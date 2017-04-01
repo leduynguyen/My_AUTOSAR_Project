@@ -1,0 +1,123 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# SpiGeneral
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiChannelBuffersAllowed
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiLevelDelivered
+  mcals: [ MPC5567, MPC5668, MPC560x, MPC551x, MPC5744P, MPC5634M, MPC5644A, MPC5643L, SPC56XL70, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, STM32F103, STM32F107, TMS570, TMS570LC43X, TMS570LS1114, MPC5777M, MPC5748G, MPC5746C]  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiSupportConcurrentSyncTransmit
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiInterruptibleSeqAllowed
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiCancelApi
+  mcals: [zynq]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiScalability
+  mcals: [TMS570LC43X]
+
+# SpiDriver
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiMaxChannel
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiMaxJob
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiMaxSequence
+
+# SpiDriver.SpiChannel
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiChannelId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiDataWidth
+  mcals: [zynq]
+
+# SpiDriver.SpiExternalDevice
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiCsSelection
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiEnableCs
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiTransferStart
+  mcals: [zynq]
+  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiIbNBuffers
+  mcals: [zynq]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiCsPolarity
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiTimeClk2Cs
+  mcals: [JACINTO5, JACINTO6, RH850F1L, RH850F1H]
+    
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: ArcSpiClkPh
+  display: ArcSpiClkPh (Deprecated)
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: ArcSpiClkPol
+  display: ArcSpiClkPol (Deprecated)
+  
+  
+# SpiDriver.SpiJob
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiHwUnitSynchronous
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiJobId
+
+
+# SpiDriver.SpiSequence
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiSequenceId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiInterruptibleSequence
+
+
+# SpiPublishedInformation
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: SpiPublishedInformation
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SpiMaxHwUnit
+
+# SpiDemEventParameterRefs
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: SpiDemEventParameterRefs
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SPI_E_HARDWARE_ERROR
+  
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSpiClkPh
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcSpiClkPol
+  mcals: [zynq]  

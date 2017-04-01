@@ -1,0 +1,471 @@
+//-------------------------------------------------------------------------------
+// HL_sys_mpu.asm
+//
+// Copyright (C) 2009-2016 Texas Instruments Incorporated - www.ti.com
+//
+//
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions
+//  are met:
+//
+//    Redistributions of source code must retain the above copyright
+//    notice, this list of conditions and the following disclaimer.
+//
+//    Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the
+//    distribution.
+//
+//    Neither the name of Texas Instruments Incorporated nor the names of
+//    its contributors may be used to endorse or promote products derived
+//    from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+//  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+//  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+//  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+//  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+//  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES// LOSS OF USE,
+//  DATA, OR PROFITS// OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+//  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+//  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+//  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//
+//
+
+#define _ASSEMBLER_
+#include "asm_arm.h"
+
+#if defined(__GNUC__)
+  	.syntax unified
+	.thumb
+#else
+	THUMB
+#endif        
+
+	ASM_GLOBAL(_mpuInit_)
+    ASM_TYPE(_mpuInit_, %function)
+
+	ASM_GLOBAL(_mpuEnable_)
+    ASM_TYPE(_mpuEnable_, %function)
+
+	ASM_GLOBAL(_mpuDisable_)
+    ASM_TYPE(_mpuDisable_, %function)
+
+//-------------------------------------------------------------------------------
+#define r1Base  0x00000000
+#define r2Base  0x00000000
+#define r3Base  0x08000000
+#define r4Base  0xF8000000
+#define r5Base  0x60000000
+#define r6Base  0x80000000
+#define r7Base  0xF0000000
+#define r8Base  0x00000000
+#define r9Base  0x00000000
+#define r10Base  0x00000000
+#define r11Base  0x00000000
+#define r12Base  0x00000000
+#define r13Base  0x00000000
+#define r14Base  0x00000000
+#define r15Base  0x00000000
+#define r16Base  0xFFF80000
+
+// bit31:13 Reserved
+// bit12    XN 1=no instruction fetches enabled
+// bit10:8  AP 3=full access,2=Read only, 1=priviledged only, 0=No access
+// bit5:3   TEX 
+// bit2     S 1=Shared
+// bit1     C
+// bit0     B
+//
+// TEX[2:0] 	C	B
+//    000		0 	0  Strongly ordered
+//    000		0 	1  Shared device
+//    000		1 	0  Outer and inner write-through, no write-allocate
+//    000		1 	1  Outer and inner write-back, no write-allocate
+//    001		0 	0  Outer and inner non-cacheable
+//    001		0 	1  reserved
+//    001		1 	0  reserved
+//    001		1 	1  Outer and Inner write-back, write-allocate.
+//    010		0 	0  Non shared device
+//    010		0 	1  reserved
+//    010		1 	X  reserved
+//    010		1 	X  reserved
+//    1BB		A 	A  Cacheable AA=inner policy,BB=outer policy
+#define STRONGLY_ORDERED 0x0000
+#define SHARED_DEVICE 0x0001
+#define OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO 0x0002
+#define OUT_IN_WRITE_BACK_NO_WRITE_ALLO 0x0003
+#define OUT_IN_NON_CACHEABLE 0x0008
+#define OUT_IN_WRITE_BACK_WRITE_ALLO 0x000B
+#define NON_SHARED_DEVICE 0x0010
+
+#define S_SHARED 0x0004
+
+#define XN_NO_I_FETCHES_ENABLED 0x1000
+
+#define AP_PRIV_USER_READ_ONLY_ACCESS 0x0600
+#define AP_PRIV_READ_ONLY_ACCESS 0x0500
+#define AP_FULL_ACCESS 0x0300
+#define AP_USER_READ_ONLY_ACCESS 0x0200
+#define AP_PRIV_ONLY_ACCESS 0x0100
+#define AP_NO_ACCESS 0x0000
+
+// Initalize Mpu
+
+ASM_LABEL(_mpuInit_)
+        // Disable mpu
+        mrc   p15, #0, r0, c1, c0, #0
+        bic   r0,  r0, #1
+        dsb
+        mcr   p15, #0, r0, c1, c0, #0
+        isb
+        // Disable background region
+        mrc   p15, #0, r0,      c1, c0, #0
+        bic   r0,  r0, #0x20000
+        mcr   p15, #0, r0,      c1, c0, #0
+        // Setup region 1
+        mov   r0,  #0
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r1Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #OUT_IN_NON_CACHEABLE
+        orr   r0,  r0,    #XN_NO_I_FETCHES_ENABLED
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((1 << 15) + (1 << 14) + (1 << 13) + (1 << 12) + (1 << 11) + (1 << 10) + (1 <<  9) + (1 <<  8) + (0x1F << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 2
+        mov   r0,  #1
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r2Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO
+        orr   r0,  r0,    #AP_PRIV_USER_READ_ONLY_ACCESS
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x15 << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region
+        mov   r0,  #2
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r3Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO //original OUT_IN_WRITE_BACK_WRITE_ALLO
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_FULL_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x12 << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 4
+        mov   r0,  #3
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r4Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #NON_SHARED_DEVICE
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_FULL_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (1 << 10) + (1 <<  9) + (1 <<  8) + (0x1A << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 5
+        mov   r0,  #4
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r5Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #STRONGLY_ORDERED
+        orr   r0,  r0,    #AP_FULL_ACCESS
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((1 << 15) + (1 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x1B << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 6
+        mov   r0,  #5
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r6Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #AP_FULL_ACCESS
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x1A << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 7
+        mov   r0,  #6
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r7Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #OUT_IN_NON_CACHEABLE
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x16 << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 8
+        mov   r0,  #7
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r8Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #NON_SHARED_DEVICE
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 9
+        mov   r0,  #8
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r9Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 10
+        mov   r0,  #9
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r10Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_NON_CACHEABLE | S_SHARED)
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_FULL_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 11
+        mov   r0,  #10
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r11Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #AP_PRIV_USER_READ_ONLY_ACCESS
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 12
+        mov   r0,  #11
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r12Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_PRIV_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 13
+        mov   r0,  #12
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r13Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_PRIV_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 14
+        mov   r0,  #13
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r14Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_PRIV_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 15
+        mov   r0,  #14
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r15Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #(OUT_IN_WRITE_THROUGH_NO_WRITE_ALLO | S_SHARED)
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_PRIV_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x04 << 1) + (0))
+        mcr   p15, #0,    r0, c6, c1, #2
+        // Setup region 16
+        mov   r0,  #15
+        mcr   p15, #0,    r0, c6, c2, #0
+        ldr   r0,  =r16Base
+        mcr   p15, #0,    r0, c6, c1, #0
+        mov   r0,  #NON_SHARED_DEVICE
+        orr   r0,  r0,    #(XN_NO_I_FETCHES_ENABLED | AP_USER_READ_ONLY_ACCESS)
+        mcr   p15, #0,    r0, c6, c1, #4
+        movw  r0,  #((0 << 15) + (0 << 14) + (0 << 13) + (0 << 12) + (0 << 11) + (0 << 10) + (0 <<  9) + (0 <<  8) + (0x12 << 1) + (1))
+        mcr   p15, #0,    r0, c6, c1, #2
+
+        // Enable mpu
+        mrc   p15, #0, r0, c1, c0, #0
+        orr   r0,  r0, #1
+        dsb
+        mcr   p15, #0, r0, c1, c0, #0
+        isb
+        bx    lr
+
+//-------------------------------------------------------------------------------
+// Enable Mpu
+
+ASM_LABEL(_mpuEnable_)
+
+        mrc   p15, #0, r0, c1, c0, #0
+        orr   r0,  r0, #1
+        dsb
+        mcr   p15, #0, r0, c1, c0, #0
+        isb
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Disable Mpu
+
+ASM_LABEL(_mpuDisable_)
+
+        mrc   p15, #0, r0, c1, c0, #0
+        bic   r0,  r0, #1
+        dsb
+        mcr   p15, #0, r0, c1, c0, #0
+        isb
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Enable Mpu background region
+
+ASM_LABEL(_mpuEnableBackgroundRegion_)
+
+        mrc   p15, #0, r0,      c1, c0, #0
+        orr   r0,  r0, #0x20000
+        mcr   p15, #0, r0,      c1, c0, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Disable Mpu background region
+
+ASM_LABEL(_mpuDisableBackgroundRegion_)
+
+        mrc   p15, #0, r0,      c1, c0, #0
+        bic   r0,  r0, #0x20000
+        mcr   p15, #0, r0,      c1, c0, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Returns number of implemented Mpu regions
+
+ASM_LABEL(_mpuGetNumberOfRegions_)
+
+        mrc   p15, #0, r0,      c0, c0, #4
+        uxtb  r0,  r0, ROR #8
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Returns the type of the implemented mpu regions
+
+ASM_LABEL(_mpuAreRegionsSeparate_)
+
+        mrc   p15, #0, r0,      c0, c0, #4
+        uxtb  r0,  r0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Set mpu region number
+
+ASM_LABEL(_mpuSetRegion_)
+
+        mcr   p15, #0, r0, c6, c2, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get mpu region number
+
+ASM_LABEL(_mpuGetRegion_)
+
+        mrc   p15, #0, r0, c6, c2, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Set base address
+
+ASM_LABEL(_mpuSetRegionBaseAddress_)
+
+        mcr   p15, #0, r0, c6, c1, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get base address
+
+ASM_LABEL(_mpuGetRegionBaseAddress_)
+
+        mrc   p15, #0, r0, c6, c1, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Set type and permission
+
+ASM_LABEL(_mpuSetRegionTypeAndPermission_)
+
+        orr   r0,  r0, r1
+        mcr   p15, #0, r0, c6, c1, #4
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get type
+
+ASM_LABEL(_mpuGetRegionType_)
+
+        mrc   p15, #0, r0,     c6, c1, #4
+        bic   r0,  r0, #0xFF00
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get permission
+
+ASM_LABEL(_mpuGetRegionPermission_)
+
+        mrc   p15, #0, r0,   c6, c1, #4
+        bic   r0,  r0, #0xFF
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Set region size register value
+
+ASM_LABEL(_mpuSetRegionSizeRegister_)
+
+        mcr   p15, #0, r0, c6, c1, #2
+        bx    lr
+
+
+
+    
+
+//-------------------------------------------------------------------------------
+

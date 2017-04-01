@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>mpc5567</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Implementations</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-IMPLEMENTATION UUID="c6c0a09d-b820-41b0-9d57-b255f2bfadfb">
+                      <SHORT-NAME>Spi</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">MCAL</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">MPC5567</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                      <SW-VERSION>2.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::mcal::mpc5567::Spi::main</USED-CODE-GENERATOR>
+                      <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5567/Spi</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                    <BSW-IMPLEMENTATION UUID="b45754f4-70c4-47ff-8995-dc20eed30383">
+                      <SHORT-NAME>Pwm</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">MCAL</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">MPC5567</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                      <SW-VERSION>2.1.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::mcal::mpc5567::Pwm::main</USED-CODE-GENERATOR>
+                      <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5567/Pwm</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                    <BSW-IMPLEMENTATION UUID="aa8c9a70-d1f1-4cf5-b82d-422d8d74863e">
+                      <SHORT-NAME>Mcu</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">MCAL</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">MPC5567</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                      <SW-VERSION>2.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::mcal::mpc5567::Mcu::main</USED-CODE-GENERATOR>
+                      <VENDOR-ID>60</VENDOR-ID>
+                      <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5567/Mcu</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                    <BSW-IMPLEMENTATION UUID="307ba75f-43f9-4f4c-810b-faba200fed25">
+                      <SHORT-NAME>Dio</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">MCAL</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">MPC5567</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SW-VERSION>5.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::mcal::mpc5567::Dio::main</USED-CODE-GENERATOR>
+                      <VENDOR-ID>60</VENDOR-ID>
+                      <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                      <VENDOR-API-INFIX>NOT_USED</VENDOR-API-INFIX>
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5567/Dio</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                    <BSW-IMPLEMENTATION UUID="989b85c1-e391-42b7-90a5-72cc39376ef7">
+                      <SHORT-NAME>Can</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">MCAL</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">MPC5567</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SW-VERSION>5.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::mcal::mpc5567::Can::main</USED-CODE-GENERATOR>
+                      <VENDOR-ID>60</VENDOR-ID>
+                      <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                      <VENDOR-API-INFIX />
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5567/Can</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                    <BSW-IMPLEMENTATION UUID="1c8a53e8-a723-4ab6-8998-0a1f691b6bad">
+                      <SHORT-NAME>Adc</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">MCAL</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">MPC5567</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                      <SW-VERSION>2.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::mcal::mpc5567::Adc::main</USED-CODE-GENERATOR>
+                      <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc5567/Adc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

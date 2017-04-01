@@ -1,0 +1,57 @@
+# 1.0
+# com.arccore.bsw.stylesheet
+
+# Container BswMModeRequestSource
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMNvMRequest
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMWdgMRequestPartitionReset
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMNvMJobModeIndication
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMLinTpModeRequest
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMLinScheduleIndication
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMLinSMIndication
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMEthSMIndication
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMDcmComModeRequest
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMDcmApplicationUpdatedIndication
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMBswModeNotification
+
+
+
+# Container BswMAvailableActions
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMTriggerStartUpPhase2
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMTriggerSlaveRTEStop
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMTriggerIPduSend
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMSwitchIPduMode
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMSchMSwitch
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: BswMComMModeLimitation
+  
+  
+ # Container BswMGeneral
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: BswMDcmEnabled  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: BswMLinTPEnabled  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: BswMNvMEnabled  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: BswMSchMEnabled  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: BswMWdgMEnabled  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: BswMMainFunctionPeriod  
+
+ 

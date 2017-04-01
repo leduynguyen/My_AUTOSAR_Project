@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="15446f59-499d-4b90-85cf-db5790a23dc2">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="53f47ae9-e117-4623-bcf6-b1b7be786495">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="a091f49e-48a5-4814-9071-50596d9c216a">
+              <SHORT-NAME>Generic</SHORT-NAME>
+              <ELEMENTS>
+                <ECUC-MODULE-DEF UUID="ECUC:7330314e-e986-4763-8446-4fea1ec1f9db">
+                  <SHORT-NAME>Eth</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of the Eth (Ethernet Driver) module.</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                      <DOC-REVISION>
+                        <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                        <DATE>2014-10-31</DATE>
+                      </DOC-REVISION>
+                    </DOC-REVISIONS>
+                  <SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-SUPPORT"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-SUPPORT@5/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  
+                  <SUPPORTED-CONFIG-VARIANTS>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-LINK-TIME</SUPPORTED-CONFIG-VARIANT>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                  </SUPPORTED-CONFIG-VARIANTS>
+                  <CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5038b196-90f1-4b1e-991a-59d361bf33c9">
+                      <SHORT-NAME>EthConfigSet</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR Eth module.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:56cd8c81-2738-4e37-9187-eb8d6838c4c6">
+                          <SHORT-NAME>EthCtrlConfig</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of the individual controller</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:5292ca43-a021-40dc-ad36-08a935433941">
+                              <SHORT-NAME>EthCtrlEnableMii</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / Disables Media Independent Interface (MII) for transceiver access</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:1750d5cc-afcb-4d21-93b0-e29e9a41ea26">
+                              <SHORT-NAME>EthCtrlEnableRxInterrupt</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / Disables receive interrupt</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:064b39a9-dca2-4886-a425-973de461e3d7">
+                              <SHORT-NAME>EthCtrlEnableTxInterrupt</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / Disables transmit interrupt</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:57bc491e-62f2-4d20-943a-0bf28cca2ac1">
+                              <SHORT-NAME>EthCtrlIdx</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the instance ID of the configured controller.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-STRING-PARAM-DEF UUID="ECUC:b7e156c0-3a45-42f1-b2f9-feb287415200">
+                              <SHORT-NAME>EthCtrlPhyAddress</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the unique 48-bit physical address (MAC address) of the controller in network byte order.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@11/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Regular Expression: [0-9a-fA-F]{2}[[:-][0-9a-fA-F]{2}]{5}</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                  <MAX-LENGTH>17</MAX-LENGTH>
+                                  <MIN-LENGTH>17</MIN-LENGTH>
+                                </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                              </ECUC-STRING-PARAM-DEF-VARIANTS>
+                            </ECUC-STRING-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:6164a17c-2277-4d64-81a0-c03e219bdf8d">
+                              <SHORT-NAME>EthCtrlRxBufLenByte</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Limits the maximum receive buffer length (frame length) in bytes. Set recommended max 1518 if no VLAN or 1522 bytes if VLAN</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>1522</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:f4b834a6-9fce-4cf9-9f80-98e4a6ad9eec">
+                              <SHORT-NAME>EthCtrlTxBufLenByte</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Limits the maximum transmit buffer length (frame length) in bytes.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>1522</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:139da546-28f2-4245-8429-9c05fa63efde">
+                              <SHORT-NAME>EthRxBufTotal</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Configures the number of receive buffers.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:3ea8a022-70b8-493a-9cf8-13ae8489d6b4">
+                              <SHORT-NAME>EthTxBufTotal</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Configures the number of transmit buffers.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>ArcEthControllerHwMIIMode</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of MII mode of the controller</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="">
+                                  <SHORT-NAME>RMII</SHORT-NAME>
+                                  <CATEGORY />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="" UUID="">
+                                  <SHORT-NAME>MII</SHORT-NAME>
+                                  <CATEGORY />
+                                  <ORIGIN />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="" UUID="">
+                                  <SHORT-NAME>RGMII</SHORT-NAME>
+                                  <CATEGORY />
+                                  <ORIGIN />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>ArcEthControllerHwSpeed</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Determines the HW communication speed</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="">
+                                  <SHORT-NAME>MBPS_100</SHORT-NAME>
+                                  <CATEGORY />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="" UUID="">
+                                  <SHORT-NAME>MBPS_10</SHORT-NAME>
+                                  <CATEGORY />
+                                  <ORIGIN />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>ArcEthControllerHwUnit</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Determines the hardware unit.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="">
+                                  <SHORT-NAME>HWUNIT_0</SHORT-NAME>
+                                  <CATEGORY />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="" UUID="">
+                                  <SHORT-NAME>HWUNIT_1</SHORT-NAME>
+                                  <CATEGORY />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:1750d5cc-afcb-5d21-93b0-e29e9a41ea26">
+                              <SHORT-NAME>ArcEthCtrlDiscardRxFCS</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables/disables Rx FCS, FCS is discarded when copied for the received buffers if this is enabled</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:1750d5cc-afcb-5d21-93b0-e29e9a41ea26">
+                              <SHORT-NAME>ArcEthCtrlEnableRxChecksumOffload</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / Disables Hardware checksum offload mechanism, if disabled controller will not verify checksum</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:1750d5cc-afcb-5d21-93b0-e29e9a41ea26">
+                              <SHORT-NAME>ArcEthCtrlEnableTxChecksumOffload</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / Disables Hardware checksum offload mechanism, When disabled controller will not generate checksum</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8f9f2801-a733-55ba-92c1-4f76e7239397">
+                              <SHORT-NAME>ArcEthCtrlRxDMAChannel</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the DMA channel for the reception packets</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>7</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8f9f2801-a733-55ba-92c1-4f76e7239397">
+                              <SHORT-NAME>ArcEthCtrlRxQueueValue</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the Switch Priority Queue number for the reception</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>3</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8f9f2801-a733-55ba-92c1-4f76e7239397">
+                              <SHORT-NAME>ArcEthCtrlTxDMAChannel</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the Specifies the DMA channel for the reception packets</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>7</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8f9f2801-a733-55ba-92c1-4f76e7239397">
+                              <SHORT-NAME>ArcEthCtrlTxQueueValue</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the Switch Priority Queue number for the transmission</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>3</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>ArcEthFifoPrio</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Determines the HW Fifo priority type set</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="">
+                                  <SHORT-NAME>DUAL_MAC</SHORT-NAME>
+                                  <CATEGORY />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF S="" UUID="">
+                                  <SHORT-NAME>NORMAL_PRIO</SHORT-NAME>
+                                  <CATEGORY />
+                                  <ORIGIN />
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:5292ca43-a021-40dc-ad36-08a935433941">
+                              <SHORT-NAME>ArcEthCtrlEnableCircDesc</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / Disables Circular type of the descriptors</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:6c163108-f8fb-4e94-aee0-19a511446ffc">
+                              <SHORT-NAME>EthDemEventParameterRefs</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <REFERENCES>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:b4651d05-f83d-44c9-9d1e-21089a781293">
+                                  <SHORT-NAME>ETH_E_ACCESS</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Controller access failed" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:632e47af-42fb-4224-8fbb-7909494d6151">
+                                  <SHORT-NAME>ETH_E_ALIGNMENT</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Alignment Error" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:a08dd4d7-e2ac-4afc-83e9-71b18bd82675">
+                                  <SHORT-NAME>ETH_E_CRC</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "CRC Failure" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:a6f98810-856a-422f-8f20-5af275bd96b2">
+                                  <SHORT-NAME>ETH_E_LATECOLLISION</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Late Collisions" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:d2e620f0-7f00-4c5d-a2bb-cec828a2786a">
+                                  <SHORT-NAME>ETH_E_MULTIPLECOLLISION</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Multiple Collisions" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:71866e3f-ce4b-418a-9115-cf80032d67ec">
+                                  <SHORT-NAME>ETH_E_OVERSIZEFRAME</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Oversized Frame" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:58dc8751-6779-4cf2-a369-71007d00354c">
+                                  <SHORT-NAME>ETH_E_RX_FRAMES_LOST</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "receive frames lost" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:191bedeb-c2b9-413d-9fe2-e0974c5712c9">
+                                  <SHORT-NAME>ETH_E_SINGLECOLLISION</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Single Collisions" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:c82783ce-7229-4673-97db-0a7b539ef538">
+                                  <SHORT-NAME>ETH_E_UNDERSIZEFRAME</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Undersized Frame" has occured.</L-2>
+                                  </DESC>
+                                  <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">true</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">LINK</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">POST-BUILD</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                      
+                                      
+                                    </SD></SDG><SD GID="_mixed">
+                                    
+                                    
+                                    
+                                  </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  
+                                  
+                                  
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:6f42d612-0b76-4acc-a377-9a35f3decf57">
+                      <SHORT-NAME>EthGeneral</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">General configuration of Ethernet Driver module</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:e9f29dc0-4e38-4c7a-89f6-67505e301506">
+                          <SHORT-NAME>EthDevErrorDetect</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:e0c4707b-44a4-45ac-b02a-03c0c5eb92a2">
+                          <SHORT-NAME>EthGetDropCountApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enables / Disables Eth_GetDropCount API.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:159a77b6-3904-4bd6-84f5-77417e699ec4">
+                          <SHORT-NAME>EthGetEtherStatsApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enables / Disables Eth_GetEtherStats API.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:64fab11f-9698-4408-961d-e08197101883">
+                          <SHORT-NAME>EthGlobalTimeSupport</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enables/Disables the GlobalTime APIs used amongst others by Global Time Synchronization over Ethernet.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8f9f2801-a733-45ba-92c1-4f76e7239397">
+                          <SHORT-NAME>EthIndex</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>255</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:ca545039-b3f3-4a63-8b04-29ebac136e9d">
+                          <SHORT-NAME>EthMainFunctionPeriod</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Specifies the period of main function Eth_MainFunction in seconds. Ethernet driver does not require this information but the BSW scheduler.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>Inf</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:5dd19540-c70f-4e65-b839-510b53e355c7">
+                          <SHORT-NAME>EthMaxCtrlsSupported</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Limits the total number of supported controllers.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>255</MAX>
+                          <MIN>1</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:3f2394e5-bdde-4327-b254-10bfcbda919b">
+                          <SHORT-NAME>EthUpdatePhysAddrFilter</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enables/Disables optional API Eth_UpdatePhysAddrFilter.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:aec58ac0-ad1c-4331-a535-7f4301e98577">
+                          <SHORT-NAME>EthVersionInfoApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enables / Disables version info API</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                            
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:6164a17c-2277-5d64-81a0-c03e219bdf8d">
+                          <SHORT-NAME>ArcEthCpu1xclkValue</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">cpu_1xclk speed in MHz, MDC clock division is set according to this value, please round this to nearest  decimal value</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>540</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:348d2d10-2ba2-5a1e-aaa8-002dac40f627">
+                          <SHORT-NAME>ArcEthSoftReset</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enables/disables soft reset of Ethernet Module</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">true: Enabled.
+false: Disabled.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>ARCCORE_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:44ab9e6d-ad97-4fd3-b26c-b2620681a83b">
+                          <SHORT-NAME>EthCtrlOffloading</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of hardware offloading features.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:39ceb7ae-86fb-4a40-a65e-fa797e0daf7a">
+                              <SHORT-NAME>EthCtrlEnableOffloadChecksumICMP</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables  /  Disables  hardware offloading for ICMP checksums.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:710505ff-ac85-45fe-a1c9-c8c5ac860ee3">
+                              <SHORT-NAME>EthCtrlEnableOffloadChecksumIPv4</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables  /  Disables  hardware offloading for IPv4 checksums.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:bd7596bc-d545-4b56-a46f-35eaf7bf3c8a">
+                              <SHORT-NAME>EthCtrlEnableOffloadChecksumTCP</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables  /  Disables  hardware offloading for TCP checksums.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:f386414c-101f-4f4f-8838-41b35cfe74c7">
+                              <SHORT-NAME>EthCtrlEnableOffloadChecksumUDP</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables  /  Disables  hardware offloading for UDP checksums.</L-2>
+                              </DESC>
+                              <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-LINK-TIME</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-POST-BUILD</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                                  
+                                  
+                                </SD></SDG><SD GID="_mixed">
+                                
+                                
+                                
+                              </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              
+                              
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </CONTAINERS>
+                </ECUC-MODULE-DEF>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

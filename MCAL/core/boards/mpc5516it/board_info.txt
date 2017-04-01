@@ -1,0 +1,81 @@
+
+
+
+The Freescale MPC5510 is an PowerPC process with a e200Z1+e200Z0 core. 
+	
+Datasheets:
+  Eval board:
+    http://www.asyst.si/isystem/files/downloads/evaluation_boards/ITMPC5517_V10.pdf  
+ 
+  MPC5516/7
+    http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPC5510&webpageId=1067371573986721160325&nodeId=0162468rH3bTdG06C10325&fromPage=tax
+
+Board:
+  8Mhz external crystal
+ 
+Info:	
+  MPC5516/7 (I think that the board is always equipped with a MPC5517E now)
+  e200Z1 + e200Z0 (VLE only)
+  48-66Mhz
+  1.5MB Flash (MPC5516 1MB)
+  80KB SRAM   (MPC5516 64KB)
+  .. 
+  
+MEMORY MAP
+  MEMORIES
+    0x0000_0000 ->           Flash
+    0x4000_0000 ->           SRAM
+
+  
+  LAYOUT
+    0x0000_0000--0x0000_7FFF  Bootloader
+    0x0000_8000--0x0000_FFFF  EEPROM emulation(FEE)
+    0x0001_0000->             Application  
+  
+
+
+
+SPI
+ The "SPI TEST" card have a total of 3 SPI devices.
+ Connect that "SPI TEST" with 1. on board to 1. on EVB. 
+  - M95256 ,     E2, SPI_A , CS1 (from 0)   
+  - M95256 ,     E2, SPI_B , CS2 (from 0)
+  - FL040AIF, Flash, SPI_A , CS0 (from 0)
+
+
+PWM: 
+  eMIOS[0] and eMIOS[1] is used.
+    eMIOS[0] - PC0 - QFP144[122]
+    eMIOS[1] - PC1 - QFP144[121]
+  
+
+
+Testing during MCAL test:
+   SPI_A, M95256 using PCS_A[2]
+
+CPU  PAD        Func     Schema     
+  --- HOLD PINS --- (pull HIGH)
+ 37  102(PG6)			 SPI_B_WP  (E2) 
+ 38  101(PG5)            SPI_A_WP2 (flash)
+ 42  97 (PG1)            SPI_A_WP1 (E2)
+               
+  --- SPI_A/SPI_B CLOCK AND CS ---               
+ 81  69 (PE5)   SIN_A 
+ 82  68 (PE4)   SOUT_A
+ 83  67 (PE3)   SCK_A 
+ .. 
+ 85  65 (PE1)   PCS_A[1]  SPI_A_CE2 (flash)
+ 86  64 (PE0)   PCS_A[2]  SPI_A_CE1 (E2)
+ 87  63 (PD15)  SIN_B	  SPI_B_SO	
+ 88  62 (PD14)  SOUT_B    SPI_B_SI
+ 89  61 (PD13)  SCK_B     SPI_B_SCK   
+ 90  60 (PD12)  PCS_B[0]  SPI_B_CE            
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 

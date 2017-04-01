@@ -1,0 +1,59 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters in WdgDemEventParameterRefs
+######################################################### 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WDG_E_DISABLE_REJECTED
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WDG_E_MODE_FAILED
+  mcals: [MPC560x, MPC551x, MPC5567, STM32F107, MPC5777M, MPC5744P, MPC5643L, MPC5644A, SPC56XL70, MPC5645S, MPC5634M, SPC560B54, MPC5606B, MPC5607B, zynq, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+  
+#########################################################
+# Hidden parameters in WdgGeneral
+######################################################### 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgMaxTimeout
+  mcals: [MPC560x, MPC551x, MPC5567, STM32F107, MPC5777M, MPC5744P, MPC5643L, MPC5644A, SPC56XL70, MPC5645S, MPC5634M, SPC560B54, MPC5606B, MPC5607B, zynq, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgIndex
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgInitialTimeout
+  mcals: [MPC560x, MPC551x, MPC5567, STM32F107, MPC5777M, MPC5744P, MPC5643L, MPC5644A, SPC56XL70, MPC5645S, MPC5634M, SPC560B54, MPC5606B, MPC5607B, zynq, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgTriggerLocation
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgRunArea
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  WdgDisableAllowed
+  
+
+#########################################################
+# Hidden parameters in WdgPublishedInformation
+#########################################################   
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgTriggerMode
+  
+#########################################################
+# Hidden parameters in WdgSettingsConfig
+#########################################################    
+# WdgExternalConfiguration
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: WdgExternalContainerRef 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcWdgInterruptPeriodMs
+  mcals: [TMS570, TMS570LC43X]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcWdgWindowSizeFast
+  mcals: [TMS570, TMS570LC43X]
+  

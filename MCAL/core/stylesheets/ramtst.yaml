@@ -1,0 +1,105 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters
+######################################################### 
+# RamTstCommon
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstChangeNumOfTestedCellsApi
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstGetExecutionStatusApi
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstGetNumberOfTestedCellsApi
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstResumeApi
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstRunPartialTestApi
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstSuspendApi
+
+# RamTstAlgorithms
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstAbrahamTestSelected
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstCheckerboardTestSelected
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstGalpatTestSelected
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstTranspGalpatTestSelected
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstWalkPathTestSelected
+
+# RamTstConfigParams
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstMinNumberOfTestedCells
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstNumberOfAlgParamSets
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstTestCompletedNotification
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstTestErrorNotification
+
+# RamTstAlgParams
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstExtNumberOfTestedCells  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstMaxNumberOfTestedCells
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstNumberOfBlocks  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstNumberOfTestedCells
+  
+# RamTstBlockParams  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstTestPolicy  
+   
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstFillPattern
+  
+# RamTstPublishedInformation
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: RamTstCellSize     
+
+#########################################################
+# Parameter groups
+#########################################################   
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Symbol based block parameters
+  members: [ ArcRamTstSymbolName, ArcRamTstSymbolLength ]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Address based block parameters
+  members: [ RamTstStartAddress, RamTstEndAddress ] 
+    
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcRamTstSymbolName 
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcRamTstSymbolLength 
+    
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: RamTstStartAddress 
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: RamTstEndAddress 
+   
+     

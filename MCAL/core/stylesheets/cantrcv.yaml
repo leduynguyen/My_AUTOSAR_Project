@@ -1,0 +1,42 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+########################################################
+# Hidden parameters in CanTrcvGeneral
+########################################################  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvSPICommRetries
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvWaitCount
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvSPICommTimeout
+  
+########################################################
+# Hidden parameters in CanTrcvChannel
+########################################################  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvControlsPowerSupply
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvMaxBaudrate
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvPorWakeupSourceRef 
+
+########################################################
+# Hidden parameters in CanTrcvPartialNetwork
+######################################################## 
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvBusErrFlag
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTrcvPowerOnFlag  
+########################################################
+# Hidden parameters in CanTrcvDioAccess
+######################################################## 
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanTrcvDioAccess 

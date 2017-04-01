@@ -1,0 +1,189 @@
+/*
+ * Elf Information
+ *
+ * Small data sections
+ *  There are 3 small data sections addressed from different 
+ *  offsets, address 0x0000_0000 , r2 or r13 
+ *
+ * 
+ * Register       Symbol          Sections          Size 
+ *---------------------------------------------------------  
+ *   r2           _SDA2_BASE_     .sdata2,  sbss2   64K 
+ *   r13          _SDA_BASE_      .sdata, . sbss    64K
+ *  addr 0x0       N/A            .sdata0, .sbss0   64K
+ * 
+ *
+ * SHT_PROGBITS - initialized read/write data
+ * SHT_NOBITS  - Zero initialized data. 
+ *
+ *
+ * .sdata2  - SHT_PROGBITS 
+ * .sbss2   - SHT_NOBITS + SHF_WRITE
+ * .sdata   - SHT_PROGBITS + SHF_WRITE
+ * .sbss    - SHT_NOBITS + SHF_WRITE
+ *
+ * Since .sdata2 and .sbss2 must be grouped together. .sbss2 must be able to write data
+ * and .sdata2 is read only. That leaves us with a copy from ROM to RAM.
+ */ 
+
+#if defined(CFG_VLE)
+#define VLE_SECTION (VLECODE)
+#else
+#define VLE_SECTION
+#endif
+
+#include "Calibration_Settings.h"
+
+#define CALIBRATION_INITIALIZED_RAM
+
+MEMORY
+{
+#include "memory_mcu.ldf"
+}
+
+SECTIONS
+{
+	GROUP : {
+   	     . = . + L_BOOT_RESERVED_SPACE;
+ 	} > L_FLASH_CODE_0
+
+   GROUP : {
+       __rom_start=ADDR(.rcw); 
+      .rcw LOAD(ADDR(.rcw)) : { }      
+      .exception_tbl (VLECODE) LOAD(ADDR(.exception_tbl)) : {}
+#if defined(CFG_VLE)
+       .text_vle (VLECODE) LOAD(ADDR(.text_vle)): {
+             *(.text)
+             *(.text_vle)
+             *(.fini)
+             *(.eini)
+         }
+       .init LOAD(ADDR(.init)) : {}
+       .init_vle (VLECODE) LOAD(ADDR(.init_vle)) : {
+             *(.init)
+             *(.init_vle)
+          }
+        .ctors LOAD(ADDR(.ctors)) : {}
+        .dtors LOAD(ADDR(.dtors)) : {}
+        .rodata (CONST) LOAD(ADDR(.rodata)) : {
+            *(.rdata)
+            *(.rodata)
+         }
+#else       
+      .text LOAD(ADDR(.text)) : { 
+      		 *(.exception_tbl)
+             *(.text)
+             *(.rodata)
+             *(.ctors)
+             *(.dtors)    
+             *(.init) 
+             *(.fini) 		
+             *(.eini)
+             . = (.+15);
+        }
+#endif
+	    extab LOAD(ADDR(extab))      : {}  
+	    extabindex LOAD(ADDR(extabindex)) : {}
+
+#if defined(CFG_MPC5607B) || defined(CFG_MPC5606B) || defined(CFG_MPC5645S)	
+		__LP_TEXT_ROM = .;
+		.=.+SIZEOF(.lowpower_text);
+		. = ALIGN(0x10);   	
+#endif
+
+	    .sdata2 LOAD(ADDR(.sdata2)) : {}
+	    .sbss2	LOAD(ADDR(.sbss2)) : {}
+		.calibration LOAD(ADDR(.calibration)) : {}	    
+		.calib_component LOAD(ADDR(.calib_component)) : {}	    
+		.calib_shared LOAD(ADDR(.calib_shared)) : {}	    
+	    . = ALIGN(0x10);   	
+	    __DATA_ROM = .;
+	    .=.+(__DATA_END - __DATA_RAM);
+	    __SDATA0 = .;
+	    .=.+SIZEOF(.PPC.EMB.sdata0);
+		__rom_end = .;	    
+
+#if defined(CFG_MPC5516)
+		.lowpower_text VLE_SECTION LOAD(0xff000) BIND(0xff000) : {
+			*(.lowpower_text)
+		}
+		
+		.lowpower_vector VLE_SECTION LOAD(0xffffc) BIND(0xffffc): {
+		    *(.lowpower_vector)
+		}
+#endif
+
+			 }	 > L_FLASH_CODE_0
+
+
+#if defined(CFG_POSTBUILD)
+   GROUP : {
+       . = POSTBUILD_ADDRESS;
+       __postbuild_start = .;
+      .postbuild LOAD(ADDR(.postbuild)) : { 
+      		 *(.postbuild_header)
+      		 *(.postbuild_data)
+      		 *(.postbuild_bss)
+             . = (.+15);
+        }
+	    __postbuild_end = .;
+	 }	 > L_FLASH_DATA_0
+#endif
+
+
+
+	 GROUP : {
+		__ram_start=.;
+	
+#if defined(CFG_MPC5607B) || defined(CFG_MPC5606B) || defined(CFG_MPC5645S)	
+		__LP_TEXT_START = .;
+		.lowpower_text (VLECODE) LOAD(ADDR(__LP_TEXT_ROM)) :  {}
+		__LP_TEXT_END = .;	    
+#endif				
+		
+		.lowpower_bss : {}
+		
+		. = ALIGN(0x10);
+		__DATA_RAM = .;
+		.data (DATA) LOAD(ADDR(__DATA_ROM)) :  {}
+#if defined(CALIBRATION_ENABLED)		
+		.calibration_data LOAD(ADDR(__DATA_ROM) + (ADDR(.calibration_data) - ADDR(.data))) : {}
+		.sdata (DATA) LOAD(ADDR(__DATA_ROM) + (ADDR(.sdata) - ADDR(.data) - ADDR(.calibration_data))): {}
+#else	
+		.sdata (DATA) LOAD(ADDR(__DATA_ROM) + (ADDR(.sdata) - ADDR(.data))): {}	
+#endif
+		
+		. = ALIGN(4);
+		__DATA_END = . ;
+	
+		__BSS_START = .;
+		.sbss (BSS) : {}
+		.bss   (BSS) : {}
+		__BSS_END = .;
+		
+		.PPC.EMB.sdata0 LOAD(ADDR(__SDATA0)) : {}	/* Small data with offset to 0 */	    
+		.PPC.EMB.sbss0  : {}
+		.ram_no_init (BSS): {
+			*(.ram_no_init_data) *(.ram_no_init_bss)
+		    *(.ramlog_data) *(.ramlog_bss) *(.dem_eventmemory_pri)
+		}		
+		
+		.ram_no_cache_data (DATA) LOAD(ADDR(.ram_no_cache_data))  : { 
+		    *(.ram_no_cache_data) 		    
+		}
+		
+		.ram_no_cache_bss (BSS) LOAD(ADDR(.ram_no_cache_bss))  : {
+			*(.ram_no_cache_bss)
+		}
+
+		. = ALIGN(0x10);
+		_heap_addr = .; 
+		__ram_end = .;
+	} > L_SRAM_0
+}   
+
+_heap_end   = ADDR(L_SRAM_0)+SIZEOF(L_SRAM_0);
+_heap_size  = _heap_end - _heap_addr;
+__SP_INIT = _heap_end;
+__SP_END	= __SP_INIT-1024;
+__SP_INIT_Z0 = __SP_END;

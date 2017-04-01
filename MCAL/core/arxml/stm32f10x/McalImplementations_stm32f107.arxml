@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="">
+          <SHORT-NAME>Implementations</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>stm32f107</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-IMPLEMENTATION UUID="">
+                  <SHORT-NAME>Dio</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-VERSION>5.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Dio::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Dio</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="">
+                  <SHORT-NAME>Port</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-VERSION>5.0.1</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Port::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Port</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="904fc700-de5e-4e5f-93c1-73e0a90a2af3">
+                  <SHORT-NAME>Adc</SHORT-NAME>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Adc::main</USED-CODE-GENERATOR>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Adc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION S="" UUID="fa69d64a-1ae0-4200-85f6-e36f9fe8f26b">
+                  <SHORT-NAME>Can</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-VERSION>5.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Can::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Can</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="a4cb3400-279b-43e9-b691-24e0a49e49bb">
+                  <SHORT-NAME>Mcu</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Mcu::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Mcu</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="6ac42e64-8647-4cc6-aedf-ee8ffc73e890">
+                  <SHORT-NAME>Pwm</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.1.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Pwm::main</USED-CODE-GENERATOR>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Pwm</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="4ca90eec-91cd-4d79-9c45-6b013edcc063">
+                  <SHORT-NAME>Gpt</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">STM32F107</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>3.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::stm32f10x::Gpt::main</USED-CODE-GENERATOR>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/ST/stm32f10x/Gpt</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

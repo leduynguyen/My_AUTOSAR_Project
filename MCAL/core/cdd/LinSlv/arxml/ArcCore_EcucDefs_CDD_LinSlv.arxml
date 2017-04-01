@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="15446f59-499d-4b90-85cf-db5790a23dc2">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>mpc560x</SHORT-NAME>
+              <ELEMENTS>
+                <ECUC-MODULE-DEF UUID="ECUC:cce1bea0-f990-5c41-b8fd-2b0f0e590935">
+                  <SHORT-NAME>CDD_LinSlv</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of the Lin slave complex device driver module.</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                      <DOC-REVISION>
+                        <REVISION-LABEL>4.4.0</REVISION-LABEL>
+                        <ISSUED-BY>ArcCore</ISSUED-BY>
+                        <DATE>2015-01-12</DATE>
+                      </DOC-REVISION>
+                    </DOC-REVISIONS>
+                  </ADMIN-DATA>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/CDD_LinSlv</REFINED-MODULE-DEF-REF>
+                  <SUPPORTED-CONFIG-VARIANTS>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                  </SUPPORTED-CONFIG-VARIANTS>
+                  <CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:1d543976-f649-52c3-b4ac-ad3abf68201a">
+                      <SHORT-NAME>LinSlvGeneral</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the parameters related to each Lin slave channel.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                      <PARAMETERS>
+                        <ECUC-BOOLEAN-PARAM-DEF S="" UUID="ECUC:6f7825c9-bce4-5f50-8643-1f8fcef24d80">
+                          <SHORT-NAME>LinSlvDevErrorDetect</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the Development Error Detection and Notification ON or OFF.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>ARCCORE</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF S="" UUID="ECUC:03f6c9e0-e3b7-5907-84c0-a96e099b4431">
+                          <SHORT-NAME>LinSlvVersionInfoApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the Lin_GetVersionInfo function ON or OFF.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>ARCCORE</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:d3d4848c-709e-5d4b-b219-c54ea93f1156">
+                          <SHORT-NAME>LinSlvTimeBase</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Defines the interval of calls to main functions in seconds.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>0.255</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF S="" UUID="ECUC:03f6c9e0-e3b7-5907-84c0-a96e099b4431">
+                          <SHORT-NAME>LinSlvTransceiverSupport</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Enable/disables the LinSlv transceiver support and the api:s LinSlv_SetTrcvMode and LinSlv_GetTrcvMode.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>ARCCORE</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5bf7d5c4-2ce3-55ef-9aa4-694ae888aef1">
+                      <SHORT-NAME>LinSlvConfig</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the channel configuration parameter of the Lin slave driver. This container is a MultipleConfigurationContainer, i.e. this container and its sub-containers exit once per configuration set.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5068d91d-ca0a-560f-9f6a-21f7ad18d591">
+                          <SHORT-NAME>LinSlvChannel</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the configuration (parameters) of the Lin slave controller(s).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF S="" UUID="ECUC:16748716-3f59-5064-a8ef-ca1ab0b00deb">
+                              <SHORT-NAME>LinSlvChannelBaudRate</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the baud rate of the Lin slave channel</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>20000</MAX>
+                              <MIN>1000</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-5c49-ac91-241dec476a8d">
+                              <SHORT-NAME>LinSlvChannelId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Identifies the Lin slave channel.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:644aeda6-9c40-5e6d-945f-555f9c2b0c56">
+                              <SHORT-NAME>LinSlvChannelWakeupSupport</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies if the Lin slave hardware channel supports wake up functionality</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:59a7fb27-4bdc-59b5-9d06-fe139cf39575">
+                              <SHORT-NAME>LinSlvStartupState</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Defines the state of each LIN channel after startup</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:6574ef8c-0c98-5c88-721c-ad53139c93cd">
+                                  <SHORT-NAME>NORMAL</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:55272573-41e3-5e73-68cb-b1a908707f65">
+                                  <SHORT-NAME>SLEEP</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-5c49-ac91-241dec476a8d">
+                              <SHORT-NAME>LinSlvResponseErrorBitOffset</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Bit index offset in the frame where the signal is defined.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>63</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-FUNCTION-NAME-DEF UUID="ECUC:2e282067-fed0-5803-aa66-d641c71663e7">
+                              <SHORT-NAME>LinSlvSleepCallback</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter is a reference to a call-back function. It is called by the module on bus timeout or the reception of a Go To Sleep command.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                <ECUC-FUNCTION-NAME-DEF-CONDITIONAL />
+                              </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                            </ECUC-FUNCTION-NAME-DEF>
+                            <ECUC-FUNCTION-NAME-DEF UUID="ECUC:2e282067-fed0-5803-aa66-d641c71663e7">
+                              <SHORT-NAME>LinSlvWakeupConfirmation</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter is a reference to a call-back function. It is called by the module on bus timeout or the reception of a Go To Sleep command.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                <ECUC-FUNCTION-NAME-DEF-CONDITIONAL />
+                              </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                            </ECUC-FUNCTION-NAME-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-5c49-ac91-241dec476a8d">
+                              <SHORT-NAME>LinSlvBusInactivityTimeout</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If no bus communication that the channel subscribes to is detected within the configured time-out, the driver will call the LinSlvSleepCallback function.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>10</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:c24ae6cb-a145-5c7d-a7e1-7493da1e0df8">
+                              <SHORT-NAME>LinSlvChannelEcuMWakeupSource</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains a reference to the Wakeup Source for this controller as defined in the ECU State Manager.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            <ECUC-REFERENCE-DEF UUID="ECUC:d72bf6de-9dad-5275-a2c9-861a4a43ce54">
+                              <SHORT-NAME>LinSlvResponseErrorFrame</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to the assigned Frame triggering.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>ARCCORE</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/mpc560x/CDD_LinSlv/LinSlvConfig/LinSlvChannel/LinSlvFrame</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:1c7be285-63c0-5176-87e9-7af9e12e9593">
+                              <SHORT-NAME>LinSlvFrame</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Generic container for all types of LIN frames. The shortName of this container is used as LinIfFrameName.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:1c4bccbb-94d9-57a9-8818-ab3f131f67a4">
+                                  <SHORT-NAME>LinSlvChecksumType</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Type of checksum that the frame is using.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:06960102-7ffd-5656-47c3-d6c57341668f">
+                                      <SHORT-NAME>CLASSIC</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:887a1b4e-a626-5418-303b-70d241aa50ae">
+                                      <SHORT-NAME>ENHANCED</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:b9735872-2db9-51ef-9047-01d69eb83851">
+                                  <SHORT-NAME>LinSlvFrameType</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Type of frame that is described (e.g. sporadic frame).</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">The sporadic slot is not found among the frame types. A sporadic slot is a set of sporadic frames.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:979cf678-dd66-587e-420f-20ca0ae37ee7">
+                                      <SHORT-NAME>MRF</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:e785f036-d53a-544e-2a88-35c7f8d55637">
+                                      <SHORT-NAME>SRF</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:b9b0b87d-3f28-50f4-2a2b-e93b6333e702">
+                                      <SHORT-NAME>UNCONDITIONAL</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:9d278703-8bd9-5c02-b84a-82dbbe4347b2">
+                                  <SHORT-NAME>LinSlvLength</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Length of the LIN SDU in bytes.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>8</MAX>
+                                  <MIN>1</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:5ea9c5f4-9012-5f2c-925b-348b6fb424ea">
+                                  <SHORT-NAME>LinSlvPid</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Protected ID of the LIN frame. There is no reason to calculate the Parity in run-time.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:9d278703-8bd9-5c02-b84a-82dbbe4347b2">
+                                  <SHORT-NAME>LinSlvFrameIdx</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Shall only be set for unconditional frames. Is used to specify the frame index which is defined under the configurable_frames for the node in the Lin Node Description file (ldf).</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <SUB-CONTAINERS>
+                                <ECUC-CHOICE-CONTAINER-DEF UUID="ECUC:ad560145-2b51-56ad-91c3-219c5c976f4c">
+                                  <SHORT-NAME>LinSlvPduDirection</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Direction of the frame</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <CHOICES>
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:c126513a-cf29-5918-bb7e-aea26cd3f5df">
+                                      <SHORT-NAME>LinSlvInternalPdu</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Represents a Diagnostic or Configuration frame : no Message ID (no PduId).</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:13322c3b-51f2-50eb-b615-dfc3e665e5e8">
+                                      <SHORT-NAME>LinSlvRxPdu</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">represents a received PDU/frame</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                      <REFERENCES>
+                                        <ECUC-REFERENCE-DEF UUID="ECUC:a4b0259f-0d05-5a0e-b86a-89c2558bb7ba">
+                                          <SHORT-NAME>LinSlvRxPduRef</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Reference to the PDU that is received in this frame.</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                                        </ECUC-REFERENCE-DEF>
+                                      </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:7640ebc8-a9e9-5673-9ccd-ce63404a29ce">
+                                      <SHORT-NAME>LinSlvTxPdu</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">represents a transmitted PDU/frame</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                      <REFERENCES>
+                                        <ECUC-REFERENCE-DEF UUID="ECUC:78cf5840-3ad7-512d-ac03-c32aec40298b">
+                                          <SHORT-NAME>LinSlvTxPduRef</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Reference to the PDU that is transmitted in this frame.</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                                        </ECUC-REFERENCE-DEF>
+                                      </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  </CHOICES>
+                                </ECUC-CHOICE-CONTAINER-DEF>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF S="" UUID="ECUC:839c724c-3ce5-5a4f-8258-f9473b61cbd0">
+                                  <SHORT-NAME>LinSlvFixedReadByIdentifierResp</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">In case this is a fixed frame this is the SDU (response).</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">This container represent an eight byte array. The Byte order
+		                                                        shall be MSB first.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                  <MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+                                  <PARAMETERS>
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:12ae340b-bce8-517e-8c8b-8fd78f073d91">
+                                      <SHORT-NAME>LinSlvReadByIdentifierIdentifier</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Definition of the initial node address</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>ARCCORE</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>255</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-FUNCTION-NAME-DEF UUID="ECUC:2e282067-fed0-5803-aa66-d641c71663e7">
+                                      <SHORT-NAME>LinSlvResponseCallback</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">This parameter is a reference to a call-back function. It is called by the module to define the response for the ReadDataByIdentifier request. The response must be an array of 8 bytes.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>ARCCORE</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL />
+                                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF S="" UUID="ECUC:e071b12c-44e9-5260-b1db-d54fc2e02a8f">
+                              <SHORT-NAME>LinSlvAttributes</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">The Node attributes of the Slaves are provided with these parameter. The ShortName of this container is used as LinIfNodeName.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>false</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:12ae340b-bce8-517e-8c8b-8fd78f073d91">
+                                  <SHORT-NAME>LinSlvConfiguredNad</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Definition of the initial node address</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>1</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:d42320ca-495a-5d03-8f65-51a1513c7bc5">
+                                  <SHORT-NAME>LinSlvFunctionId</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">LIN function ID</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:58478360-77ad-51dc-a149-5196162b1f53">
+                                  <SHORT-NAME>LinSlvSupplierId</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">LIN Supplier ID</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:1bec9005-853b-56dc-8607-091f91a537b5">
+                                  <SHORT-NAME>LinSlvVariant</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the Variant ID</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF S="" UUID="ECUC:5519f98a-d432-584f-b653-445226eca31a">
+                              <SHORT-NAME>LinSlvTrcv</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Container gives LIN transceiver driver information about a single LIN transceiver channel. Any LIN transceiver driver has such LIN transceiver channels.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>false</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:4e9ab320-a49a-556e-a4b4-90244009f7ea">
+                                  <SHORT-NAME>LinSlvTrcvInitState</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">State of LIN transceiver after call to LinTrcv_Init.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:e6966074-d1d0-5e32-6570-c9906d8594eb">
+                                      <SHORT-NAME>LINTRCV_TRCV_MODE_NORMAL</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:7e47f244-786d-5e5b-3f19-1375b94870f0">
+                                      <SHORT-NAME>LINTRCV_TRCV_MODE_SLEEP</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:6a70cd96-008d-5435-5602-068c5d799236">
+                                      <SHORT-NAME>LINTRCV_TRCV_MODE_STANDBY</SHORT-NAME>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                              </PARAMETERS>
+                              <SUB-CONTAINERS>
+                                <ECUC-CHOICE-CONTAINER-DEF UUID="ECUC:5eacba8a-9292-56db-a06e-3a7cf400b449">
+                                  <SHORT-NAME>LinTrcvAccess</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Container gives LIN transceiver driver access about a single LIN transceiver channel.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <CHOICES>
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:5097db74-73a0-5c39-a04d-2bc2b00d47ef">
+                                      <SHORT-NAME>LinSlvTrcvDioAccess</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Container gives LIN transceiver driver information about accessing ports and port pins. This configuration is adapted for the TJA1028.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                      <PARAMETERS>
+                                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c3ebc9ff-d623-5c49-ac91-241dec476a8d">
+                                          <SHORT-NAME>LinSlvTrcvTXDLowWaitCount</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Bit index offset in the frame where the signal is defined.</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <SCOPE>LOCAL</SCOPE>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                          <MAX>4294967295</MAX>
+                                          <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+                                      </PARAMETERS>
+                                      <REFERENCES>
+                                        <ECUC-CHOICE-REFERENCE-DEF UUID="ECUC:de9282c6-6a65-57db-95ff-aa3fe4b97a0a">
+                                          <SHORT-NAME>LinSlvTrcvDioRstnRefName</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Dio reference to the reset input pin</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <DESTINATION-REFS>
+                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DESTINATION-REF>
+                                          </DESTINATION-REFS>
+                                        </ECUC-CHOICE-REFERENCE-DEF>
+                                        <ECUC-CHOICE-REFERENCE-DEF UUID="ECUC:de9282c6-6a65-57db-95ff-aa3fe4b97a0a">
+                                          <SHORT-NAME>LinSlvTrcvDioEnableRefName</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Reference to the enable output pin</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <DESTINATION-REFS>
+                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DESTINATION-REF>
+                                          </DESTINATION-REFS>
+                                        </ECUC-CHOICE-REFERENCE-DEF>
+                                        <ECUC-CHOICE-REFERENCE-DEF UUID="ECUC:de9282c6-6a65-57db-95ff-aa3fe4b97a0a">
+                                          <SHORT-NAME>LinSlvTrcvDioTXDRefName</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Dio reference to the reset input pin</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <DESTINATION-REFS>
+                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DESTINATION-REF>
+                                          </DESTINATION-REFS>
+                                        </ECUC-CHOICE-REFERENCE-DEF>
+                                        <ECUC-CHOICE-REFERENCE-DEF S="" UUID="ECUC:de9282c6-6a65-57db-95ff-aa3fe4b97a0a">
+                                          <SHORT-NAME>LinSlvTrcvPortTXDRefName</SHORT-NAME>
+                                          <DESC>
+                                            <L-2 L="EN">Dio reference to the reset input pin</L-2>
+                                          </DESC>
+                                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                          <IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          </IMPLEMENTATION-CONFIG-CLASSES>
+                                          <ORIGIN>ARCCORE</ORIGIN>
+                                          <DESTINATION-REFS>
+                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Port/PortConfigSet/PortContainer/PortPin</DESTINATION-REF>
+                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/Port/PortConfigSet/PortContainer/PortPin</DESTINATION-REF>
+                                          </DESTINATION-REFS>
+                                        </ECUC-CHOICE-REFERENCE-DEF>
+                                      </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  </CHOICES>
+                                </ECUC-CHOICE-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </CONTAINERS>
+                </ECUC-MODULE-DEF>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

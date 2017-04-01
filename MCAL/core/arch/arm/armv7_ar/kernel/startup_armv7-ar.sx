@@ -1,0 +1,446 @@
+/*-------------------------------- Arctic Core ------------------------------
+ * Copyright (C) 2013, ArcCore AB, Sweden, www.arccore.com.
+ * Contact: <contact@arccore.com>
+ * 
+ * You may ONLY use this file:
+ * 1)if you have a valid commercial ArcCore license and then in accordance with  
+ * the terms contained in the written license agreement between you and ArcCore, 
+ * or alternatively
+ * 2)if you follow the terms found in GNU General Public License version 2 as 
+ * published by the Free Software Foundation and appearing in the file 
+ * LICENSE.GPL included in the packaging of this file or here 
+ * <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+ *-------------------------------- Arctic Core -----------------------------*/
+        
+
+#define _ASSEMBLER_
+#include "asm_arm.h"
+
+        
+#if defined(__GNUC__)
+	.org 0 
+	.arm
+	/******************************************************************************
+	* Interrupt and exception vectors. Vectors start at addr 0x0.
+	******************************************************************************/    
+ 	.section	.int_vecs,"ax",%progbits
+ 	
+ 	
+#else
+	PRESERVE8 {TRUE}
+	AREA	||.int_vecs||, CODE, READONLY
+	ARM
+#endif
+
+
+#if defined(__ARMCC_VERSION)
+#define STACK_END		|Image$$STACK$$ZI$$Base|
+#else 
+#define STACK_END 		_estack
+#endif
+
+ 	ASM_EXTERN(Irq_Handler)
+	ASM_EXTERN(Svc_Handler)
+	ASM_EXTERN(Data_Exc_Handler)
+	ASM_EXTERN(Prefetch_Exc_Handler)
+	ASM_EXTERN(Dummy_Irq)
+	ASM_EXTERN(Undefined_Instruction_Handler)
+	ASM_EXTERN(main)
+	ASM_EXTERN(init)
+#if defined(__GNUC__)	
+	ASM_EXTERN(_init)
+#endif
+	ASM_EXTERN(STACK_END)
+	ASM_EXTERN(MMU_PageTable)
+	
+
+		/* This is the reset handler. Since the CPU is in ARM mode when this instruction is executed
+		   it has to be hard coded (otherwise it will compile wrong).
+		   Instruction branches to address 0x22 while changing instruction mode to THUMB. */
+        blx   Reset_Handler			/* Reset */
+        b   Undefined_Instruction_Handler	/* Undefined instruction exception */
+        b   Dummy_Irq        		/* Supervisor Call */
+        b   Prefetch_Exc_Handler    /* Prefetch Abort  */
+        b   Data_Exc_Handler   		/* Data Abort */
+        b   Dummy_Irq          		/* Not Used */
+        b   Irq_Handler        		/* IRQ */
+	    b   Dummy_Irq        		/* FIQ */
+
+		nop
+		blx 	Reset_Handler      /* Branch to the real reset handler. */
+
+#if defined(__GNUC__)
+  	.syntax unified
+	.thumb
+	.global	Default_Handler
+	
+#else
+	THUMB
+#endif	
+
+
+/* Addresses used to setup RAM */
+
+/* ARM Scatter file defined Image$$<section>$$Base */
+
+#if defined(CFG_ARM_CR4) || defined(CFG_ARM_CR5)
+ASM_WORD(_sidata)
+ASM_WORD(_sdata)
+ASM_WORD(_edata)
+ASM_WORD(_sbss)
+ASM_WORD(_ebss)
+/* The address of the stack to use in all modes. */
+ASM_WORD(__inital_sp)
+#endif
+
+ASM_WORD(_estack)
+#
+/**
+ * @brief  This is the code that gets called when the processor first
+ *          starts execution following a reset event. Only the absolutely
+ *          necessary set is performed, after which the application
+ *          supplied main() routine is called. 
+ * @param  None
+ * @retval : None
+*/
+#if defined(__GNUC__)
+    .section	.text.Reset_Handler
+	.weak	Reset_Handler
+	.type	Reset_Handler, %function
+Reset_Handler:	
+#else
+	AREA	||.text||, CODE, READONLY,  ALIGN=8
+	THUMB
+#endif
+
+ASM_LABEL(Reset_Handler)
+
+
+
+#if defined(CFG_ARM_CR4) || defined(CFG_ARM_CR5)
+/* Set big endian state */
+	SETEND BE
+
+/* Initialize core registers.
+   This is done to avoid mismatch between lockstep CPU and ordinary CPU
+*/
+    mov   r0,         #0x0000
+    mov   r1,         #0x0000
+    mov   r2,         #0x0000
+    mov   r3,         #0x0000
+    mov   r4,         #0x0000
+    mov   r5,         #0x0000
+    mov   r6,         #0x0000
+    mov   r7,         #0x0000
+    mov   r8,         #0x0000
+    mov   r9,         #0x0000
+    mov   r10,        #0x0000
+    mov   r11,        #0x0000
+    mov   r12,        #0x0000
+    mov   r1,         #0x03D0
+    orr   r2,        r1,     #0x0001
+    msr   cpsr_cxsf,  r2
+    msr   spsr_cxsf,  r2
+    mov   r8,         #0x0000
+    mov   r9,         #0x0000
+    mov   r10,        #0x0000
+    mov   r11,        #0x0000
+    mov   r12,        #0x0000
+    orr   r12,        r1,     #0x0002
+    msr   cpsr_c,     r12
+    msr   spsr_cxsf,  r12
+    orr   r12,        r1,     #0x0007
+    msr   cpsr_c,     r12
+    msr   spsr_cxsf,  r12
+    orr   r12,        r1,     #0x000B
+    msr   cpsr_c,     r12
+    msr   spsr_cxsf,  r12
+    orr   r12,        r1,     #0x0003
+    msr   cpsr_c,     r12
+    msr   spsr_cxsf,  r12
+
+/* System level configuration
+   This mainly involves setting instruction mode for exceptions and interrupts.
+*/
+    mrc   p15,0,r11,c1,c0,0       /* Read current system configuration */
+    mov   r12,		  #0x40000000 /* Set THUMB instruction set mode for interrupts and exceptions */
+    orr   r12, r12, r11
+    mcr   p15,0,r12,c1,c0,0       /* Write new configuration */
+#endif
+
+
+/*
+ * Init stages:
+ * #1  Disable everything
+ * #2  Clear caches
+ * #3  SCU stuff?
+ * #4  Init MMU
+ */
+
+/* #1 
+ * Clear everything by writing  System control register (SCTLR) 
+ */
+   
+	mrc    p15, 0, r0, c1, c0, 0       // Read CP15 register 1 into r0
+  	bic    r0, r0, #(1 << 0)           // Clear MMU enable
+  	bic    r0, r0, #(1 << 2)           // Disable D-cache
+  	bic    r0, r0, #(1 << 12)          // Disable I-cache
+  	mcr    p15, 0, r0, c1, c0, 0       // 
+
+
+/* Initialize stack pointers.
+   This is done for all processor modes. Note that we only use one stack pointer.
+   In reality this means that no mode except USER and SYS is allowed to do anythin on the stack.
+   IRQ mode handles its own stack in the interrupt routine.
+*/
+	mov   r2,		#0xD1  			/* FIQ */
+    msr   cpsr_c,   r2
+    ldr   sp,		=STACK_END
+
+    mov   r2,		#0xD2			/* IRQ */
+    msr   cpsr_c,   r2
+    ldr   sp,		=STACK_END
+
+    mov   r2,		#0xD7			/* Abort */
+    msr   cpsr_c,   r2
+    ldr   sp,		=STACK_END
+
+    mov   r2,		#0xDB			/* Undefined */
+    msr   cpsr_c,   r2
+    ldr   sp,		=STACK_END
+
+    mov   r2,		#0xDF			/* System */
+    msr   cpsr_c,   r2
+    ldr   sp,		=STACK_END
+
+    mov   r2,		#0xD3			/* Supervisor Mode */
+    msr   cpsr_c,   r2
+    ldr   sp,		=STACK_END
+
+#if defined(CFG_ARM_CR4) || defined(CFG_ARM_CR5)
+/* Initialize RAM.
+   First the initialized RAM is copied from flash to RAM.
+   Then the zeroed RAM is erased.
+*/
+	ldr	r0, =_sdata       /* r0 holds start of data in ram */
+	ldr	r3, =_edata       /* r3 holds end of data in ram */
+	ldr	r5, =_sidata      /* r5 start of data in flash */
+	movs  r1,       #0    /* r1 is the counter */
+	b	LoopCopyDataInit
+
+CopyDataInit:
+	ldr	r4, [r5, r1]          /* read current position in flash */
+	str	r4, [r0, r1]          /* store current position in ram */
+	adds	r1, r1, #4        /* increment counter */
+    
+LoopCopyDataInit:
+	adds	r2, r0, r1        /* are we at the final position? */
+	cmp	r2, r3                /* ... */
+	bcc	CopyDataInit          /* nope, continue */
+
+/* Fill zero areas */
+	ldr	r2, =_sbss            /* r2 holds the start address */
+	ldr r5, =_ebss            /* r5 holds the end address */
+	bl	LoopFillZero
+
+	ldr	r2, =_sstack            /* r2 holds the start address */
+	ldr r5, =_estack            /* r5 holds the end address */
+	bl	LoopFillZero
+
+#endif
+
+	/* Enable VFP here to support memset(), memcpy() that uses 
+	 * VFP instructions at startup */
+	ldr 	r0, =(0xF << 20)
+	mcr 	p15, 0, r0, c1, c0, 2
+	
+	mov 	r3, #0x40000000 
+	vmsr 	FPEXC, r3
+
+   /* Change to system mode */
+	mov   r2,		#0xDF
+    msr   cpsr_c,   r2
+        
+    /* Call init to setup the MMU-PageTable */
+    bl	init
+
+#if defined(CFG_ZYNQ)    
+    /* Call init2 in this file to setup MMU, cache, etc */
+    bl  init2
+#endif
+    
+#if defined(__GNUC__)    
+    bl _init
+#endif
+    
+	/* Call the application's entry point.*/
+	bl	main
+	bx	lr
+
+#if defined(CFG_ZYNQ)
+ASM_LABEL(init2)
+	push    {lr}	/* save LR so we can return */
+
+	/* Clear the cache */
+	bl CacheClear
+
+    /*  Get our cpu id */
+	MRC    p15, 0, r1, c0, c0, 5
+  	AND    r1, r1, #0xf
+
+    /* SCU invalidatation to be done by one core only */
+	CMP    r1, #0   
+    BNE    scu_done
+
+ 	BL     scu_disable                 
+    BL     scu_invalidate              
+    BL     scu_enable          
+        
+ASM_LABEL(scu_done)
+ 
+ 	/* Setup MMU 
+ 	 * Zynq is VMSAv7 
+ 	 */
+
+ 	/* Set TTBCR = 0 so that we only use TTBR0*/
+ 	mov  r0,#0x0
+	mcr  p15, 0, r0, c2, c0, 2	
+ 
+ 	/* Load page table "into"  TTBR0 */
+ 	ldr    r0,=MMU_PageTable  
+ 	mcr    p15, 0, r0, c2, c0, 0
+    
+    /* Set full access for all 16 domains */
+    LDR    r0, =0xFFFFFFFF             
+    MCR    p15, 0, r0, c3, c0, 0
+
+	/* Invalidate TLBs */
+    MOV    r0, #0
+    MCR    p15, 0, r0, c8, c7, 0       
+
+	/* Enable most things (MMU, cache, etc)  */
+	MRC  p15, 0, r0, c1, c0, 0			// Read (SCTLR)
+	orr  r0, r0, #(0x1 << 12)			// Enable I cache
+	orr  r0, r0, #(0x1 << 11)			// Branch
+	orr  r0, r0, #(0x1 << 2)			// Cache enable for UNIFIED caches	
+	bic  r0, r0, #0x2					// disable strict aligment check
+	orr  r0, r0, #0x1					// Set MMU bit
+	mcr  p15, 0, r0, c1, c0, 0			// Write system control.
+    nop
+    nop
+    pop    {lr}
+    bx      lr		/* return */
+
+/* Copy from PM 
+ * 8.9.1 Example code for cache maintenance operations
+ */
+
+ASM_LABEL(CacheClear)
+	MRC p15, 1, R0, c0, c0, 1   // Read CLIDR into R0
+	ANDS R3, R0, #0x07000000
+	MOV R3, R3, LSR #23         // Cache level value (naturally aligned)
+	BEQ Finished
+	MOV R10, #0
+ASM_LABEL(Loop1) 
+	ADD R2, R10, R10, LSR #1    // Work out 3 x cache level
+	MOV R1, R0, LSR R2          // bottom 3 bits are the Cache type for this level
+
+	AND R1, R1, #7              // get those 3 bits alone
+	CMP R1, #2
+	BLT Skip                    // no cache or only instruction cache at this level
+	MCR p15, 2, R10, c0, c0, 0  // write CSSELR from R10
+	ISB                         // ISB to sync the change to the CCSIDR
+	MRC p15, 1, R1, c0, c0, 0   // read current CCSIDR to R1
+	AND R2, R1, #7              // extract the line length field
+	ADD R2, R2, #4              // add 4 for the line length offset (log2 16 bytes)
+	LDR R4, =0x3FF
+	ANDS R4, R4, R1, LSR #3     // R4 is the max number on the way size (right aligned)
+	CLZ R5, R4                  // R5 is the bit position of the way size increment
+	MOV R9, R4                  // R9 working copy of the max way size (right aligned)
+ASM_LABEL(Loop2) 
+	LDR R7, =0x00007FFF
+	ANDS R7, R7, R1, LSR #13    // R7 is the max num of the index size (right aligned)
+ASM_LABEL(Loop3)
+	 
+	LSL r9,R5 
+	ORR R11, R10, R9 
+
+//	ORR R11, R10, R9, LSL R5    // factor in the way number and cache number into R11
+
+	LSL r7,r2
+	ORR R11, R11, R7   // factor in the index number
+
+//	ORR R11, R11, R7, LSL R2    // factor in the index number
+	MCR p15, 0, R11, c7, c10, 2 // DCCSW, clean by set/way
+	SUBS R7, R7, #1             // decrement the index
+	BGE Loop3
+	SUBS R9, R9, #1             // decrement the way number
+	BGE Loop2
+ASM_LABEL(Skip) 
+	ADD R10, R10, #2            // increment the cache number
+	CMP R3, R10
+	BGT Loop1
+ASM_LABEL(Finished)
+	BX      lr
+
+#define SCU_CONTROL_REG  0xF8F00000		/* MPCORE base */ 
+
+ASM_LABEL(scu_invalidate)
+    MVN    r0, #0
+    LDR    r1, =SCU_CONTROL_REG
+    STR    r0, [r1, #0xc]              // Invalidate all SCU TAG RAMs
+    BX     lr
+    
+ASM_LABEL(scu_enable)
+    // allow non secure accesses to scu & timers.
+    LDR    r1, =SCU_CONTROL_REG
+    
+    LDR    r0, [r1, #0x54]             // Read SCU Secure Access Control Register
+    ORR    r0, r0, #0xff               // Enable access in NS by all cpus
+    STR    r0, [r1, #0x54]             // Update SCU Secure Access Control Register
+    
+    LDR    r0, [r1, #0x0]              // Read SCU Control Register
+    ORR    r0, r0, #0x1                // Set Enable SCU bit
+    STR    r0, [r1, #0x0]              // Update SCU Control Register
+    BX     lr
+
+ASM_LABEL(scu_disable)
+    LDR    r1, =SCU_CONTROL_REG
+    LDR    r0, [r1, #0x0]              // Read SCU Control Register
+    BIC    r0, r0, #0x1                // Clear Enable SCU bit
+    STR    r0, [r1, #0x0]              // Update SCU Control Register
+    BX     lr
+
+ASM_LABEL(scu_enabled)
+    LDR    r1, =SCU_CONTROL_REG
+    LDR    r0, [r1, #0x0]              // Get SCU state
+    AND    r0, r0, #0x01
+    BX     lr
+
+#endif /* CFG_ZYNQ */
+
+/* Zero fill the bss segment. */  
+ASM_LABEL(FillZero)
+	movs	r3, #0
+	str	    r3, [r2], #4
+    
+ASM_LABEL(LoopFillZero)
+	cmp	r2, r5
+	bcc	FillZero
+	bx  lr
+
+#if defined(__ARMCC_VERSION)
+	ASM_GLOBAL(__user_setup_stackheap)
+ASM_LABEL(__user_setup_stackheap)
+	bx  lr
+#endif
+
+#if defined(__GNUC__)
+.size	Reset_Handler, .-Reset_Handler
+#endif
+
+
+#if defined(__ARMCC_VERSION)
+	END
+#endif
+

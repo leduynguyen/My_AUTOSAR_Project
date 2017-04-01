@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+<AR-PACKAGES>
+    <AR-PACKAGE UUID="000319ee-d3a1-4dee-838f-12d1320399cc">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="9d06ed66-21bc-4496-b595-2b2715b6af56">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE S="">
+              <SHORT-NAME>ST</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="_conversion">
+                    <SD GID="_path">SHORT-NAME-PATTERN@2/</SD>
+                    <SD GID="_target">org.artop.aal.autosar403</SD>
+                    <SDG GID="SHORT-NAME-PATTERN"/>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="8159b37b-75b9-48da-a6ae-b960aa42d070">
+                  <SHORT-NAME>stm32f10x</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-DEF UUID="ECUC:cd6efdb7-686d-58a9-80ec-f361585dcbc3">
+                      <SHORT-NAME>Mcu</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of the Mcu (Microcontroller Unit) module.</L-2>
+                      </DESC>
+                      <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                          <DOC-REVISION>
+                            <REVISION-LABEL>4.4.0</REVISION-LABEL>
+                            <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                            <DATE>2013-10-31</DATE>
+                          </DOC-REVISION>
+                        </DOC-REVISIONS>
+                      </ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Mcu</REFINED-MODULE-DEF-REF>
+                      <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                      </SUPPORTED-CONFIG-VARIANTS>
+                      <CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:0a0f46f3-25a3-5d80-bef0-2752b7304463">
+                          <SHORT-NAME>McuGeneralConfiguration</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the configuration (parameters) of the MCU driver.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:a940168d-eeab-5151-a78e-381ce11c5706">
+                              <SHORT-NAME>McuDevErrorDetect</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Pre-processor switch for enabling the development error detection and reporting.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:ea4753f1-1822-558f-a149-613e06cf9d75">
+                              <SHORT-NAME>McuGetRamStateApi</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Pre-processor switch to enable/disable the API Mcu_GetRamState.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">(e.g. If the H/W does not support the functionality, this parameter can be used to disable the Api).</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:3ad589e7-8c66-5cfc-b54f-f07908d45ea0">
+                              <SHORT-NAME>McuInitClock</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If this parameter is set to FALSE, the clock initialization has to be disabled from the MCU driver. This concept applies when there are some write once clock registers and a bootloader is present. If this parameter is set to TRUE, the MCU driver is responsible of the clock initialization.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:80005e5b-81c8-5254-9253-65722170a8d2">
+                              <SHORT-NAME>McuNoPll</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall be set True, if the H/W does not have a PLL or the PLL circuitry is enabled after the power on without S/W intervention. In this case MCU_DistributePllClock has to be disabled and  MCU_GetPllStatus has to return MCU_PLL_STATUS_UNDEFINED. Otherwise this parameters has to be set False</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:88316ee4-ac23-518d-a433-20ccecc20da2">
+                              <SHORT-NAME>McuPerformResetApi</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Pre-processor switch to enable / disable the use of the function Mcu_PerformReset()</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:c573aff5-6a13-591f-a869-7a125b7ca0e4">
+                              <SHORT-NAME>McuVersionInfoApi</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Pre-processor switch to enable / disable the API to read out the modules version information.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:885e3d9d-b8f4-5142-98ae-050bd6d9c6ae">
+                          <SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the configuration (parameters) of the MCU driver</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:303ee5f9-8122-552c-a715-a46983e7fe5e">
+                              <SHORT-NAME>McuClockSrcFailureNotification</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables/Disables clock failure notification. In case this feature is not supported by HW the setting should be disabled.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:24341258-9e01-5e48-5605-550cecc934c6">
+                                  <SHORT-NAME>DISABLED</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:d6eb0352-453e-54b6-44f0-85f545f72195">
+                                  <SHORT-NAME>ENABLED</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:a0e5878f-ad7b-5ec1-a4cf-26394deb5ac6">
+                              <SHORT-NAME>McuNumberOfMcuModes</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall represent the number of Modes available for the MCU.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">calculationFormula = Number of configured McuModeSettingConf</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>1</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:5c7ef78a-cb1b-5ea9-978f-f6c78cd8d738">
+                              <SHORT-NAME>McuRamSectors</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall represent the number of RAM sectors available for the MCU.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">calculationFormula = Number of configured McuRamSectorSettingConf</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>1</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8182a6cf-4323-518c-bb8c-277225bae6da">
+                              <SHORT-NAME>McuResetSetting</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter relates to the MCU specific reset configuration. This applies to the function Mcu_PerformReset, which performs a microcontroller reset using the hardware feature of the microcontroller.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>1</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF UUID="ECUC:0f0c8933-6ce9-5a53-90cc-31b61ca90e25">
+                              <SHORT-NAME>ArcDefaultClockRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains a reference to the default clock that will be used at initialization</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Mcu/McuModuleConfiguration/McuClockSettingConfig</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:f63efc1c-b907-562f-8bb7-4089e77f95f9">
+                              <SHORT-NAME>McuClockSettingConfig</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container contains the configuration (parameters) for the Clock settings of the MCU.  Please see MCU031 for more information on the MCU clock settings.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:d2d2ea3f-9a7b-5fbf-9e20-b87bd423a209">
+                                  <SHORT-NAME>McuClockSettingId</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The Id of this McuClockSettingConfig to be used as argument for the API call &quot;Mcu_InitClock&quot;.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="8341b521-19e5-42a1-9a9f-c02c93c36735">
+                                  <SHORT-NAME>ArcAHBClocksEnable</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>7</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <DEFAULT-VALUE></DEFAULT-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="ec0cf73f-0005-450c-be4d-3193d3bc8bc6">
+                                      <SHORT-NAME>DMA1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="b15be3e9-0a29-442b-a844-16077448c424">
+                                      <SHORT-NAME>DMA2</SHORT-NAME>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="236f3dc5-7632-45c0-a766-7676e65ef925">
+                                      <SHORT-NAME>SRAM</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="012612f1-521f-4d5d-9dd0-46123a14d149">
+                                      <SHORT-NAME>FLITF</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="34d54106-a7ee-473a-9bca-91f6470c0616">
+                                      <SHORT-NAME>CRC</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="cbd24e2f-df00-4595-9de4-9aef9c63fe63">
+                                      <SHORT-NAME>FSMC</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="d8bc56a7-fb87-42f8-b1af-324e64e4f282">
+                                      <SHORT-NAME>SDIO</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>ETH_MAC_Tx</SHORT-NAME>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>ETH_MAC_Rx</SHORT-NAME>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>ETH_MAC</SHORT-NAME>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="db6cedba-f897-436b-b37e-013f2002a3d7">
+                                  <SHORT-NAME>ArcAPB1ClocksEnable</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>25</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="2ae50ab2-7560-4d70-a391-ca9c497b5af3">
+                                      <SHORT-NAME>TIM2</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="76e02445-4dc9-441e-92e7-833797a22909">
+                                      <SHORT-NAME>TIM3</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="80b21043-c1e1-4de1-b7f5-c54ea88ab188">
+                                      <SHORT-NAME>TIM4</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="b4668f7b-9431-4df6-a1b4-372a0248a1fe">
+                                      <SHORT-NAME>TIM5</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="b4cf2f81-0842-4675-b81a-e25af4859b21">
+                                      <SHORT-NAME>TIM6</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="e0f1e722-c0c2-4803-be70-23047e93750f">
+                                      <SHORT-NAME>TIM7</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="41627e21-0742-49e1-b6d9-4d3f1c40d6c3">
+                                      <SHORT-NAME>TIM12</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="9ed574c0-a534-4261-8487-4caa27d5d3d6">
+                                      <SHORT-NAME>TIM13</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="47bd1d24-4d00-4984-99fe-23f93f064e5a">
+                                      <SHORT-NAME>TIM14</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="afe55313-4ddf-4e4f-bf3f-c4c0173c1f07">
+                                      <SHORT-NAME>WWDG</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="77142933-ae04-45d5-a74f-269f9e534ba8">
+                                      <SHORT-NAME>SPI2</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="60f84255-ede6-42ca-8cd8-c5577b4c29fc">
+                                      <SHORT-NAME>SPI3</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="36375563-e597-4629-920a-ae358ba230e5">
+                                      <SHORT-NAME>USART2</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="a690adf7-7ed4-4bec-9061-657aebf67fa6">
+                                      <SHORT-NAME>USART3</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="6a1c5efc-ac47-458c-8ad9-abc9fd7226c7">
+                                      <SHORT-NAME>UART4</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="6055b087-3d04-4879-a1d8-b1dbfa5937e5">
+                                      <SHORT-NAME>UART5</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="baad344a-6dc6-47b4-a001-703f1bd47686">
+                                      <SHORT-NAME>I2C1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="aeda06a3-7f52-43a0-9850-94a2938ed605">
+                                      <SHORT-NAME>I2C2</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="359cc7d5-21d7-4600-b971-c1589b32989c">
+                                      <SHORT-NAME>USB</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="cb48cc91-f691-4235-941e-9182d17c32ba">
+                                      <SHORT-NAME>CAN1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="30d2d2b2-fb2b-44a3-b154-d9c7dec08e1e">
+                                      <SHORT-NAME>CAN2</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="e540bec3-5110-4bf2-b6a4-65be178f86e9">
+                                      <SHORT-NAME>BKP</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="2b55e6eb-c994-4d00-b9b5-1ae739f41372">
+                                      <SHORT-NAME>PWR</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="17c9180c-44e4-4763-9c15-a40fd953f718">
+                                      <SHORT-NAME>DAC</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="b3a621b7-3a43-457d-93c9-c1c25313f72f">
+                                      <SHORT-NAME>CEC</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF UUID="a2938aee-52f4-47df-b956-d19c16ee7391">
+                                  <SHORT-NAME>ArcAPB2ClocksEnable</SHORT-NAME>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>21</UPPER-MULTIPLICITY>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>ARCCORE</ORIGIN>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="abfe88c7-8b0b-45b9-b743-b1a8e7e6cd2b">
+                                      <SHORT-NAME>AFIO</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="fe649c80-247c-4a31-a1fc-7f9d6376784c">
+                                      <SHORT-NAME>GPIOA</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="0a38c715-aaeb-4829-b525-7d7c565e5410">
+                                      <SHORT-NAME>GPIOB</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="3dcb4e85-233d-4f6d-bbfd-a850915fee38">
+                                      <SHORT-NAME>GPIOC</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="90c57d66-7803-4e12-a11e-ba5b9d78033b">
+                                      <SHORT-NAME>GPIOD</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="d923aec9-0917-4c45-a9c6-5e4f3ea37948">
+                                      <SHORT-NAME>GPIOE</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="89755363-c5ea-4426-8797-e7e51857a8ed">
+                                      <SHORT-NAME>GPIOF</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="b8a0dedd-6533-4eee-91c2-1f25ca1e4002">
+                                      <SHORT-NAME>GPIOG</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="c5b3d542-dba3-4088-8662-494922ef2b40">
+                                      <SHORT-NAME>ADC1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="fcc92d54-4fb5-4b3f-96d7-04f60ea3c09d">
+                                      <SHORT-NAME>ADC2</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="667ff75a-1c24-4a84-b860-a908edd71e96">
+                                      <SHORT-NAME>TIM1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="f52234d0-08a7-41b2-af77-0345011e84e2">
+                                      <SHORT-NAME>SPI1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="112f818f-1fa5-4ec8-a824-ca01d61f3417">
+                                      <SHORT-NAME>TIM8</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="fb62f08f-44fd-48c8-aad7-d9447c36ebfe">
+                                      <SHORT-NAME>USART1</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="db8f30d4-9e1e-401f-9a73-797280e606fd">
+                                      <SHORT-NAME>ADC3</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="4a568193-6d04-4a84-aa5b-d9b8e34cd202">
+                                      <SHORT-NAME>TIM15</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="7308ac30-6590-4a32-ba16-ccc2b705af1a">
+                                      <SHORT-NAME>TIM16</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="2d8b245a-92bf-444e-b5cc-29656a97a62e">
+                                      <SHORT-NAME>TIM17</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="1665ec01-b27d-410f-a214-b693bbb02c5e">
+                                      <SHORT-NAME>TIM9</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="8c5532ea-0250-4c2f-9e61-0ae38d9a70fb">
+                                      <SHORT-NAME>TIM10</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF UUID="f0b5546e-43d8-4b84-a7f6-3d034ba85001">
+                                      <SHORT-NAME>TIM11</SHORT-NAME>
+                                      <ADMIN-DATA>
+                                        <SDGS>
+                                          <SDG GID="_conversion">
+                                            <SD GID="_path">ORIGIN@2/</SD>
+                                            <SD GID="_target">org.artop.aal.autosar402</SD>
+                                            <SDG GID="ORIGIN">
+                                              <SD GID="_mixed">ARCCORE</SD>
+                                            </SDG>
+                                          </SDG>
+                                        </SDGS>
+                                      </ADMIN-DATA>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                              </PARAMETERS>
+                              <SUB-CONTAINERS>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:11433bf7-4c9a-5499-ba86-d4f2b6e3186e">
+                                  <SHORT-NAME>McuClockReferencePoint</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This container defines a reference point in the Mcu Clock tree. It defines the frequency which then can be used by other modules as an input value. Lower multiplicity is 1, as even in the simplest case (only one frequency is used), there is one frequency to be defined.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                  <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                  <PARAMETERS>
+                                    <ECUC-FLOAT-PARAM-DEF UUID="ECUC:602fa1f9-cadd-5b16-9b2e-d9ef5c152f96">
+                                      <SHORT-NAME>Frequency</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">This is the frequency for the specific instance of the McuClockReferencePoint container. It shall be given in Hz.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>Inf</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <ECUC-FLOAT-PARAM-DEF UUID="ECUC:602fa1f9-cadd-5b16-9b2e-d9ef5c152f96">
+                                      <SHORT-NAME>McuClockReferencePointFrequency</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">This is the frequency for the specific instance of the McuClockReferencePoint container. It shall be given in Hz.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>ECU</SCOPE>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <DEFAULT-VALUE>25E6</DEFAULT-VALUE>
+                                      <MAX>Inf</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:a1e6a1f0-3f7b-51e2-a25f-0800200c9a66">
+                                  <SHORT-NAME>PLLSettings</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">PLL Settings</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY-INFINITE>false</UPPER-MULTIPLICITY-INFINITE>
+                                  <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                  <PARAMETERS>
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:3d8f6b00-3f7c-51e2-a25f-0800200c9a66">
+                                      <SHORT-NAME>IDF</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Value for the IDF register.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <DEFAULT-VALUE>9</DEFAULT-VALUE>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:60a1d790-3f7c-51e2-a25f-0800200c9a66">
+                                      <SHORT-NAME>NDIV</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Value for the NDIV register.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <DEFAULT-VALUE>8</DEFAULT-VALUE>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF UUID="ECUC:78613fb0-3f7c-51e2-a25f-0800200c9a66">
+                                      <SHORT-NAME>ODF</SHORT-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The value for the ODF register.</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <IMPLEMENTATION-CONFIG-CLASSES>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      </IMPLEMENTATION-CONFIG-CLASSES>
+                                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:4c697a37-02d8-52df-8696-0c9f592008c7">
+                              <SHORT-NAME>McuDemEventParameterRefs</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId symbolic name. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <REFERENCES>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:66c8e900-6197-52a3-8e25-a695aa21788e">
+                                  <SHORT-NAME>MCU_E_CLOCK_FAILURE</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to configured DEM event to report &quot;Clock source failure&quot;.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:32517397-6199-51a5-bfb1-6bebf9df26ea">
+                              <SHORT-NAME>McuModeSettingConf</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container contains the configuration (parameters) for the Mode setting of the MCU.  Please see MCU035 for more information on the MCU mode settings.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:f0450b1d-51c7-5e23-9bd7-0488035ae777">
+                                  <SHORT-NAME>McuMode</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The parameter represents the MCU Mode settings.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:067acd14-020b-5eaf-9597-b9c52b6fca43">
+                              <SHORT-NAME>McuRamSectorSettingConf</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container contains the configuration (parameters) for the RAM Sector setting. Please see MCU030 for more information on RAM sec-tor settings.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:e25b2477-20d6-53c4-8551-041fc23d8eeb">
+                                  <SHORT-NAME>McuRamDefaultValue</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter shall represent the Data pre-setting to be initialized</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:c24586f9-4f43-52cc-87fd-05fe91e91f5c">
+                                  <SHORT-NAME>McuRamSectionBaseAddress</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter shall represent the MCU RAM section base address</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>4294967295</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:7221c8a7-78ec-5cc3-8cfe-6c93010660cb">
+                                  <SHORT-NAME>McuRamSectionSize</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter represents the MCU RAM Section size in bytes.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>4294967295</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:8051fc81-2a32-5e81-8e62-c3701213a9f2">
+                          <SHORT-NAME>McuPublishedInformation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Container holding all MCU specific published information parameters</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:6dad17e9-21eb-57f5-a6c3-6ccc06977645">
+                              <SHORT-NAME>McuResetReasonConf</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container contains the configuration for the different type of reset reason that can be retrieved from Mcu_GetResetReason Api.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF UUID="ECUC:8b8a721a-1726-5a04-8f61-da75604611b2">
+                                  <SHORT-NAME>McuResetReason</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The parameter represents the different type of reset that a Micro supports. This parameter is referenced by the parameter EcuMResetReason in the ECU State manager module.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>ECU</SCOPE>
+                                  <IMPLEMENTATION-CONFIG-CLASSES>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  </IMPLEMENTATION-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </CONTAINERS>
+                    </ECUC-MODULE-DEF>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

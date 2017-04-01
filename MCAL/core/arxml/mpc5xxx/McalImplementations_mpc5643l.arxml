@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="">
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="">
+          <SHORT-NAME>Implementations</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>mpc5643l</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-IMPLEMENTATION>
+                  <SHORT-NAME>Adc</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Adc::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/Adc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="">
+                  <SHORT-NAME>Can</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-VERSION>5.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Can::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/Can</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="">
+                  <SHORT-NAME>Dio</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <SW-VERSION>5.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Dio::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/Dio</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION>
+                  <SHORT-NAME>Gpt</SHORT-NAME>
+                  <CATEGORY />
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>3.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Gpt::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/Gpt</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION>
+                  <SHORT-NAME>Mcu</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Mcu::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/Mcu</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION S="" UUID="">
+                  <SHORT-NAME>Pwm</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.1.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::PwmFlex::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/Freescale/FlexPWM/Pwm</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION>
+                  <SHORT-NAME>Spi</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.0.0</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Spi::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/mpc560x/Spi</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+                <BSW-IMPLEMENTATION UUID="">
+                  <SHORT-NAME>Lin</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG>
+                        <SD GID="_ExtensionKey">MCAL</SD>
+                        <SD GID="_Type">java.lang.String</SD>
+                        <SD GID="_Value">MPC5643L</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <SW-VERSION>2.1.1</SW-VERSION>
+                  <USED-CODE-GENERATOR>generators::mcal::mpc560x::Lin::main</USED-CODE-GENERATOR>
+                  <VENDOR-ID>60</VENDOR-ID>
+                  <AR-RELEASE-VERSION>4.1.2</AR-RELEASE-VERSION>
+                  <VENDOR-API-INFIX />
+                  <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/Freescale/LinFlex/Lin</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                  </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                </BSW-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

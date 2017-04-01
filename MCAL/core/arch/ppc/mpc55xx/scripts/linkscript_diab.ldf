@@ -1,0 +1,145 @@
+
+MEMORY
+{
+	#include "memory_mcu.ldf"
+}
+
+SECTIONS
+{
+	GROUP : {
+		. = . + L_BOOT_RESERVED_SPACE; 
+		.rcw KEEP : {
+			*(.rcw)
+		}
+	} > L_FLASH_CODE_0
+	GROUP : {	
+#if defined(CFG_VLE)		
+		.text_vle (TEXT)	: {
+			*(.text)
+			*(.text_vle)
+			*(.vletext)
+			*(.rdata)
+			*(.rodata)
+			*(.j_class_table)
+			*(.init)
+			*(.fini)
+			*(.exception_tbl)
+		}
+#else		
+		.text (TEXT)	: {
+			*(.text)
+			*(.rdata)
+			*(.rodata)
+			*(.j_class_table)
+			*(.init)
+			*(.fini)
+			*(.exception_tbl)
+		}
+#endif
+
+		.frame_info(=TEXT) : {}
+		/* constructor and destructor function ptrs                 */
+		.ctors ALIGN(4) : { ctordtor.o(.ctors) *(.ctors) }
+		.dtors ALIGN(4) : { ctordtor.o(.dtors) *(.dtors) }
+
+		.sdata2 (=TEXT)	: {}   /* small CONST area for some targets */
+		.sbss2 (=TEXT)	: {}   /* small null CONST area for some targets */
+		__DATA_ROM = .;
+	    .=.+SIZEOF(.data);
+	    __SDATA = .;
+	    .=.+SIZEOF(.sdata);
+	    __SDATA0 = .;
+		__rom_end = .;
+	} > L_FLASH_CODE_0
+
+#if defined(CFG_MPC5516)
+	GROUP 0x000ff000 : {
+		.Mcu_Arc_LowPowerRecoverFlash : {
+		    *(.lowpower_text)
+		}
+	} > L_FLASH_CODE_0
+	
+	GROUP 0x000ffffc : {
+		.lowpower_vector : {
+	    	*(.lowpower_vector)
+		}
+	} > L_FLASH_CODE_0
+#endif	
+
+
+	GROUP : {
+		/* Take all code from all non-vle objects and libraries. */
+
+		.text (TEXT)	: {
+			*(.text)
+		}
+	} > L_FLASH_CODE_0
+
+	/* The third GROUP allocates space for the initialized data and
+	 * uninitialized data in the "ram" section.
+	 */
+
+	GROUP : {
+		__ram_start=.;
+		__DATA_RAM	= .;
+		.data (DATA) LOAD(__DATA_ROM)	: {
+		    *(.data)
+		    *(.ram_no_cache_data)    
+		}
+
+		.sdata (DATA) LOAD(__SDATA)	: {}
+		__DATA_END	= .;
+
+		/* Allocate uninitialized sections.			    */
+
+		__BSS_START	= .;
+		.sbss (BSS)	: {}
+		.bss  (BSS)	: {}
+		.tibss (BSS)	: {}
+		__BSS_END	= .;
+
+#if defined(USE_ETH)
+		.eth_ahb_buf (DATA) ALIGN(0x40)	: {
+			*(.eth_ahb_buf)
+		}
+#endif
+
+		.ramlog (=NOLOAD) (BSS) : { *(.ramlog) }
+		/* Any remaining space will be used as a heap.		    */
+
+		.calibration : {}  
+
+		.PPC.EMB.sdata0 (DATA) (OPTIONAL) : { }
+		
+		.ram_no_init (=NOLOAD) ALIGN(0x10) : {
+		    *(.ramlog .dem_eventmemory_pri)
+		}
+		
+		.ram_no_cache_bss (=NOLOAD) ALIGN(0x10) : {
+		    *(.ram_no_cache_bss)
+		}
+		
+		_heap_start = .;
+        __ram_end = .;
+	} > L_SRAM_0
+
+}
+
+__SP_INIT	= ADDR(L_SRAM_0)+SIZEOF(L_SRAM_0);
+__SP_END	= __SP_INIT-1024;
+__HEAP_END	= __SP_END;		    /* Heap contiguous with stack.  */
+__SP_INIT_Z0 = __HEAP_END+256;
+__rom_start = ADDR(.rcw);
+
+/* Some targets use an extra underscore in front of identifiers
+ * ------------------------------------------------------------------------ */
+ _heap_end = ADDR(L_SRAM_0) + SIZEOF(L_SRAM_0);
+__HEAP_START	= _heap_start;
+//___HEAP_END	= __HEAP_END;
+___SP_INIT	= __SP_INIT;
+___SP_END	= __SP_END;
+___DATA_ROM	= __DATA_ROM;
+___DATA_RAM	= __DATA_RAM;
+___DATA_END	= __DATA_END;
+___BSS_START	= __BSS_START;
+___BSS_END	= __BSS_END;

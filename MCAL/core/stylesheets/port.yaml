@@ -1,0 +1,60 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# Container PortGeneral
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortSetPinDirection
+  mcals: [ JACINTO5, JACINTO6]
+  
+# Container PortPin
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortSetPinModeApi
+  mcals: [ JACINTO5, JACINTO6, TMS570, TMS570LC43X]
+  
+# Container PortPin
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinModeChangeable
+  mcals: [ TMS570, TMS570LC43X, TMS570LS1114, RH850F1H, zynq, STM32F103, STM32F107, JACINTO5, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPortPinSlewRate
+  mcals: [ JACINTO5 ] 
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinDirectionChangeable
+  mcals: [ TMS570, TMS570LC43X, TMS570LS1114, RH850F1H, zynq, STM32F103, STM32F107, JACINTO5, JACINTO6 ]     
+  
+# Container PortPin
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinMode
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortPinInitialMode
+  mcals: [ STM32F103, STM32F107]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPortPadId
+  mcals: [ TMS570, TMS570LC43X, TMS570LS1114, RH850F1H, RH850F1L ]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPortSignalName
+  mcals: [ TMS570, TMS570LC43X ]
+    
+  # Container PortContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PortNumberOfPortPins
+    
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: PortPinId  
+  
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcPortPinPull
+  mcals: [ TMS570, TMS570LC43X, TMS570LS1114 ]
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcPortPinSlewRate
+  mcals: [ TMS570, TMS570LC43X, TMS570LS1114 ]

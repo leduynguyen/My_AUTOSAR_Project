@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  
+<AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ArcCore</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Generic</SHORT-NAME>
+              <ELEMENTS>
+                <ECUC-MODULE-DEF UUID="ECUC:506d0671-efed-4c60-bbf4-1a8c714a49ce">
+                  <SHORT-NAME>StbM</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of the Synchronized Time-base Manager (StbM) module.</L-2>
+                  </DESC>
+                  <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                      <DOC-REVISION>
+                        <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                        <DATE>2014-10-31</DATE>
+                      </DOC-REVISION>
+                    </DOC-REVISIONS>
+                  <SDGS><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-SUPPORT"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-SUPPORT@5/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  
+                  <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/StbM</REFINED-MODULE-DEF-REF>
+                  <SUPPORTED-CONFIG-VARIANTS>
+                    <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                  </SUPPORTED-CONFIG-VARIANTS>
+                  <CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:e3062823-830e-401e-ab3f-102908ca5111">
+                      <SHORT-NAME>StbMGeneral</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container holds the general parameters of the Synchronized Time-base Manager</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:7a01b1fa-4807-49ad-84ba-511286993060">
+                          <SHORT-NAME>StbMDevErrorDetect</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:c433c237-94b3-452b-9e71-63fd3700849a">
+                          <SHORT-NAME>StbMGetCurrentTimeExtendedAvailable</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This allows to define whether an additional variant of the API GetCurrentTime with a 64 bit argument is provided.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:1d28d937-66d3-458b-9843-0e21ea280db6">
+                          <SHORT-NAME>StbMMainFunctionPeriod</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Schedule period of the main function StbM_MainFunction. Unit: [s].</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>Inf</MAX>
+                          <MIN>1E-6</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:16c0bfdf-bfa8-4261-b458-2efa197b30d0">
+                          <SHORT-NAME>StbMVersionInfo</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Activate/Deactivate the version information API (StbM_GetVersionInfo). True: version information API activated False: version information API deactivated.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:0eb5422e-e6ba-4303-8c41-1f56ad5d2f52">
+                      <SHORT-NAME>StbMSynchronizedTimeBase</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Synchronized time.base collects the information about a specific time-base provider within the system.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <PARAMETERS>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:a4bd47a0-95aa-405b-8752-8bd48af3d145">
+                          <SHORT-NAME>StbMIsSystemWideGlobalTimeMaster</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter shall be set to true for a global time master that acts as a system-wide source of time information with respect to global time.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">It is possible that several global time masters exist that have set this parameter set to true because the global time masters exist once per global time domain and one ECU may start several global time domains on different busses it is connected to.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:10043553-7e9d-48cd-b52b-d4a6ed064dd9">
+                          <SHORT-NAME>StbMStoreTimebaseNonVolatile</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This allows for specifying that the timebase shall be stored in the NvRam</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:8619508d-59be-8dbe-1082-c1025c7ebb64">
+                              <SHORT-NAME>NO_STORAGE</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:427c8636-fa76-8917-2111-5f9a37d5bb31">
+                              <SHORT-NAME>STORAGE_AT_SHUTDOWN</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:fa8c10e1-4ce0-4e46-b860-1bd3865081e2">
+                          <SHORT-NAME>StbMSyncLossThreshold</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This represents the minimum delta between the time value in two sync messages for which the sync loss flag is set. Unit: seconds.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>Inf</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUC:a27afdc4-309a-499d-ac82-c95edcb1f5b1">
+                          <SHORT-NAME>StbMSyncLossTimeout</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This attribute describes the timeout for the situation that the time synchronization gets lost in the scope of the time domain. Unit: seconds</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>Inf</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:3f37a751-19db-46c2-8fe8-727675c83547">
+                          <SHORT-NAME>StbMSynchronizedTimeBaseIdentifier</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Identification of a synchronized time-base via a unique identifier.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF UUID="ECUC:594f200a-9e5b-4522-8996-fb9fac381268">
+                          <SHORT-NAME>StbMEthGlobalTimeDomainRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Optional sub container in case a local time shall be accessed on an Ethernet bus.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthTSyn/EthTSynGlobalTimeDomain</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF UUID="ECUC:9049f989-691f-409a-906d-e3ddffe934fa">
+                          <SHORT-NAME>StbMLocalTimeRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This represents an optional sub-container in case a local time shall be accessed.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@11/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">In this case, the designated OS counter has to be configured properly, meaning: 
+
+                                        * the counter is directly driven by a HW timer. 
+                                        * the counter's OsCounterTicksPerBase is one tick in x nanoseconds (ns).</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsCounter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF UUID="ECUC:7b397fdd-c1dc-41ae-bce8-46f3949cd47d">
+                          <SHORT-NAME>StbMOffsetTimeBase</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This is the reference to the Synchronized Time-Base this Offset Time-Base is based on. This reference makes the containing StbMSynchronizedTimeBase an Offset Time-Base.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/StbM/StbMSynchronizedTimeBase</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="40bef5f8-3bdd-4ae5-8074-ff1440e21cbd">
+                          <SHORT-NAME>ArcStbMNvMBlockRef</SHORT-NAME>
+                          <DESC>
+                            <L-2>Reference to NvM block used for storing Time Stamp Data.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@11/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          
+                          <ORIGIN>ARCCORE_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUC:19e45c71-41c9-4253-a241-102f47f74b40">
+                      <SHORT-NAME>StbMTriggeredCustomer</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The triggered customer is directly triggered by the Synchronized Time-base Manager by getting synchronized with the current (global) definition of time and passage of time.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUC:66300845-e1f9-4af6-be9e-6bd32cd2e858">
+                          <SHORT-NAME>StbMTriggeredCustomerPeriod</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">The triggering period of the triggered customer, called by the StbM_MainFunction.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@6/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">The period is documented in microseconds.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>4294967295</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF UUID="ECUC:489979ba-a412-4da4-a60c-363cf7aec241">
+                          <SHORT-NAME>StbMOSScheduleTableRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Mandatory reference to synchronized OS ScheduleTable, which will be explicitly synchronized by the StbM.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="MULTIPLICITY-CONFIG-CLASSES"><SDG GID="ECUC-MULTIPLICITY-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">MULTIPLICITY-CONFIG-CLASSES@6/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-MULTIPLICITY"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-MULTIPLICITY@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@9/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@10/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsScheduleTable</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ECUC:265babaa-6c72-4d8f-b6fe-f4cd7ac08b90">
+                          <SHORT-NAME>StbMSynchronizedTimeBaseRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Mandatory reference to the required synchronized time-base.</L-2>
+                          </DESC>
+                          <ADMIN-DATA><SDGS><SDG GID="_conversion"><SDG GID="SCOPE"><SD GID="_mixed">LOCAL</SD></SDG><SD GID="_path">SCOPE@5/</SD><SD GID="_target">org.artop.aal.autosar411</SD></SDG><SDG GID="_conversion"><SDG GID="POST-BUILD-VARIANT-VALUE"><SD GID="_mixed">false</SD></SDG><SD GID="_path">POST-BUILD-VARIANT-VALUE@7/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG><SDG GID="_conversion"><SDG GID="VALUE-CONFIG-CLASSES"><SDG GID="ECUC-VALUE-CONFIGURATION-CLASS"><SDG GID="CONFIG-CLASS"><SD GID="_mixed">PRE-COMPILE</SD></SDG><SDG GID="CONFIG-VARIANT"><SD GID="_mixed">VARIANT-PRE-COMPILE</SD></SDG><SD GID="_mixed">
+                              
+                              
+                            </SD></SDG><SD GID="_mixed">
+                            
+                          </SD></SDG><SD GID="_path">VALUE-CONFIG-CLASSES@8/</SD><SD GID="_target">org.artop.aal.autosar421</SD></SDG></SDGS></ADMIN-DATA><LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          
+                          
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ArcCore/EcucDefs/Generic/StbM/StbMSynchronizedTimeBase</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </CONTAINERS>
+                </ECUC-MODULE-DEF>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Implementations</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-IMPLEMENTATION UUID="">
+                      <SHORT-NAME>StbM</SHORT-NAME>
+                      <CATEGORY />
+                      <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                      <SW-VERSION>1.0.0</SW-VERSION>
+                      <USED-CODE-GENERATOR>generators::generic::StbM::main</USED-CODE-GENERATOR>
+                      <VENDOR-ID>60</VENDOR-ID>
+                      <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+                      <VENDOR-API-INFIX />
+                      <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ArcCore/EcucDefs/Generic/StbM</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                      </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

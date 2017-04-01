@@ -1,0 +1,67 @@
+/* 
+ * Linkscript for Zynq
+ *
+ * Assume that this entire "blob" in copied from 
+ * for example  
+ 
+ 
+
+
+Assume that we are loaded to RAM but we still need to copy
+ * .data and init .bss sections */
+
+
+LOAD_ROM 0x0000000 
+{
+
+    SRAM 0x00000
+	{
+		* (.int_vecs, +FIRST)
+		* (InRoot$$Sections)
+		serial_dbg_winidea.o (+ZI)
+#if defined(USE_ETH)
+		*(.eth_desc)	
+#endif
+	} 	   
+
+    ARM_LIB_HEAP  0x2e000 EMPTY -0x2000  
+    {
+    }                
+
+    STACK 0x30000 EMPTY -0x1000  
+    {
+    }                
+
+
+}
+
+#if !defined(USE_ETH)
+DDR_REM 0x100000
+{   
+   APP 0x00100000 
+   {    
+	* (+RO +ZI + RW)		
+   }
+}
+#else
+DDR_UNCACHE 0x100000 
+{  
+   ETH 0x00100000
+   {
+    * (.eth_ahb_buf) 		
+   }
+}
+   
+DDR_REM 0x200000
+{   
+   APP 0x00200000 
+   {    
+	* (+RO +ZI + RW)		
+   }
+}
+#endif
+
+
+
+
+

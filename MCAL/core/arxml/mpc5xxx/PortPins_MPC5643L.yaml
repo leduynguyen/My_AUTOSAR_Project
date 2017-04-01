@@ -1,0 +1,6187 @@
+# 1.0
+# com.arccore.bsw.port.pin.MPC5643L
+#
+#
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[0]'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'SIUL_GPIO_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[0]'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'eTimer_0_ETC_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'SCK'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'DSPI_2_SCK',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[1]'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'SIUL_GPIO_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[1]'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'eTimer_0_ETC_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'SOUT'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'DSPI_2_SOUT',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[2]'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'SIUL_GPIO_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'eTimer_0_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[3]'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'FlexPWM_0_A_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'SIN'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'DSPI_2_SIN',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[3]'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'SIUL_GPIO_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'eTimer_0_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS0'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'DSPI_2_CS0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[3]'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'FlexPWM_0_B_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[4]'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'SIUL_GPIO_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[0]'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'eTimer_1_ETC_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS1'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'DSPI_2_CS1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'eTimer_0_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[5]'
+  }
+  properties: {
+    PortPinId: 5,
+    __shortName: 'SIUL_GPIO_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'CS0'
+  }
+  properties: {
+    PortPinId: 5,
+    __shortName: 'DSPI_1_CS0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 5,
+    __shortName: 'eTimer_1_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS7'
+  }
+  properties: {
+    PortPinId: 5,
+    __shortName: 'DSPI_0_CS7',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[6]'
+  }
+  properties: {
+    PortPinId: 6,
+    __shortName: 'SIUL_GPIO_6',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'SCK'
+  }
+  properties: {
+    PortPinId: 6,
+    __shortName: 'DSPI_1_SCK',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[7]'
+  }
+  properties: {
+    PortPinId: 7,
+    __shortName: 'SIUL_GPIO_7',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'SOUT'
+  }
+  properties: {
+    PortPinId: 7,
+    __shortName: 'DSPI_1_SOUT',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[8]'
+  }
+  properties: {
+    PortPinId: 8,
+    __shortName: 'SIUL_GPIO_8',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'SIN'
+  }
+  properties: {
+    PortPinId: 8,
+    __shortName: 'DSPI_1_SIN',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[9]'
+  }
+  properties: {
+    PortPinId: 9,
+    __shortName: 'SIUL_GPIO_9',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS1'
+  }
+  properties: {
+    PortPinId: 9,
+    __shortName: 'DSPI_2_CS1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[3]'
+  }
+  properties: {
+    PortPinId: 9,
+    __shortName: 'FlexPWM_0_B_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[0]'
+  }
+  properties: {
+    PortPinId: 9,
+    __shortName: 'FlexPWM_0_FAULT_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[10]'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'SIUL_GPIO_10',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS0'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'DSPI_2_CS0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[0]'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'FlexPWM_0_B_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[2]'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'FlexPWM_0_X_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[11]'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'SIUL_GPIO_11',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'SCK'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'DSPI_2_SCK',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[0]'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'FlexPWM_0_A_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[2]'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'FlexPWM_0_A_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[12]'
+  }
+  properties: {
+    PortPinId: 12,
+    __shortName: 'SIUL_GPIO_12',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'SOUT'
+  }
+  properties: {
+    PortPinId: 12,
+    __shortName: 'DSPI_2_SOUT',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[2]'
+  }
+  properties: {
+    PortPinId: 12,
+    __shortName: 'FlexPWM_0_A_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[2]'
+  }
+  properties: {
+    PortPinId: 12,
+    __shortName: 'FlexPWM_0_B_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[13]'
+  }
+  properties: {
+    PortPinId: 13,
+    __shortName: 'SIUL_GPIO_13',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[2]'
+  }
+  properties: {
+    PortPinId: 13,
+    __shortName: 'FlexPWM_0_B_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'SIN'
+  }
+  properties: {
+    PortPinId: 13,
+    __shortName: 'DSPI_2_SIN',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[0]'
+  }
+  properties: {
+    PortPinId: 13,
+    __shortName: 'FlexPWM_0_FAULT_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[14]'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'SIUL_GPIO_14',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexCAN_1',
+    group: 'FlexCAN_1',
+    name: 'TXD'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'FlexCAN_1_TXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'eTimer_1_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[15]'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'SIUL_GPIO_15',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'eTimer_1_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexCAN_1',
+    group: 'FlexCAN_1',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'FlexCAN_1_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexCAN_0',
+    group: 'FlexCAN_0',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'FlexCAN_0_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[16]'
+  }
+  properties: {
+    PortPinId: 16,
+    __shortName: 'SIUL_GPIO_16',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexCAN_0',
+    group: 'FlexCAN_0',
+    name: 'TXD'
+  }
+  properties: {
+    PortPinId: 16,
+    __shortName: 'FlexCAN_0_TXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 16,
+    __shortName: 'eTimer_1_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[17]'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'SIUL_GPIO_17',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'eTimer_1_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexCAN_0',
+    group: 'FlexCAN_0',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'FlexCAN_0_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexCAN_1',
+    group: 'FlexCAN_1',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'FlexCAN_1_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[18]'
+  }
+  properties: {
+    PortPinId: 18,
+    __shortName: 'SIUL_GPIO_18',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_0',
+    group: 'LINFlexD_0',
+    name: 'TXD'
+  }
+  properties: {
+    PortPinId: 18,
+    __shortName: 'LINFlexD_0_TXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[19]'
+  }
+  properties: {
+    PortPinId: 19,
+    __shortName: 'SIUL_GPIO_19',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_0',
+    group: 'LINFlexD_0',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 19,
+    __shortName: 'LINFlexD_0_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[20]'
+  }
+  properties: {
+    PortPinId: 20,
+    __shortName: 'SIUL_GPIO_20',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[21]'
+  }
+  properties: {
+    PortPinId: 21,
+    __shortName: 'SIUL_GPIO_21',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[22]'
+  }
+  properties: {
+    PortPinId: 22,
+    __shortName: 'SIUL_GPIO_22',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS2'
+  }
+  properties: {
+    PortPinId: 22,
+    __shortName: 'DSPI_2_CS2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[23]'
+  }
+  properties: {
+    PortPinId: 23,
+    __shortName: 'SIUL_GPI_23',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_0',
+    group: 'LINFlexD_0',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 23,
+    __shortName: 'LINFlexD_0_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[0]'
+  }
+  properties: {
+    PortPinId: 23,
+    __shortName: 'ADC_0_AN_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[24]'
+  }
+  properties: {
+    PortPinId: 24,
+    __shortName: 'SIUL_GPI_24',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 24,
+    __shortName: 'eTimer_0_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[1]'
+  }
+  properties: {
+    PortPinId: 24,
+    __shortName: 'ADC_0_AN_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[25]'
+  }
+  properties: {
+    PortPinId: 25,
+    __shortName: 'SIUL_GPI_25',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[11]'
+  }
+  properties: {
+    PortPinId: 25,
+    __shortName: 'ADC_0_AN_11',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[11]'
+  }
+  properties: {
+    PortPinId: 25,
+    __shortName: 'ADC_1_AN_11',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[26]'
+  }
+  properties: {
+    PortPinId: 26,
+    __shortName: 'SIUL_GPI_26',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[12]'
+  }
+  properties: {
+    PortPinId: 26,
+    __shortName: 'ADC_0_AN_12',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[12]'
+  }
+  properties: {
+    PortPinId: 26,
+    __shortName: 'ADC_1_AN_12',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[27]'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'SIUL_GPI_27',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[13]'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'ADC_0_AN_13',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[13]'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'ADC_1_AN_13',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[28]'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'SIUL_GPI_28',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[14]'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'ADC_0_AN_14',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[14]'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'ADC_1_AN_14',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[29]'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'SIUL_GPI_29',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_1',
+    group: 'LINFlexD_1',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'LINFlexD_1_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[0]'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'ADC_1_AN_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[30]'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'SIUL_GPI_30',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'eTimer_0_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[1]'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'ADC_1_AN_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[31]'
+  }
+  properties: {
+    PortPinId: 31,
+    __shortName: 'SIUL_GPI_31',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[2]'
+  }
+  properties: {
+    PortPinId: 31,
+    __shortName: 'ADC_1_AN_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[32]'
+  }
+  properties: {
+    PortPinId: 32,
+    __shortName: 'SIUL_GPI_32',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[3]'
+  }
+  properties: {
+    PortPinId: 32,
+    __shortName: 'ADC_1_AN_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[33]'
+  }
+  properties: {
+    PortPinId: 33,
+    __shortName: 'SIUL_GPI_33',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[2]'
+  }
+  properties: {
+    PortPinId: 33,
+    __shortName: 'ADC_0_AN_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[34]'
+  }
+  properties: {
+    PortPinId: 34,
+    __shortName: 'SIUL_GPI_34',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[3]'
+  }
+  properties: {
+    PortPinId: 34,
+    __shortName: 'ADC_0_AN_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[36]'
+  }
+  properties: {
+    PortPinId: 36,
+    __shortName: 'SIUL_GPIO_36',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS0'
+  }
+  properties: {
+    PortPinId: 36,
+    __shortName: 'DSPI_0_CS0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[1]'
+  }
+  properties: {
+    PortPinId: 36,
+    __shortName: 'FlexPWM_0_X_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[37]'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'SIUL_GPIO_37',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'SCK'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'DSPI_0_SCK',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[3]'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'FlexPWM_0_FAULT_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[38]'
+  }
+  properties: {
+    PortPinId: 38,
+    __shortName: 'SIUL_GPIO_38',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'SOUT'
+  }
+  properties: {
+    PortPinId: 38,
+    __shortName: 'DSPI_0_SOUT',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[1]'
+  }
+  properties: {
+    PortPinId: 38,
+    __shortName: 'FlexPWM_0_B_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[39]'
+  }
+  properties: {
+    PortPinId: 39,
+    __shortName: 'SIUL_GPIO_39',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[1]'
+  }
+  properties: {
+    PortPinId: 39,
+    __shortName: 'FlexPWM_0_A_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'SIN'
+  }
+  properties: {
+    PortPinId: 39,
+    __shortName: 'DSPI_0_SIN',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[42]'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'SIUL_GPIO_42',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS2'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'DSPI_2_CS2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[3]'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'FlexPWM_0_A_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[1]'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'FlexPWM_0_FAULT_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[43]'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'SIUL_GPIO_43',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'eTimer_0_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS2'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'DSPI_2_CS2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[44]'
+  }
+  properties: {
+    PortPinId: 44,
+    __shortName: 'SIUL_GPIO_44',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 44,
+    __shortName: 'eTimer_0_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS3'
+  }
+  properties: {
+    PortPinId: 44,
+    __shortName: 'DSPI_2_CS3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[45]'
+  }
+  properties: {
+    PortPinId: 45,
+    __shortName: 'SIUL_GPIO_45',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[1]'
+  }
+  properties: {
+    PortPinId: 45,
+    __shortName: 'eTimer_1_ETC_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'EXT_SYNC'
+  }
+  properties: {
+    PortPinId: 45,
+    __shortName: 'FlexPWM_0_EXT_SYNC',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[46]'
+  }
+  properties: {
+    PortPinId: 46,
+    __shortName: 'SIUL_GPIO_46',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 46,
+    __shortName: 'eTimer_1_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[47]'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'SIUL_GPIO_47',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'CA_TR_EN'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'FlexRay_CA_TR_EN',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[0]'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'eTimer_1_ETC_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[1]'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'FlexPWM_0_A_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'EXT_SYNC'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'FlexPWM_0_EXT_SYNC',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[48]'
+  }
+  properties: {
+    PortPinId: 48,
+    __shortName: 'SIUL_GPIO_48',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'CA_TX'
+  }
+  properties: {
+    PortPinId: 48,
+    __shortName: 'FlexRay_CA_TX',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[1]'
+  }
+  properties: {
+    PortPinId: 48,
+    __shortName: 'eTimer_1_ETC_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[1]'
+  }
+  properties: {
+    PortPinId: 48,
+    __shortName: 'FlexPWM_0_B_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[49]'
+  }
+  properties: {
+    PortPinId: 49,
+    __shortName: 'SIUL_GPIO_49',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 49,
+    __shortName: 'eTimer_1_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[50]'
+  }
+  properties: {
+    PortPinId: 50,
+    __shortName: 'SIUL_GPIO_50',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 50,
+    __shortName: 'eTimer_1_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[3]'
+  }
+  properties: {
+    PortPinId: 50,
+    __shortName: 'FlexPWM_0_X_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[51]'
+  }
+  properties: {
+    PortPinId: 51,
+    __shortName: 'SIUL_GPIO_51',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'CB_TX'
+  }
+  properties: {
+    PortPinId: 51,
+    __shortName: 'FlexRay_CB_TX',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 51,
+    __shortName: 'eTimer_1_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[3]'
+  }
+  properties: {
+    PortPinId: 51,
+    __shortName: 'FlexPWM_0_A_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[52]'
+  }
+  properties: {
+    PortPinId: 52,
+    __shortName: 'SIUL_GPIO_52',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'CB_TR_EN'
+  }
+  properties: {
+    PortPinId: 52,
+    __shortName: 'FlexRay_CB_TR_EN',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 52,
+    __shortName: 'eTimer_1_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[3]'
+  }
+  properties: {
+    PortPinId: 52,
+    __shortName: 'FlexPWM_0_B_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[53]'
+  }
+  properties: {
+    PortPinId: 53,
+    __shortName: 'SIUL_GPIO_53',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS3'
+  }
+  properties: {
+    PortPinId: 53,
+    __shortName: 'DSPI_0_CS3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[2]'
+  }
+  properties: {
+    PortPinId: 53,
+    __shortName: 'FlexPWM_0_FAULT_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[54]'
+  }
+  properties: {
+    PortPinId: 54,
+    __shortName: 'SIUL_GPIO_54',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS2'
+  }
+  properties: {
+    PortPinId: 54,
+    __shortName: 'DSPI_0_CS2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[3]'
+  }
+  properties: {
+    PortPinId: 54,
+    __shortName: 'FlexPWM_0_X_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[1]'
+  }
+  properties: {
+    PortPinId: 54,
+    __shortName: 'FlexPWM_0_FAULT_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[55]'
+  }
+  properties: {
+    PortPinId: 55,
+    __shortName: 'SIUL_GPIO_55',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'CS3'
+  }
+  properties: {
+    PortPinId: 55,
+    __shortName: 'DSPI_1_CS3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS4'
+  }
+  properties: {
+    PortPinId: 55,
+    __shortName: 'DSPI_0_CS4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[56]'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'SIUL_GPIO_56',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'CS2'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'DSPI_1_CS2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'eTimer_1_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS5'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'DSPI_0_CS5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[3]'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'FlexPWM_0_FAULT_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[57]'
+  }
+  properties: {
+    PortPinId: 57,
+    __shortName: 'SIUL_GPIO_57',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[0]'
+  }
+  properties: {
+    PortPinId: 57,
+    __shortName: 'FlexPWM_0_X_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_1',
+    group: 'LINFlexD_1',
+    name: 'TXD'
+  }
+  properties: {
+    PortPinId: 57,
+    __shortName: 'LINFlexD_1_TXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[58]'
+  }
+  properties: {
+    PortPinId: 58,
+    __shortName: 'SIUL_GPIO_58',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[0]'
+  }
+  properties: {
+    PortPinId: 58,
+    __shortName: 'FlexPWM_0_A_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[0]'
+  }
+  properties: {
+    PortPinId: 58,
+    __shortName: 'eTimer_0_ETC_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[59]'
+  }
+  properties: {
+    PortPinId: 59,
+    __shortName: 'SIUL_GPIO_59',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[0]'
+  }
+  properties: {
+    PortPinId: 59,
+    __shortName: 'FlexPWM_0_B_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[1]'
+  }
+  properties: {
+    PortPinId: 59,
+    __shortName: 'eTimer_0_ETC_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[60]'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'SIUL_GPIO_60',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[1]'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'FlexPWM_0_X_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_1',
+    group: 'LINFlexD_1',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'LINFlexD_1_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[62]'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'SIUL_GPIO_62',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[1]'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'FlexPWM_0_B_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'eTimer_0_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[64]'
+  }
+  properties: {
+    PortPinId: 64,
+    __shortName: 'SIUL_GPI_64',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[5]'
+  }
+  properties: {
+    PortPinId: 64,
+    __shortName: 'ADC_1_AN_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[66]'
+  }
+  properties: {
+    PortPinId: 66,
+    __shortName: 'SIUL_GPI_66',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[5]'
+  }
+  properties: {
+    PortPinId: 66,
+    __shortName: 'ADC_0_AN_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[68]'
+  }
+  properties: {
+    PortPinId: 68,
+    __shortName: 'SIUL_GPI_68',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[7]'
+  }
+  properties: {
+    PortPinId: 68,
+    __shortName: 'ADC_0_AN_7',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[69]'
+  }
+  properties: {
+    PortPinId: 69,
+    __shortName: 'SIUL_GPI_69',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[8]'
+  }
+  properties: {
+    PortPinId: 69,
+    __shortName: 'ADC_0_AN_8',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[70]'
+  }
+  properties: {
+    PortPinId: 70,
+    __shortName: 'SIUL_GPI_70',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[4]'
+  }
+  properties: {
+    PortPinId: 70,
+    __shortName: 'ADC_0_AN_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[71]'
+  }
+  properties: {
+    PortPinId: 71,
+    __shortName: 'SIUL_GPI_71',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_0',
+    group: 'ADC_0',
+    name: 'AN[6]'
+  }
+  properties: {
+    PortPinId: 71,
+    __shortName: 'ADC_0_AN_6',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[73]'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'SIUL_GPI_73',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[7]'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'ADC_1_AN_7',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[74]'
+  }
+  properties: {
+    PortPinId: 74,
+    __shortName: 'SIUL_GPI_74',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[8]'
+  }
+  properties: {
+    PortPinId: 74,
+    __shortName: 'ADC_1_AN_8',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[75]'
+  }
+  properties: {
+    PortPinId: 75,
+    __shortName: 'SIUL_GPI_75',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[4]'
+  }
+  properties: {
+    PortPinId: 75,
+    __shortName: 'ADC_1_AN_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPI[76]'
+  }
+  properties: {
+    PortPinId: 76,
+    __shortName: 'SIUL_GPI_76',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'ADC_1',
+    group: 'ADC_1',
+    name: 'AN[6]'
+  }
+  properties: {
+    PortPinId: 76,
+    __shortName: 'ADC_1_AN_6',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[77]'
+  }
+  properties: {
+    PortPinId: 77,
+    __shortName: 'SIUL_GPIO_77',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 77,
+    __shortName: 'eTimer_0_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS3'
+  }
+  properties: {
+    PortPinId: 77,
+    __shortName: 'DSPI_2_CS3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[78]'
+  }
+  properties: {
+    PortPinId: 78,
+    __shortName: 'SIUL_GPIO_78',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 78,
+    __shortName: 'eTimer_1_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[79]'
+  }
+  properties: {
+    PortPinId: 79,
+    __shortName: 'SIUL_GPIO_79',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS1'
+  }
+  properties: {
+    PortPinId: 79,
+    __shortName: 'DSPI_0_CS1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[80]'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'SIUL_GPIO_80',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[1]'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'FlexPWM_0_A_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'eTimer_0_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[83]'
+  }
+  properties: {
+    PortPinId: 83,
+    __shortName: 'SIUL_GPIO_83',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS6'
+  }
+  properties: {
+    PortPinId: 83,
+    __shortName: 'DSPI_0_CS6',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[84]'
+  }
+  properties: {
+    PortPinId: 84,
+    __shortName: 'SIUL_GPIO_84',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[85]'
+  }
+  properties: {
+    PortPinId: 85,
+    __shortName: 'SIUL_GPIO_85',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[86]'
+  }
+  properties: {
+    PortPinId: 86,
+    __shortName: 'SIUL_GPIO_86',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[87]'
+  }
+  properties: {
+    PortPinId: 87,
+    __shortName: 'SIUL_GPIO_87',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[88]'
+  }
+  properties: {
+    PortPinId: 88,
+    __shortName: 'SIUL_GPIO_88',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[89]'
+  }
+  properties: {
+    PortPinId: 89,
+    __shortName: 'SIUL_GPIO_89',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[90]'
+  }
+  properties: {
+    PortPinId: 90,
+    __shortName: 'SIUL_GPIO_90',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[91]'
+  }
+  properties: {
+    PortPinId: 91,
+    __shortName: 'SIUL_GPIO_91',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[92]'
+  }
+  properties: {
+    PortPinId: 92,
+    __shortName: 'SIUL_GPIO_92',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 92,
+    __shortName: 'eTimer_1_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[93]'
+  }
+  properties: {
+    PortPinId: 93,
+    __shortName: 'SIUL_GPIO_93',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_1',
+    group: 'eTimer_1',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 93,
+    __shortName: 'eTimer_1_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[94]'
+  }
+  properties: {
+    PortPinId: 94,
+    __shortName: 'SIUL_GPIO_94',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_1',
+    group: 'LINFlexD_1',
+    name: 'TXD'
+  }
+  properties: {
+    PortPinId: 94,
+    __shortName: 'LINFlexD_1_TXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[95]'
+  }
+  properties: {
+    PortPinId: 95,
+    __shortName: 'SIUL_GPIO_95',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'LINFlexD_1',
+    group: 'LINFlexD_1',
+    name: 'RXD'
+  }
+  properties: {
+    PortPinId: 95,
+    __shortName: 'LINFlexD_1_RXD',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[98]'
+  }
+  properties: {
+    PortPinId: 98,
+    __shortName: 'SIUL_GPIO_98',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[2]'
+  }
+  properties: {
+    PortPinId: 98,
+    __shortName: 'FlexPWM_0_X_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'CS1'
+  }
+  properties: {
+    PortPinId: 98,
+    __shortName: 'DSPI_1_CS1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[99]'
+  }
+  properties: {
+    PortPinId: 99,
+    __shortName: 'SIUL_GPIO_99',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[2]'
+  }
+  properties: {
+    PortPinId: 99,
+    __shortName: 'FlexPWM_0_A_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 99,
+    __shortName: 'eTimer_0_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[100]'
+  }
+  properties: {
+    PortPinId: 100,
+    __shortName: 'SIUL_GPIO_100',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[2]'
+  }
+  properties: {
+    PortPinId: 100,
+    __shortName: 'FlexPWM_0_B_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_0',
+    group: 'eTimer_0',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 100,
+    __shortName: 'eTimer_0_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[101]'
+  }
+  properties: {
+    PortPinId: 101,
+    __shortName: 'SIUL_GPIO_101',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'X[3]'
+  }
+  properties: {
+    PortPinId: 101,
+    __shortName: 'FlexPWM_0_X_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS3'
+  }
+  properties: {
+    PortPinId: 101,
+    __shortName: 'DSPI_2_CS3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[102]'
+  }
+  properties: {
+    PortPinId: 102,
+    __shortName: 'SIUL_GPIO_102',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'A[3]'
+  }
+  properties: {
+    PortPinId: 102,
+    __shortName: 'FlexPWM_0_A_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[103]'
+  }
+  properties: {
+    PortPinId: 103,
+    __shortName: 'SIUL_GPIO_103',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'B[3]'
+  }
+  properties: {
+    PortPinId: 103,
+    __shortName: 'FlexPWM_0_B_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[104]'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'SIUL_GPIO_104',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'DBG0'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'FlexRay_DBG0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS1'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'DSPI_0_CS1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[0]'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'FlexPWM_0_FAULT_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[105]'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'SIUL_GPIO_105',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'DBG1'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'FlexRay_DBG1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_1',
+    group: 'DSPI_1',
+    name: 'CS1'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'DSPI_1_CS1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[1]'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'FlexPWM_0_FAULT_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[106]'
+  }
+  properties: {
+    PortPinId: 106,
+    __shortName: 'SIUL_GPIO_106',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'DBG2'
+  }
+  properties: {
+    PortPinId: 106,
+    __shortName: 'FlexRay_DBG2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_2',
+    group: 'DSPI_2',
+    name: 'CS3'
+  }
+  properties: {
+    PortPinId: 106,
+    __shortName: 'DSPI_2_CS3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[2]'
+  }
+  properties: {
+    PortPinId: 106,
+    __shortName: 'FlexPWM_0_FAULT_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[107]'
+  }
+  properties: {
+    PortPinId: 107,
+    __shortName: 'SIUL_GPIO_107',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexRay',
+    group: 'FlexRay',
+    name: 'DBG3'
+  }
+  properties: {
+    PortPinId: 107,
+    __shortName: 'FlexRay_DBG3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinInitialMode: PORT_PIN_MODE_FLEXRAY,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_0',
+    group: 'FlexPWM_0',
+    name: 'FAULT[3]'
+  }
+  properties: {
+    PortPinId: 107,
+    __shortName: 'FlexPWM_0_FAULT_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[108]'
+  }
+  properties: {
+    PortPinId: 108,
+    __shortName: 'SIUL_GPIO_108',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[109]'
+  }
+  properties: {
+    PortPinId: 109,
+    __shortName: 'SIUL_GPIO_109',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[110]'
+  }
+  properties: {
+    PortPinId: 110,
+    __shortName: 'SIUL_GPIO_110',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[111]'
+  }
+  properties: {
+    PortPinId: 111,
+    __shortName: 'SIUL_GPIO_111',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[112]'
+  }
+  properties: {
+    PortPinId: 112,
+    __shortName: 'SIUL_GPIO_112',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[113]'
+  }
+  properties: {
+    PortPinId: 113,
+    __shortName: 'SIUL_GPIO_113',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[114]'
+  }
+  properties: {
+    PortPinId: 114,
+    __shortName: 'SIUL_GPIO_114',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[115]'
+  }
+  properties: {
+    PortPinId: 115,
+    __shortName: 'SIUL_GPIO_115',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[116]'
+  }
+  properties: {
+    PortPinId: 116,
+    __shortName: 'SIUL_GPIO_116',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'X[0]'
+  }
+  properties: {
+    PortPinId: 116,
+    __shortName: 'FlexPWM_1_X_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[0]'
+  }
+  properties: {
+    PortPinId: 116,
+    __shortName: 'eTimer_2_ETC_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[117]'
+  }
+  properties: {
+    PortPinId: 117,
+    __shortName: 'SIUL_GPIO_117',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'A[0]'
+  }
+  properties: {
+    PortPinId: 117,
+    __shortName: 'FlexPWM_1_A_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS4'
+  }
+  properties: {
+    PortPinId: 117,
+    __shortName: 'DSPI_0_CS4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[118]'
+  }
+  properties: {
+    PortPinId: 118,
+    __shortName: 'SIUL_GPIO_118',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'B[0]'
+  }
+  properties: {
+    PortPinId: 118,
+    __shortName: 'FlexPWM_1_B_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS5'
+  }
+  properties: {
+    PortPinId: 118,
+    __shortName: 'DSPI_0_CS5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[119]'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'SIUL_GPIO_119',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'X[1]'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'FlexPWM_1_X_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[1]'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'eTimer_2_ETC_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[120]'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'SIUL_GPIO_120',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'A[1]'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'FlexPWM_1_A_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS6'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'DSPI_0_CS6',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[121]'
+  }
+  properties: {
+    PortPinId: 121,
+    __shortName: 'SIUL_GPIO_121',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'B[1]'
+  }
+  properties: {
+    PortPinId: 121,
+    __shortName: 'FlexPWM_1_B_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS7'
+  }
+  properties: {
+    PortPinId: 121,
+    __shortName: 'DSPI_0_CS7',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[122]'
+  }
+  properties: {
+    PortPinId: 122,
+    __shortName: 'SIUL_GPIO_122',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'X[2]'
+  }
+  properties: {
+    PortPinId: 122,
+    __shortName: 'FlexPWM_1_X_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 122,
+    __shortName: 'eTimer_2_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[123]'
+  }
+  properties: {
+    PortPinId: 123,
+    __shortName: 'SIUL_GPIO_123',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'A[2]'
+  }
+  properties: {
+    PortPinId: 123,
+    __shortName: 'FlexPWM_1_A_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[124]'
+  }
+  properties: {
+    PortPinId: 124,
+    __shortName: 'SIUL_GPIO_124',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'B[2]'
+  }
+  properties: {
+    PortPinId: 124,
+    __shortName: 'FlexPWM_1_B_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[125]'
+  }
+  properties: {
+    PortPinId: 125,
+    __shortName: 'SIUL_GPIO_125',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'X[3]'
+  }
+  properties: {
+    PortPinId: 125,
+    __shortName: 'FlexPWM_1_X_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 125,
+    __shortName: 'eTimer_2_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[126]'
+  }
+  properties: {
+    PortPinId: 126,
+    __shortName: 'SIUL_GPIO_126',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'A[3]'
+  }
+  properties: {
+    PortPinId: 126,
+    __shortName: 'FlexPWM_1_A_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[4]'
+  }
+  properties: {
+    PortPinId: 126,
+    __shortName: 'eTimer_2_ETC_4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[127]'
+  }
+  properties: {
+    PortPinId: 127,
+    __shortName: 'SIUL_GPIO_127',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'FlexPWM_1',
+    group: 'FlexPWM_1',
+    name: 'B[3]'
+  }
+  properties: {
+    PortPinId: 127,
+    __shortName: 'FlexPWM_1_B_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_PWM,
+    PortPinInitialMode: PORT_PIN_MODE_PWM,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[5]'
+  }
+  properties: {
+    PortPinId: 127,
+    __shortName: 'eTimer_2_ETC_5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[128]'
+  }
+  properties: {
+    PortPinId: 128,
+    __shortName: 'SIUL_GPIO_128',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[0]'
+  }
+  properties: {
+    PortPinId: 128,
+    __shortName: 'eTimer_2_ETC_0',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS4'
+  }
+  properties: {
+    PortPinId: 128,
+    __shortName: 'DSPI_0_CS4',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[129]'
+  }
+  properties: {
+    PortPinId: 129,
+    __shortName: 'SIUL_GPIO_129',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[1]'
+  }
+  properties: {
+    PortPinId: 129,
+    __shortName: 'eTimer_2_ETC_1',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS5'
+  }
+  properties: {
+    PortPinId: 129,
+    __shortName: 'DSPI_0_CS5',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[130]'
+  }
+  properties: {
+    PortPinId: 130,
+    __shortName: 'SIUL_GPIO_130',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[2]'
+  }
+  properties: {
+    PortPinId: 130,
+    __shortName: 'eTimer_2_ETC_2',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS6'
+  }
+  properties: {
+    PortPinId: 130,
+    __shortName: 'DSPI_0_CS6',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'SIUL',
+    group: 'SIUL',
+    name: 'GPIO[131]'
+  }
+  properties: {
+    PortPinId: 131,
+    __shortName: 'SIUL_GPIO_131',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'eTimer_2',
+    group: 'eTimer_2',
+    name: 'ETC[3]'
+  }
+  properties: {
+    PortPinId: 131,
+    __shortName: 'eTimer_2_ETC_3',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_GPT,
+    PortPinInitialMode: PORT_PIN_MODE_GPT,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: 'DSPI_0',
+    group: 'DSPI_0',
+    name: 'CS7'
+  }
+  properties: {
+    PortPinId: 131,
+    __shortName: 'DSPI_0_CS7',
+    ArcPortPinOpenDrainEnable: 0,
+    ArcPortPinPull: PORT_PIN_PULL_NONE,
+    ArcPortPinSlewRate: PORT_PIN_SLEW_RATE_MAX,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+

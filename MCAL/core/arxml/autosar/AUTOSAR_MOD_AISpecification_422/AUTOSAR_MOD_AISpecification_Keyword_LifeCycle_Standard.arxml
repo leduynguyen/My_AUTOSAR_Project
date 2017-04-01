@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <LONG-NAME>
+        <L-4 L="EN">AUTOSAR</L-4>
+      </LONG-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>AISpecification</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">AISpecification</L-4>
+          </LONG-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>LifeCycleInfoSets</SHORT-NAME>
+              <CATEGORY>STANDARD</CATEGORY>
+              <REFERENCE-BASES>
+                <REFERENCE-BASE>
+                  <SHORT-LABEL>KeywordSets</SHORT-LABEL>
+                  <IS-DEFAULT>false</IS-DEFAULT>
+                  <IS-GLOBAL>false</IS-GLOBAL>
+                  <BASE-IS-THIS-PACKAGE>false</BASE-IS-THIS-PACKAGE>
+                  <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR/AISpecification/KeywordSets_Blueprint</PACKAGE-REF>
+                </REFERENCE-BASE>
+              </REFERENCE-BASES>
+              <ELEMENTS>
+                <LIFE-CYCLE-INFO-SET>
+                  <SHORT-NAME>KeywordObslt</SHORT-NAME>
+                  <DEFAULT-LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</DEFAULT-LC-STATE-REF>
+                  <LIFE-CYCLE-INFOS>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Ar</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">harmonisation with basic software abbreviations</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Area</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Gen</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">harmonisation with generate, generation, generated, generator</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Generic</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Us</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Set to obsolete because there might be a different pair of keywords for upstream and downstream in the future</L-1>
+                        </P>
+                      </REMARK>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Wind</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">correction according naming rules, To use Windscreen, please build the short name of the keyword abbreviations of Wind and Screen.</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Wind1</USE-INSTEAD-REF>
+                        <USE-INSTEAD-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Scrn</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Sts</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/St</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Sec</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="KeywordSets" DEST="KEYWORD">KeywordList/Idx2nd</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>                
+                  </LIFE-CYCLE-INFOS>
+                  <USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF DEST="LIFE-CYCLE-STATE-DEFINITION-GROUP">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates</USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF>
+                </LIFE-CYCLE-INFO-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

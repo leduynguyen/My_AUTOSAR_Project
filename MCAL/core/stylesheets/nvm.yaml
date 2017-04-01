@@ -1,0 +1,254 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+########################################################
+# Hidden parameters in NvMCommon 
+########################################################
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMCompiledConfigId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMBswMMultiBlockJobStatusInformation
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMCrcNumOfBytes
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMDrvModeSwitch
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMDynamicConfiguration
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMJobPrioritization
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMRepeatMirrorOperations 
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMSizeImmediateJobQueue 
+
+########################################################
+# Hidden parameters in NvMBlockDescriptor
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMBlockJobPriority
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMBlockUseSyncMechanism
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMBswMBlockStatusInformation
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMBswMBlockStatusInformation
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMMaxNumOfReadRetries
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMMaxNumOfWriteRetries
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMReadRamBlockFromNvCallback
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMSelectBlockForWriteAll
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMStaticBlockIDCheck
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMWriteBlockOnce
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMWriteRamBlockToNvCallback
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMWriteVerification
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMWriteVerificationDataSize
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMResistantToChangedSw
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMNvramDeviceId  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NvMNvBlockBaseNumber  
+  
+########################################################
+########################################################
+# Hidden parameters in NvmDemEventParameterRefs  
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NVM_E_LOSS_OF_REDUNDANCY
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NVM_E_QUEUE_OVERFLOW
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NVM_E_VERIFY_FAILED
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NVM_E_WRITE_PROTECTED
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: NVM_E_WRONG_BLOCK_ID
+  
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: NvMBlockCrcType 
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: NvMCalcRamBlockCrc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: NvMSelectBlockForReadAll   
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: NvMNvramBlockIdentifier      
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: NvMNvramDeviceId   
+########################################################
+# Disabled containers 
+########################################################
+
+  
+########################################################
+# Parameter groups 
+########################################################
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Callback settings
+  members: [ NvMSingleBlockCallback, NvMInitBlockCallback ] 
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Nv settings
+  members: [ NvMNvBlockNum, NvMNvBlockBaseNumber, NvMNvBlockLength ]   
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Rom settings
+  members: [ NvMRomBlockNum, NvMRomBlockDataAddress ] 
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Ram settings
+  members: [ NvMRamBlockDataAddress ]
+    
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Crc settings
+  members: [ NvMBlockUseCrc, NvMBlockCrcType, NvMCalcRamBlockCrc ]  
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Api settings
+  members: [ NvMApiConfigClass, NvMSetRamBlockStatusApi, NvMVersionInfoApi ]  
+  
+########################################################
+# Display Names 
+########################################################
+# NvMCommon
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMApiConfigClass
+  display: NvM Api Config Class 
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMDatasetSelectionBits
+  display: NvM Dataset Selection Bits 
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMDevErrorDetect
+  display: NvM Dev Error Detect   
+ 
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMMultiBlockCallback
+  display: NvM Multi Block Callback
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMPollingMode
+  display: NvM Polling Mode 
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMSetRamBlockStatusApi
+  display: NvM Set Ram Block Status Api
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMSizeStandardJobQueue
+  display: NvM Size Standard Job Queue
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMVersionInfoApi
+  display: NvM Version Info Api   
+          
+# NvMBlockDescriptor
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMBlockManagementType
+  display: NvM Block Management Type 
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMBlockWriteProt
+  display: NvM Block Write Prot  
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMNvBlockBaseNumber
+  display: NvM Nv Block Base Number
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMNvBlockLength
+  display: NvM Nv Block Length
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMNvramBlockIdentifier
+  display: NvM Nvram Block Identifier
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMSelectBlockForReadAll
+  display: NvM Select Block For Read All
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMBlockCrcType
+  display: NvM Block Crc Type   
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMBlockUseCrc
+  display: NvM Block Use Crc  
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMCalcRamBlockCrc
+  display: NvM Calc Ram Block Crc 
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMInitBlockCallback
+  display: NvM Init Block Callback  
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMSingleBlockCallback
+  display: NvM Single Block Callback   
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMNvBlockNum
+  display: NvM Nv Block Num 
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMRomBlockNum
+  display: NvM Rom Block Num  
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMRamBlockDataAddress
+  display: NvM Ram Block Data Address  
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMRomBlockDataAddress
+  display: NvM Rom Block Data Address                    
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMNameOfEaBlock
+  display: NvM Name Of Ea Block
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: NvMNameOfFeeBlock 
+  display: NvM Name Of Fee Block

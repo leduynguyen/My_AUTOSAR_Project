@@ -1,0 +1,29 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters
+#########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrPTwoKeySlotMode
+  mcals: [RH850F1H,MPC5744P,MPC5746C,MPC5747C, MPC5748G]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrPFallBackInternal
+  mcals: [RH850F1H,MPC5744P,MPC5746C,MPC5747C, MPC5748G]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrPExternalSync
+  mcals: [RH850F1H,MPC5744P,MPC5746C,MPC5747C, MPC5748G]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrPNmVectorEarlyUpdate
+  mcals: [RH850F1H,MPC5744P,MPC5746C,MPC5747C, MPC5748G]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrPdMicrotick
+  mcals: [RH850F1H,MPC5744P,MPC5746C,MPC5747C, MPC5748G]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrPSecondKeySlotId
+  mcals: [RH850F1H,MPC5744P,MPC5746C,MPC5747C, MPC5748G]

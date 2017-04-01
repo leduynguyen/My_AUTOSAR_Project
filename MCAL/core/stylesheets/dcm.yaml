@@ -1,0 +1,379 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters in DcmDsd
+######################################################### 
+# DcmDsdServiceTable
+## DcmDsdService
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDsdSidTabModeRuleRef
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcDcmDsdSidConditionCheckFnc
+  
+###  DcmDsdSubService
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDsdSubServiceModeRuleRef
+  
+#########################################################
+# Hidden parameters in DcmDsl
+#########################################################
+# DcmDslDiagResp
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslDiagRespOnSecondDeclinedRequest
+  
+# DcmDslProtocol
+## DcmDslProtocolRow  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslProtocolEndiannessConvEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslProtocolIsParallelExecutab
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslProtocolSessionRef
+  
+### DcmDslMainConnection
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslROEConnectionRef  
+  
+#### DcmDslProtocolRx
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslProtocolRxChannelId
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslProtocolRxPduId  
+  
+#### DcmDslProtocolTx  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslTxConfirmationPduId  
+  
+### DcmDslPeriodicTransmission
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslPeriodicTxConfirmationPduId
+
+### DcmDslResponseOnEvent
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslRoeTxConfirmationPduId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDslRoeTxPduRef
+
+#########################################################
+# Hidden parameters in DcmDsp
+#########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspMaxDidToRead
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPowerDownTime
+
+# DcmDspComControl 
+ 
+## DcmDspComControlSetting
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspComControlCommunicationReEnableModeRuleRef
+
+# DcmDspControlDTCSetting
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspControlDTCSettingReEnableModeRuleRef
+  
+# DcmDspData
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDataEcuSignal
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDataReadEcuSignal
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDataType
+    
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Read
+  members: [ DcmDspDataReadDataLengthFnc, DcmDspDataReadFnc, DcmDspDataConditionCheckReadFnc]
+    
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Write
+  members: [ DcmDspDataWriteFnc]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Scaling
+  members: [ DcmDspDataGetScalingInfoFnc]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: IO Control
+  members: [ DcmDspDataFreezeCurrentStateFnc, DcmDspDataResetToDefaultFnc, DcmDspDataReturnControlToEcuFnc, DcmDspDataShortTermAdjustmentFnc ]
+    
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Block Id
+  members: [ DcmDspDataBlockIdRef]
+    
+# DcmDspDid
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRoeQueueEnabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidUsed
+    
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Included Dids
+  members: [ DcmDspDidRef ]  
+  
+# DcmDspDidInfo
+## DcmDspDidAccess
+### DcmDspDidControl
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidControlModeRuleRef
+       
+
+### DcmDspDidRead
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidReadModeRuleRef
+  
+### DcmDspDidWrite
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidWriteModeRuleRef
+    
+#DcmDspDidRange
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeHasGaps
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeIdentifierLowerLimit
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeIdentifierUpperLimit
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeInfoRef
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeIsDidAvailableFnc
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeMaxDataLength
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeReadDidFnc
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeUsePort
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspDidRangeWriteDidFnc
+  
+#DcmDspMemory   
+## DcmDspMemoryIdInfo
+### DcmDspReadMemoryRangeInfo
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspReadMemoryRangeModeRuleRef
+
+###  DcmDspWriteMemoryRangeInfo
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspWriteMemoryRangeModeRuleRef 
+
+# DcmDspPid
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidUsed
+  
+## DcmDspPidData
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidDataPos
+
+### DcmDspPidDataSupportInfo  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidDataSupportInfoBit
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidDataSupportInfoRef
+
+### DcmDspPidService02  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidDataDemRef
+  
+### DcmDspPidSupportInfo
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidSupportInfoLen
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspPidSupportInfoPos
+
+# DcmDspRequestControl
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRequestControlInBufferSize
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRequestControlOutBufferSize
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRequestControlTestId  
+  
+# DcmDspRoe
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeInitFnc
+      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeInitOnDSC
+      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeInterMessageTime
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeMaxEventLength
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeMaxNumberOfRetry
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeMaxQueueLength
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeQueueEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoeStopFnc
+  
+# DcmDspRoutineInfo
+## DcmDspRoutineAuthorization     
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmDspRoutineModeRuleRef
+  
+# DcmDspSecurity
+## DcmDspSecurityRow    
+  
+#########################################################
+# Hidden parameters in DcmGeneral
+#########################################################  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmRequestSupplierNotificationEnabled
+
+#########################################################
+# Hidden parameters in DcmPageBufferCfg
+#########################################################  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmPagedBufferEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmPagedBufferTimeout  
+  
+#########################################################
+# Hidden parameters in DcmProcessingConditions
+######################################################### 
+# DcmModeCondition 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmBswModeRef 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmConditionType
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmSwcModeRef
+
+# DcmModeRule
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmArgumentRef
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmLogicalOperator
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DcmModeRuleNrcValue                         
+  
+#Disabled containers
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmDslResponseOnEvent
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmDspComControlSetting
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmDspControlDTCSetting 
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmDspDidRange
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmDspRequestControl   
+ 
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmModeCondition
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmModeRule
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmProcessingConditions
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DcmDspPidDataSupportInfo  
+#########################################################
+# Excluded from generic validation
+#########################################################  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDslProtocolPreemptTimeout
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDslProtocolPriority 
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDslProtocolRxBufferID 
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDslProtocolSIDTable  
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmTimStrP2ServerAdjust
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmTimStrP2StarServerAdjust  
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataConditionCheckReadFnc 
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataFreezeCurrentStateFnc  
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataResetToDefaultFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataReturnControlToEcuFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataShortTermAdjustmentFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataWriteFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataReadFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataReadDataLengthFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataConditionCheckReadFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspDataGetScalingInfoFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspRequestResultsRoutineFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspStartRoutineFnc
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspStopRoutineFnc
+ 
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: DcmDspSecurityLevel                
+  
+########################################################
+# Dsiplay names
+########################################################   
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: ArcDcmDspRoeNvMBlockRef
+  display: Arc Dcm Dsp Roe NvM Block Ref              

@@ -1,0 +1,411 @@
+/*-------------------------------- Arctic Core ------------------------------
+ * Copyright (C) 2013, ArcCore AB, Sweden, www.arccore.com.
+ * Contact: <contact@arccore.com>
+ * 
+ * You may ONLY use this file:
+ * 1)if you have a valid commercial ArcCore license and then in accordance with  
+ * the terms contained in the written license agreement between you and ArcCore, 
+ * or alternatively
+ * 2)if you follow the terms found in GNU General Public License version 2 as 
+ * published by the Free Software Foundation and appearing in the file 
+ * LICENSE.GPL included in the packaging of this file or here 
+ * <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+ *-------------------------------- Arctic Core -----------------------------*/
+ 
+#define TRAP_ENTRY(_name) 	\
+ 	.balign 32;             \
+	mov %d4, %d15;			\
+	j  _name;		\
+	rfe;										
+
+
+
+
+/* 
+ * Call the interrupt entry.  
+ * - HW saves the upper context
+ * - Interrupts are disabled
+ *  
+ * For ISR1 the function will be called as "void func(void)"
+ * For ISR2 the function will be called as "void Irq_Entry( *, uint32 vector)"
+ *
+ * a4 - stack as argument
+ * d4 - vector
+ */
+#define INT_ENTRY(i)	\
+	.global int_entry_##i;	\
+	.balign 8;			\
+	.type int_entry_##i, %function; \
+	int_entry_##i:;		\
+	mov.u %d8,i*8; \
+	j 	Irq_Entry
+
+
+
+// a14, SRPN 
+.section .text,"ax",@progbits
+.global Irq_Entry
+Irq_Entry:
+	svlcx;
+	movh.a %a15,hi:Irq_VectorTable
+	lea %a15,[%a15]lo:Irq_VectorTable
+	/* Add offset */
+	mov.a  %a14,%d8
+	add.a %a15,%a14
+	
+	ld.a %a14,[%a15+]	/* .func */
+	sub.a   %a10,4
+	ld.w %d4,[%a15]   /* .vector */
+	
+	/* Store context on stack */
+	mfcr	%d5,$pcxi
+	isync
+	st.w	[%a10],%d5
+	mov.aa  %a4,%a10 	
+
+	calli  %a14
+
+	/* The stack is returned here in A[2] */
+	ld.w   %d5,[%a2]
+	mtcr   $pcxi, %d5
+	isync
+	
+	rslcx;		/* Return Lower */
+	rfe;		/* Return Upper */ 
+
+
+.section .trap_tbl_cpu0,"ax",@progbits
+.balign 0x100
+.global trap_tbl_cpu0
+
+
+/**
+ * Trap Handler table. 
+ * %d15 is the TIN number. This is passed as argument 
+ * to the Trap_x handler
+ */
+trap_tbl_cpu0:
+	TRAP_ENTRY(Trap_MMU)
+	TRAP_ENTRY(Trap_InternalProtection )
+	TRAP_ENTRY(Trap_InstructionErrors )
+	TRAP_ENTRY(Trap_ContextManagement )
+	TRAP_ENTRY(Trap_SystemBusAndPeripheralErrors )
+	TRAP_ENTRY(Trap_InstructionErrors )
+	TRAP_ENTRY(Trap_ContextManagement )
+	TRAP_ENTRY(Trap_AssertionTraps )
+	TRAP_ENTRY(Trap_SystemCall )
+	TRAP_ENTRY(Trap_NMI )
+
+
+
+.section .trap_tbl_cpu1,"ax",@progbits
+.balign 0x100
+.global trap_tbl_cpu1
+
+
+/**
+ * Trap Handler table.
+ * %d15 is the TIN number. This is passed as argument
+ * to the Trap_x handler
+ */
+trap_tbl_cpu1:
+	TRAP_ENTRY(Trap_MMU)
+	TRAP_ENTRY(Trap_InternalProtection )
+	TRAP_ENTRY(Trap_InstructionErrors )
+	TRAP_ENTRY(Trap_ContextManagement )
+	TRAP_ENTRY(Trap_SystemBusAndPeripheralErrors )
+	TRAP_ENTRY(Trap_InstructionErrors )
+	TRAP_ENTRY(Trap_ContextManagement )
+	TRAP_ENTRY(Trap_AssertionTraps )
+	TRAP_ENTRY(Trap_SystemCall )
+	TRAP_ENTRY(Trap_NMI )
+
+
+
+.section .trap_tbl_cpu2,"ax",@progbits
+.balign 0x100
+.global trap_tbl_cpu2
+
+
+/**
+ * Trap Handler table.
+ * %d15 is the TIN number. This is passed as argument
+ * to the Trap_x handler
+ */
+trap_tbl_cpu2:
+	TRAP_ENTRY(Trap_MMU)
+	TRAP_ENTRY(Trap_InternalProtection )
+	TRAP_ENTRY(Trap_InstructionErrors )
+	TRAP_ENTRY(Trap_ContextManagement )
+	TRAP_ENTRY(Trap_SystemBusAndPeripheralErrors )
+	TRAP_ENTRY(Trap_InstructionErrors )
+	TRAP_ENTRY(Trap_ContextManagement )
+	TRAP_ENTRY(Trap_AssertionTraps )
+	TRAP_ENTRY(Trap_SystemCall )
+	TRAP_ENTRY(Trap_NMI )
+
+
+
+	.type Irq_VectorTable,"object"
+
+.section .int_tbl,"ax",@progbits
+.balign 0x1000
+.global int_tbl
+int_tbl:
+	INT_ENTRY(0)
+	INT_ENTRY(1)
+	INT_ENTRY(2)
+	INT_ENTRY(3)
+	INT_ENTRY(4)
+	INT_ENTRY(5)
+	INT_ENTRY(6)
+	INT_ENTRY(7)
+	INT_ENTRY(8)
+	INT_ENTRY(9)
+	INT_ENTRY(10)
+	INT_ENTRY(11)
+	INT_ENTRY(12)
+	INT_ENTRY(13)
+	INT_ENTRY(14)
+	INT_ENTRY(15)
+	INT_ENTRY(16)
+	INT_ENTRY(17)
+	INT_ENTRY(18)
+	INT_ENTRY(19)
+	INT_ENTRY(20)
+	INT_ENTRY(21)
+	INT_ENTRY(22)
+	INT_ENTRY(23)
+	INT_ENTRY(24)
+	INT_ENTRY(25)
+	INT_ENTRY(26)
+	INT_ENTRY(27)
+	INT_ENTRY(28)
+	INT_ENTRY(29)
+	INT_ENTRY(30)
+	INT_ENTRY(31)
+	INT_ENTRY(32)
+	INT_ENTRY(33)
+	INT_ENTRY(34)
+	INT_ENTRY(35)
+	INT_ENTRY(36)
+	INT_ENTRY(37)
+	INT_ENTRY(38)
+	INT_ENTRY(39)
+	INT_ENTRY(40)
+	INT_ENTRY(41)
+	INT_ENTRY(42)
+	INT_ENTRY(43)
+	INT_ENTRY(44)
+	INT_ENTRY(45)
+	INT_ENTRY(46)
+	INT_ENTRY(47)
+	INT_ENTRY(48)
+	INT_ENTRY(49)
+	INT_ENTRY(50)
+	INT_ENTRY(51)
+	INT_ENTRY(52)
+	INT_ENTRY(53)
+	INT_ENTRY(54)
+	INT_ENTRY(55)
+	INT_ENTRY(56)
+	INT_ENTRY(57)
+	INT_ENTRY(58)
+	INT_ENTRY(59)
+	INT_ENTRY(60)
+	INT_ENTRY(61)
+	INT_ENTRY(62)
+	INT_ENTRY(63)
+	INT_ENTRY(64)
+	INT_ENTRY(65)
+	INT_ENTRY(66)
+	INT_ENTRY(67)
+	INT_ENTRY(68)
+	INT_ENTRY(69)
+	INT_ENTRY(70)
+	INT_ENTRY(71)
+	INT_ENTRY(72)
+	INT_ENTRY(73)
+	INT_ENTRY(74)
+	INT_ENTRY(75)
+	INT_ENTRY(76)
+	INT_ENTRY(77)
+	INT_ENTRY(78)
+	INT_ENTRY(79)
+	INT_ENTRY(80)
+	INT_ENTRY(81)
+	INT_ENTRY(82)
+	INT_ENTRY(83)
+	INT_ENTRY(84)
+	INT_ENTRY(85)
+	INT_ENTRY(86)
+	INT_ENTRY(87)
+	INT_ENTRY(88)
+	INT_ENTRY(89)
+	INT_ENTRY(90)
+	INT_ENTRY(91)
+	INT_ENTRY(92)
+	INT_ENTRY(93)
+	INT_ENTRY(94)
+	INT_ENTRY(95)
+	INT_ENTRY(96)
+	INT_ENTRY(97)
+	INT_ENTRY(98)
+	INT_ENTRY(99)
+	INT_ENTRY(100)
+	INT_ENTRY(101)
+	INT_ENTRY(102)
+	INT_ENTRY(103)
+	INT_ENTRY(104)
+	INT_ENTRY(105)
+	INT_ENTRY(106)
+	INT_ENTRY(107)
+	INT_ENTRY(108)
+	INT_ENTRY(109)
+	INT_ENTRY(110)
+	INT_ENTRY(111)
+	INT_ENTRY(112)
+	INT_ENTRY(113)
+	INT_ENTRY(114)
+	INT_ENTRY(115)
+	INT_ENTRY(116)
+	INT_ENTRY(117)
+	INT_ENTRY(118)
+	INT_ENTRY(119)
+	INT_ENTRY(120)
+	INT_ENTRY(121)
+	INT_ENTRY(122)
+	INT_ENTRY(123)
+	INT_ENTRY(124)
+	INT_ENTRY(125)
+	INT_ENTRY(126)
+	INT_ENTRY(127)
+	INT_ENTRY(128)
+	INT_ENTRY(129)
+	INT_ENTRY(130)
+	INT_ENTRY(131)
+	INT_ENTRY(132)
+	INT_ENTRY(133)
+	INT_ENTRY(134)
+	INT_ENTRY(135)
+	INT_ENTRY(136)
+	INT_ENTRY(137)
+	INT_ENTRY(138)
+	INT_ENTRY(139)
+	INT_ENTRY(140)
+	INT_ENTRY(141)
+	INT_ENTRY(142)
+	INT_ENTRY(143)
+	INT_ENTRY(144)
+	INT_ENTRY(145)
+	INT_ENTRY(146)
+	INT_ENTRY(147)
+	INT_ENTRY(148)
+	INT_ENTRY(149)
+	INT_ENTRY(150)
+	INT_ENTRY(151)
+	INT_ENTRY(152)
+	INT_ENTRY(153)
+	INT_ENTRY(154)
+	INT_ENTRY(155)
+	INT_ENTRY(156)
+	INT_ENTRY(157)
+	INT_ENTRY(158)
+	INT_ENTRY(159)
+	INT_ENTRY(160)
+	INT_ENTRY(161)
+	INT_ENTRY(162)
+	INT_ENTRY(163)
+	INT_ENTRY(164)
+	INT_ENTRY(165)
+	INT_ENTRY(166)
+	INT_ENTRY(167)
+	INT_ENTRY(168)
+	INT_ENTRY(169)
+	INT_ENTRY(170)
+	INT_ENTRY(171)
+	INT_ENTRY(172)
+	INT_ENTRY(173)
+	INT_ENTRY(174)
+	INT_ENTRY(175)
+	INT_ENTRY(176)
+	INT_ENTRY(177)
+	INT_ENTRY(178)
+	INT_ENTRY(179)
+	INT_ENTRY(180)
+	INT_ENTRY(181)
+	INT_ENTRY(182)
+	INT_ENTRY(183)
+	INT_ENTRY(184)
+	INT_ENTRY(185)
+	INT_ENTRY(186)
+	INT_ENTRY(187)
+	INT_ENTRY(188)
+	INT_ENTRY(189)
+	INT_ENTRY(190)
+	INT_ENTRY(191)
+	INT_ENTRY(192)
+	INT_ENTRY(193)
+	INT_ENTRY(194)
+	INT_ENTRY(195)
+	INT_ENTRY(196)
+	INT_ENTRY(197)
+	INT_ENTRY(198)
+	INT_ENTRY(199)
+	INT_ENTRY(200)
+	INT_ENTRY(201)
+	INT_ENTRY(202)
+	INT_ENTRY(203)
+	INT_ENTRY(204)
+	INT_ENTRY(205)
+	INT_ENTRY(206)
+	INT_ENTRY(207)
+	INT_ENTRY(208)
+	INT_ENTRY(209)
+	INT_ENTRY(210)
+	INT_ENTRY(211)
+	INT_ENTRY(212)
+	INT_ENTRY(213)
+	INT_ENTRY(214)
+	INT_ENTRY(215)
+	INT_ENTRY(216)
+	INT_ENTRY(217)
+	INT_ENTRY(218)
+	INT_ENTRY(219)
+	INT_ENTRY(220)
+	INT_ENTRY(221)
+	INT_ENTRY(222)
+	INT_ENTRY(223)
+	INT_ENTRY(224)
+	INT_ENTRY(225)
+	INT_ENTRY(226)
+	INT_ENTRY(227)
+	INT_ENTRY(228)
+	INT_ENTRY(229)
+	INT_ENTRY(230)
+	INT_ENTRY(231)
+	INT_ENTRY(232)
+	INT_ENTRY(233)
+	INT_ENTRY(234)
+	INT_ENTRY(235)
+	INT_ENTRY(236)
+	INT_ENTRY(237)
+	INT_ENTRY(238)
+	INT_ENTRY(239)
+	INT_ENTRY(240)
+	INT_ENTRY(241)
+	INT_ENTRY(242)
+	INT_ENTRY(243)
+	INT_ENTRY(244)
+	INT_ENTRY(245)
+	INT_ENTRY(246)
+	INT_ENTRY(247)
+	INT_ENTRY(248)
+	INT_ENTRY(249)
+	INT_ENTRY(250)
+	INT_ENTRY(251)
+	INT_ENTRY(252)
+	INT_ENTRY(253)
+	INT_ENTRY(254)
+	INT_ENTRY(255)
+	

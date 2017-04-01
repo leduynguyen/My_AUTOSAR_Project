@@ -1,0 +1,26 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#EthIfGeneral 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthIfPublicCddHeaderFile
+        
+#EthIfConfigSet ::EthIfControllers
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthIfCtrlIdx 
+  
+#EthIfConfigSet ::EthIfFrameOwnerConfigs
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthIfOwner
+  
+#EthIfConfigSet ::EthIfSwitchs
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthIfSwitchIdx
+ 
+ #EthIfConfigSet ::EthIfTrcvLinkStateConfigs 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthIfTrcvLinkStateChgFunction
+
+  
+  
+    

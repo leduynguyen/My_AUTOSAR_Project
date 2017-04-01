@@ -1,0 +1,36 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+  
+########################################################
+# Hidden parameters in SdClientService
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SdClientServiceHandleId
+
+########################################################
+# Hidden parameters in SdServerService
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SdServerServiceHandleId
+
+########################################################
+# Hidden parameters in SdConsumedEventGroup
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SdConsumedEventGroupHandleId
+
+########################################################
+# Hidden parameters in SdEventHandler
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SdEventHandlerHandleId
+
+########################################################
+# Hidden parameters in SdInstanceMulticastRxPdu
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: SdRxPduId
+  
+
+
+  

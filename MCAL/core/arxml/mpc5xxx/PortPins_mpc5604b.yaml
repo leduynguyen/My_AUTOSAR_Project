@@ -1,0 +1,6551 @@
+# 1.0
+# com.arccore.bsw.port.pin.MPC560x
+#
+#
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[0]'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'GPIO0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[0]'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'E0UC0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CLKOUT,
+    group: CLKOUT,
+    name: 'CLKOUT'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'CLKOUT',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[19]'
+  }
+  properties: {
+    PortPinId: 0,
+    __shortName: 'WKPU19',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER1,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER1,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[1]'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'GPIO1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[1]'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'E0UC1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: NMI,
+    group: NMI,
+    name: 'NMI'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'NMI',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[2]'
+  }
+  properties: {
+    PortPinId: 1,
+    __shortName: 'WKPU2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER1,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER1,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[2]'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'GPIO2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[2]'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'E0UC2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[3]'
+  }
+  properties: {
+    PortPinId: 2,
+    __shortName: 'WKPU3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[3]'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'GPIO3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[3]'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'E0UC3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[0]'
+  }
+  properties: {
+    PortPinId: 3,
+    __shortName: 'EIRQ0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[4]'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'GPIO4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[4]'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'E0UC4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[9]'
+  }
+  properties: {
+    PortPinId: 4,
+    __shortName: 'WKPU9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[5]'
+  }
+  properties: {
+    PortPinId: 5,
+    __shortName: 'GPIO5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[5]'
+  }
+  properties: {
+    PortPinId: 5,
+    __shortName: 'E0UC5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[6]'
+  }
+  properties: {
+    PortPinId: 6,
+    __shortName: 'GPIO6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[6]'
+  }
+  properties: {
+    PortPinId: 6,
+    __shortName: 'E0UC6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[1]'
+  }
+  properties: {
+    PortPinId: 6,
+    __shortName: 'EIRQ1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[7]'
+  }
+  properties: {
+    PortPinId: 7,
+    __shortName: 'GPIO7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[7]'
+  }
+  properties: {
+    PortPinId: 7,
+    __shortName: 'E0UC7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN3TX,
+    group: LIN3TX,
+    name: 'LIN3TX'
+  }
+  properties: {
+    PortPinId: 7,
+    __shortName: 'LIN3TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[2]'
+  }
+  properties: {
+    PortPinId: 7,
+    __shortName: 'EIRQ2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[8]'
+  }
+  properties: {
+    PortPinId: 8,
+    __shortName: 'GPIO8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[8]'
+  }
+  properties: {
+    PortPinId: 8,
+    __shortName: 'E0UC8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[3]'
+  }
+  properties: {
+    PortPinId: 8,
+    __shortName: 'EIRQ3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN3RX,
+    group: LIN3RX,
+    name: 'LIN3RX'
+  }
+  properties: {
+    PortPinId: 8,
+    __shortName: 'LIN3RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[9]'
+  }
+  properties: {
+    PortPinId: 9,
+    __shortName: 'GPIO9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[9]'
+  }
+  properties: {
+    PortPinId: 9,
+    __shortName: 'E0UC9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[10]'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'GPIO10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[10]'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'E0UC10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SDA,
+    group: SDA,
+    name: 'SDA'
+  }
+  properties: {
+    PortPinId: 10,
+    __shortName: 'SDA',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[11]'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'GPIO11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[11]'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'E0UC11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCL,
+    group: SCL,
+    name: 'SCL'
+  }
+  properties: {
+    PortPinId: 11,
+    __shortName: 'SCL',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[12]'
+  }
+  properties: {
+    PortPinId: 12,
+    __shortName: 'GPIO12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SIN_0,
+    group: SIN_0,
+    name: 'SIN_0'
+  }
+  properties: {
+    PortPinId: 12,
+    __shortName: 'SIN_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[13]'
+  }
+  properties: {
+    PortPinId: 13,
+    __shortName: 'GPIO13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SOUT_0,
+    group: SOUT_0,
+    name: 'SOUT_0'
+  }
+  properties: {
+    PortPinId: 13,
+    __shortName: 'SOUT_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[14]'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'GPIO14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_0,
+    group: SCK_0,
+    name: 'SCK_0'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'SCK_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_0,
+    group: CS0_0,
+    name: 'CS0_0'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'CS0_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[4]'
+  }
+  properties: {
+    PortPinId: 14,
+    __shortName: 'EIRQ4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[15]'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'GPIO15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_0,
+    group: CS0_0,
+    name: 'CS0_0'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'CS0_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_0,
+    group: SCK_0,
+    name: 'SCK_0'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'SCK_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[10]'
+  }
+  properties: {
+    PortPinId: 15,
+    __shortName: 'WKPU10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[16]'
+  }
+  properties: {
+    PortPinId: 16,
+    __shortName: 'GPIO16',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN0TX,
+    group: CAN0TX,
+    name: 'CAN0TX'
+  }
+  properties: {
+    PortPinId: 16,
+    __shortName: 'CAN0TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[17]'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'GPIO17',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[4]'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'WKPU4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN0RX,
+    group: CAN0RX,
+    name: 'CAN0RX'
+  }
+  properties: {
+    PortPinId: 17,
+    __shortName: 'CAN0RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[18]'
+  }
+  properties: {
+    PortPinId: 18,
+    __shortName: 'GPIO18',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN0TX,
+    group: LIN0TX,
+    name: 'LIN0TX'
+  }
+  properties: {
+    PortPinId: 18,
+    __shortName: 'LIN0TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SDA,
+    group: SDA,
+    name: 'SDA'
+  }
+  properties: {
+    PortPinId: 18,
+    __shortName: 'SDA',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[19]'
+  }
+  properties: {
+    PortPinId: 19,
+    __shortName: 'GPIO19',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCL,
+    group: SCL,
+    name: 'SCL'
+  }
+  properties: {
+    PortPinId: 19,
+    __shortName: 'SCL',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[11]'
+  }
+  properties: {
+    PortPinId: 19,
+    __shortName: 'WKPU11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN0RX,
+    group: LIN0RX,
+    name: 'LIN0RX'
+  }
+  properties: {
+    PortPinId: 19,
+    __shortName: 'LIN0RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[20]'
+  }
+  properties: {
+    PortPinId: 20,
+    __shortName: 'GPIO20',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[0]'
+  }
+  properties: {
+    PortPinId: 20,
+    __shortName: 'GPI0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[21]'
+  }
+  properties: {
+    PortPinId: 21,
+    __shortName: 'GPIO21',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[1]'
+  }
+  properties: {
+    PortPinId: 21,
+    __shortName: 'GPI1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[22]'
+  }
+  properties: {
+    PortPinId: 22,
+    __shortName: 'GPIO22',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[2]'
+  }
+  properties: {
+    PortPinId: 22,
+    __shortName: 'GPI2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[23]'
+  }
+  properties: {
+    PortPinId: 23,
+    __shortName: 'GPIO23',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[3]'
+  }
+  properties: {
+    PortPinId: 23,
+    __shortName: 'GPI3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[24]'
+  }
+  properties: {
+    PortPinId: 24,
+    __shortName: 'GPIO24',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[0]'
+  }
+  properties: {
+    PortPinId: 24,
+    __shortName: 'ANS0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: OSC32K_XTAL7,
+    group: OSC32K_XTAL7,
+    name: 'OSC32K_XTAL7'
+  }
+  properties: {
+    PortPinId: 24,
+    __shortName: 'OSC32K_XTAL7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[25]'
+  }
+  properties: {
+    PortPinId: 25,
+    __shortName: 'GPIO25',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[1]'
+  }
+  properties: {
+    PortPinId: 25,
+    __shortName: 'ANS1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: OSC32K_EXTAL7,
+    group: OSC32K_EXTAL7,
+    name: 'OSC32K_EXTAL7'
+  }
+  properties: {
+    PortPinId: 25,
+    __shortName: 'OSC32K_EXTAL7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[26]'
+  }
+  properties: {
+    PortPinId: 26,
+    __shortName: 'GPIO26',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[2]'
+  }
+  properties: {
+    PortPinId: 26,
+    __shortName: 'ANS2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[8]'
+  }
+  properties: {
+    PortPinId: 26,
+    __shortName: 'WKPU8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[27]'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'GPIO27',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[3]'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'E0UC3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_0,
+    group: CS0_0,
+    name: 'CS0_0'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'CS0_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[3]'
+  }
+  properties: {
+    PortPinId: 27,
+    __shortName: 'ANS3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[28]'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'GPIO28',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[4]'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'E0UC4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS1_0,
+    group: CS1_0,
+    name: 'CS1_0'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'CS1_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANX,
+    group: ANX,
+    name: 'ANX[0]'
+  }
+  properties: {
+    PortPinId: 28,
+    __shortName: 'ANX0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[29]'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'GPIO29',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[5]'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'E0UC5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS2_0,
+    group: CS2_0,
+    name: 'CS2_0'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'CS2_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANX,
+    group: ANX,
+    name: 'ANX[1]'
+  }
+  properties: {
+    PortPinId: 29,
+    __shortName: 'ANX1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[30]'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'GPIO30',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[6]'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'E0UC6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS3_0,
+    group: CS3_0,
+    name: 'CS3_0'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'CS3_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANX,
+    group: ANX,
+    name: 'ANX[2]'
+  }
+  properties: {
+    PortPinId: 30,
+    __shortName: 'ANX2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[31]'
+  }
+  properties: {
+    PortPinId: 31,
+    __shortName: 'GPIO31',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[7]'
+  }
+  properties: {
+    PortPinId: 31,
+    __shortName: 'E0UC7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS4_0,
+    group: CS4_0,
+    name: 'CS4_0'
+  }
+  properties: {
+    PortPinId: 31,
+    __shortName: 'CS4_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANX,
+    group: ANX,
+    name: 'ANX[3]'
+  }
+  properties: {
+    PortPinId: 31,
+    __shortName: 'ANX3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[32]'
+  }
+  properties: {
+    PortPinId: 32,
+    __shortName: 'GPIO32',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: TDI,
+    group: TDI,
+    name: 'TDI'
+  }
+  properties: {
+    PortPinId: 32,
+    __shortName: 'TDI',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[33]'
+  }
+  properties: {
+    PortPinId: 33,
+    __shortName: 'GPIO33',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: TDO10,
+    group: TDO10,
+    name: 'TDO10'
+  }
+  properties: {
+    PortPinId: 33,
+    __shortName: 'TDO10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[34]'
+  }
+  properties: {
+    PortPinId: 34,
+    __shortName: 'GPIO34',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_1,
+    group: SCK_1,
+    name: 'SCK_1'
+  }
+  properties: {
+    PortPinId: 34,
+    __shortName: 'SCK_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN4TX,
+    group: CAN4TX,
+    name: 'CAN4TX'
+  }
+  properties: {
+    PortPinId: 34,
+    __shortName: 'CAN4TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[5]'
+  }
+  properties: {
+    PortPinId: 34,
+    __shortName: 'EIRQ5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[35]'
+  }
+  properties: {
+    PortPinId: 35,
+    __shortName: 'GPIO35',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_1,
+    group: CS0_1,
+    name: 'CS0_1'
+  }
+  properties: {
+    PortPinId: 35,
+    __shortName: 'CS0_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[0]'
+  }
+  properties: {
+    PortPinId: 35,
+    __shortName: 'MA0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN1RX,
+    group: CAN1RX,
+    name: 'CAN1RX'
+  }
+  properties: {
+    PortPinId: 35,
+    __shortName: 'CAN1RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN4RX,
+    group: CAN4RX,
+    name: 'CAN4RX'
+  }
+  properties: {
+    PortPinId: 35,
+    __shortName: 'CAN4RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[6]'
+  }
+  properties: {
+    PortPinId: 35,
+    __shortName: 'EIRQ6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[36]'
+  }
+  properties: {
+    PortPinId: 36,
+    __shortName: 'GPIO36',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SIN_1,
+    group: SIN_1,
+    name: 'SIN_1'
+  }
+  properties: {
+    PortPinId: 36,
+    __shortName: 'SIN_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN3RX,
+    group: CAN3RX,
+    name: 'CAN3RX'
+  }
+  properties: {
+    PortPinId: 36,
+    __shortName: 'CAN3RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[37]'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'GPIO37',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SOUT_1,
+    group: SOUT_1,
+    name: 'SOUT_1'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'SOUT_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN3TX,
+    group: CAN3TX,
+    name: 'CAN3TX'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'CAN3TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[7]'
+  }
+  properties: {
+    PortPinId: 37,
+    __shortName: 'EIRQ7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[38]'
+  }
+  properties: {
+    PortPinId: 38,
+    __shortName: 'GPIO38',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN1TX,
+    group: LIN1TX,
+    name: 'LIN1TX'
+  }
+  properties: {
+    PortPinId: 38,
+    __shortName: 'LIN1TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[39]'
+  }
+  properties: {
+    PortPinId: 39,
+    __shortName: 'GPIO39',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN1RX,
+    group: LIN1RX,
+    name: 'LIN1RX'
+  }
+  properties: {
+    PortPinId: 39,
+    __shortName: 'LIN1RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[12]'
+  }
+  properties: {
+    PortPinId: 39,
+    __shortName: 'WKPU12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[40]'
+  }
+  properties: {
+    PortPinId: 40,
+    __shortName: 'GPIO40',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN2TX,
+    group: LIN2TX,
+    name: 'LIN2TX'
+  }
+  properties: {
+    PortPinId: 40,
+    __shortName: 'LIN2TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[41]'
+  }
+  properties: {
+    PortPinId: 41,
+    __shortName: 'GPIO41',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN2RX,
+    group: LIN2RX,
+    name: 'LIN2RX'
+  }
+  properties: {
+    PortPinId: 41,
+    __shortName: 'LIN2RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[13]'
+  }
+  properties: {
+    PortPinId: 41,
+    __shortName: 'WKPU13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[42]'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'GPIO42',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN1TX,
+    group: CAN1TX,
+    name: 'CAN1TX'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'CAN1TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN4TX,
+    group: CAN4TX,
+    name: 'CAN4TX'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'CAN4TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[1]'
+  }
+  properties: {
+    PortPinId: 42,
+    __shortName: 'MA1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[43]'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'GPIO43',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN1RX,
+    group: CAN1RX,
+    name: 'CAN1RX'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'CAN1RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN4RX,
+    group: CAN4RX,
+    name: 'CAN4RX'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'CAN4RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[5]'
+  }
+  properties: {
+    PortPinId: 43,
+    __shortName: 'WKPU5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[44]'
+  }
+  properties: {
+    PortPinId: 44,
+    __shortName: 'GPIO44',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[12]'
+  }
+  properties: {
+    PortPinId: 44,
+    __shortName: 'E0UC12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SIN_2,
+    group: SIN_2,
+    name: 'SIN_2'
+  }
+  properties: {
+    PortPinId: 44,
+    __shortName: 'SIN_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[45]'
+  }
+  properties: {
+    PortPinId: 45,
+    __shortName: 'GPIO45',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[13]'
+  }
+  properties: {
+    PortPinId: 45,
+    __shortName: 'E0UC13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SOUT_2,
+    group: SOUT_2,
+    name: 'SOUT_2'
+  }
+  properties: {
+    PortPinId: 45,
+    __shortName: 'SOUT_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[46]'
+  }
+  properties: {
+    PortPinId: 46,
+    __shortName: 'GPIO46',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[14]'
+  }
+  properties: {
+    PortPinId: 46,
+    __shortName: 'E0UC14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_2,
+    group: SCK_2,
+    name: 'SCK_2'
+  }
+  properties: {
+    PortPinId: 46,
+    __shortName: 'SCK_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[8]'
+  }
+  properties: {
+    PortPinId: 46,
+    __shortName: 'EIRQ8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER1,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER1,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[47]'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'GPIO47',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[15]'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'E0UC15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_2,
+    group: CS0_2,
+    name: 'CS0_2'
+  }
+  properties: {
+    PortPinId: 47,
+    __shortName: 'CS0_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[48]'
+  }
+  properties: {
+    PortPinId: 48,
+    __shortName: 'GPIO48',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[4]'
+  }
+  properties: {
+    PortPinId: 48,
+    __shortName: 'GPI4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[49]'
+  }
+  properties: {
+    PortPinId: 49,
+    __shortName: 'GPIO49',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[5]'
+  }
+  properties: {
+    PortPinId: 49,
+    __shortName: 'GPI5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[50]'
+  }
+  properties: {
+    PortPinId: 50,
+    __shortName: 'GPIO50',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[6]'
+  }
+  properties: {
+    PortPinId: 50,
+    __shortName: 'GPI6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[51]'
+  }
+  properties: {
+    PortPinId: 51,
+    __shortName: 'GPIO51',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[7]'
+  }
+  properties: {
+    PortPinId: 51,
+    __shortName: 'GPI7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[52]'
+  }
+  properties: {
+    PortPinId: 52,
+    __shortName: 'GPIO52',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[8]'
+  }
+  properties: {
+    PortPinId: 52,
+    __shortName: 'GPI8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[53]'
+  }
+  properties: {
+    PortPinId: 53,
+    __shortName: 'GPIO53',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[9]'
+  }
+  properties: {
+    PortPinId: 53,
+    __shortName: 'GPI9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[54]'
+  }
+  properties: {
+    PortPinId: 54,
+    __shortName: 'GPIO54',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[10]'
+  }
+  properties: {
+    PortPinId: 54,
+    __shortName: 'GPI10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[55]'
+  }
+  properties: {
+    PortPinId: 55,
+    __shortName: 'GPIO55',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[11]'
+  }
+  properties: {
+    PortPinId: 55,
+    __shortName: 'GPI11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[56]'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'GPIO56',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[12]'
+  }
+  properties: {
+    PortPinId: 56,
+    __shortName: 'GPI12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[57]'
+  }
+  properties: {
+    PortPinId: 57,
+    __shortName: 'GPIO57',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[13]'
+  }
+  properties: {
+    PortPinId: 57,
+    __shortName: 'GPI13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[58]'
+  }
+  properties: {
+    PortPinId: 58,
+    __shortName: 'GPIO58',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[14]'
+  }
+  properties: {
+    PortPinId: 58,
+    __shortName: 'GPI14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[59]'
+  }
+  properties: {
+    PortPinId: 59,
+    __shortName: 'GPIO59',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPI,
+    group: GPI,
+    name: 'GPI[15]'
+  }
+  properties: {
+    PortPinId: 59,
+    __shortName: 'GPI15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[60]'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'GPIO60',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS5_0,
+    group: CS5_0,
+    name: 'CS5_0'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'CS5_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[24]'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'E0UC24',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[4]'
+  }
+  properties: {
+    PortPinId: 60,
+    __shortName: 'ANS4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[61]'
+  }
+  properties: {
+    PortPinId: 61,
+    __shortName: 'GPIO61',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_1,
+    group: CS0_1,
+    name: 'CS0_1'
+  }
+  properties: {
+    PortPinId: 61,
+    __shortName: 'CS0_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[25]'
+  }
+  properties: {
+    PortPinId: 61,
+    __shortName: 'E0UC25',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[5]'
+  }
+  properties: {
+    PortPinId: 61,
+    __shortName: 'ANS5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[62]'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'GPIO62',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS1_1,
+    group: CS1_1,
+    name: 'CS1_1'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'CS1_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[26]'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'E0UC26',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[6]'
+  }
+  properties: {
+    PortPinId: 62,
+    __shortName: 'ANS6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[63]'
+  }
+  properties: {
+    PortPinId: 63,
+    __shortName: 'GPIO63',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS2_1,
+    group: CS2_1,
+    name: 'CS2_1'
+  }
+  properties: {
+    PortPinId: 63,
+    __shortName: 'CS2_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[27]'
+  }
+  properties: {
+    PortPinId: 63,
+    __shortName: 'E0UC27',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[7]'
+  }
+  properties: {
+    PortPinId: 63,
+    __shortName: 'ANS7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[64]'
+  }
+  properties: {
+    PortPinId: 64,
+    __shortName: 'GPIO64',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[16]'
+  }
+  properties: {
+    PortPinId: 64,
+    __shortName: 'E0UC16',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN5RX,
+    group: CAN5RX,
+    name: 'CAN5RX'
+  }
+  properties: {
+    PortPinId: 64,
+    __shortName: 'CAN5RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[6]'
+  }
+  properties: {
+    PortPinId: 64,
+    __shortName: 'WKPU6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[66]'
+  }
+  properties: {
+    PortPinId: 66,
+    __shortName: 'GPIO66',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[18]'
+  }
+  properties: {
+    PortPinId: 66,
+    __shortName: 'E0UC18',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SIN_1,
+    group: SIN_1,
+    name: 'SIN_1'
+  }
+  properties: {
+    PortPinId: 66,
+    __shortName: 'SIN_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[67]'
+  }
+  properties: {
+    PortPinId: 67,
+    __shortName: 'GPIO67',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[19]'
+  }
+  properties: {
+    PortPinId: 67,
+    __shortName: 'E0UC19',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SOUT_1,
+    group: SOUT_1,
+    name: 'SOUT_1'
+  }
+  properties: {
+    PortPinId: 67,
+    __shortName: 'SOUT_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[68]'
+  }
+  properties: {
+    PortPinId: 68,
+    __shortName: 'GPIO68',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[20]'
+  }
+  properties: {
+    PortPinId: 68,
+    __shortName: 'E0UC20',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_1,
+    group: SCK_1,
+    name: 'SCK_1'
+  }
+  properties: {
+    PortPinId: 68,
+    __shortName: 'SCK_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[9]'
+  }
+  properties: {
+    PortPinId: 68,
+    __shortName: 'EIRQ9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER1,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER1,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[69]'
+  }
+  properties: {
+    PortPinId: 69,
+    __shortName: 'GPIO69',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[21]'
+  }
+  properties: {
+    PortPinId: 69,
+    __shortName: 'E0UC21',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_1,
+    group: CS0_1,
+    name: 'CS0_1'
+  }
+  properties: {
+    PortPinId: 69,
+    __shortName: 'CS0_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[2]'
+  }
+  properties: {
+    PortPinId: 69,
+    __shortName: 'MA2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[70]'
+  }
+  properties: {
+    PortPinId: 70,
+    __shortName: 'GPIO70',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[22]'
+  }
+  properties: {
+    PortPinId: 70,
+    __shortName: 'E0UC22',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS3_0,
+    group: CS3_0,
+    name: 'CS3_0'
+  }
+  properties: {
+    PortPinId: 70,
+    __shortName: 'CS3_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[1]'
+  }
+  properties: {
+    PortPinId: 70,
+    __shortName: 'MA1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[71]'
+  }
+  properties: {
+    PortPinId: 71,
+    __shortName: 'GPIO71',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[23]'
+  }
+  properties: {
+    PortPinId: 71,
+    __shortName: 'E0UC23',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS2_0,
+    group: CS2_0,
+    name: 'CS2_0'
+  }
+  properties: {
+    PortPinId: 71,
+    __shortName: 'CS2_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[0]'
+  }
+  properties: {
+    PortPinId: 71,
+    __shortName: 'MA0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[72]'
+  }
+  properties: {
+    PortPinId: 72,
+    __shortName: 'GPIO72',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN2TX12,
+    group: CAN2TX12,
+    name: 'CAN2TX12'
+  }
+  properties: {
+    PortPinId: 72,
+    __shortName: 'CAN2TX12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[22]'
+  }
+  properties: {
+    PortPinId: 72,
+    __shortName: 'E0UC22',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN3TX,
+    group: CAN3TX,
+    name: 'CAN3TX'
+  }
+  properties: {
+    PortPinId: 72,
+    __shortName: 'CAN3TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[73]'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'GPIO73',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[23]'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'E0UC23',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[7]'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'WKPU7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN2RX,
+    group: CAN2RX,
+    name: 'CAN2RX'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'CAN2RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN3RX,
+    group: CAN3RX,
+    name: 'CAN3RX'
+  }
+  properties: {
+    PortPinId: 73,
+    __shortName: 'CAN3RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[74]'
+  }
+  properties: {
+    PortPinId: 74,
+    __shortName: 'GPIO74',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN3TX,
+    group: LIN3TX,
+    name: 'LIN3TX'
+  }
+  properties: {
+    PortPinId: 74,
+    __shortName: 'LIN3TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS3_1,
+    group: CS3_1,
+    name: 'CS3_1'
+  }
+  properties: {
+    PortPinId: 74,
+    __shortName: 'CS3_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[10]'
+  }
+  properties: {
+    PortPinId: 74,
+    __shortName: 'EIRQ10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[75]'
+  }
+  properties: {
+    PortPinId: 75,
+    __shortName: 'GPIO75',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS4_1,
+    group: CS4_1,
+    name: 'CS4_1'
+  }
+  properties: {
+    PortPinId: 75,
+    __shortName: 'CS4_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: LIN3RX,
+    group: LIN3RX,
+    name: 'LIN3RX'
+  }
+  properties: {
+    PortPinId: 75,
+    __shortName: 'LIN3RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_LIN,
+    PortPinInitialMode: PORT_PIN_MODE_LIN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[14]'
+  }
+  properties: {
+    PortPinId: 75,
+    __shortName: 'WKPU14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[76]'
+  }
+  properties: {
+    PortPinId: 76,
+    __shortName: 'GPIO76',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[19]'
+  }
+  properties: {
+    PortPinId: 76,
+    __shortName: 'E1UC19',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SIN_2,
+    group: SIN_2,
+    name: 'SIN_2'
+  }
+  properties: {
+    PortPinId: 76,
+    __shortName: 'SIN_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[11]'
+  }
+  properties: {
+    PortPinId: 76,
+    __shortName: 'EIRQ11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[77]'
+  }
+  properties: {
+    PortPinId: 77,
+    __shortName: 'GPIO77',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SOUT2,
+    group: SOUT2,
+    name: 'SOUT2'
+  }
+  properties: {
+    PortPinId: 77,
+    __shortName: 'SOUT2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[20]'
+  }
+  properties: {
+    PortPinId: 77,
+    __shortName: 'E1UC20',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[78]'
+  }
+  properties: {
+    PortPinId: 78,
+    __shortName: 'GPIO78',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_2,
+    group: SCK_2,
+    name: 'SCK_2'
+  }
+  properties: {
+    PortPinId: 78,
+    __shortName: 'SCK_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[21]'
+  }
+  properties: {
+    PortPinId: 78,
+    __shortName: 'E1UC21',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[12]'
+  }
+  properties: {
+    PortPinId: 78,
+    __shortName: 'EIRQ12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER1,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER1,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[79]'
+  }
+  properties: {
+    PortPinId: 79,
+    __shortName: 'GPIO79',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_2,
+    group: CS0_2,
+    name: 'CS0_2'
+  }
+  properties: {
+    PortPinId: 79,
+    __shortName: 'CS0_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[22]'
+  }
+  properties: {
+    PortPinId: 79,
+    __shortName: 'E1UC22',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[80]'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'GPIO80',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[10]'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'E0UC10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS3_1,
+    group: CS3_1,
+    name: 'CS3_1'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'CS3_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[8]'
+  }
+  properties: {
+    PortPinId: 80,
+    __shortName: 'ANS8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[81]'
+  }
+  properties: {
+    PortPinId: 81,
+    __shortName: 'GPIO81',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[11]'
+  }
+  properties: {
+    PortPinId: 81,
+    __shortName: 'E0UC11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS4_1,
+    group: CS4_1,
+    name: 'CS4_1'
+  }
+  properties: {
+    PortPinId: 81,
+    __shortName: 'CS4_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[9]'
+  }
+  properties: {
+    PortPinId: 81,
+    __shortName: 'ANS9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[82]'
+  }
+  properties: {
+    PortPinId: 82,
+    __shortName: 'GPIO82',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[12]'
+  }
+  properties: {
+    PortPinId: 82,
+    __shortName: 'E0UC12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_2,
+    group: CS0_2,
+    name: 'CS0_2'
+  }
+  properties: {
+    PortPinId: 82,
+    __shortName: 'CS0_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[10]'
+  }
+  properties: {
+    PortPinId: 82,
+    __shortName: 'ANS10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[83]'
+  }
+  properties: {
+    PortPinId: 83,
+    __shortName: 'GPIO83',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[13]'
+  }
+  properties: {
+    PortPinId: 83,
+    __shortName: 'E0UC13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS1_2,
+    group: CS1_2,
+    name: 'CS1_2'
+  }
+  properties: {
+    PortPinId: 83,
+    __shortName: 'CS1_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[11]'
+  }
+  properties: {
+    PortPinId: 83,
+    __shortName: 'ANS11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[84]'
+  }
+  properties: {
+    PortPinId: 84,
+    __shortName: 'GPIO84',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[14]'
+  }
+  properties: {
+    PortPinId: 84,
+    __shortName: 'E0UC14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS2_2,
+    group: CS2_2,
+    name: 'CS2_2'
+  }
+  properties: {
+    PortPinId: 84,
+    __shortName: 'CS2_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[12]'
+  }
+  properties: {
+    PortPinId: 84,
+    __shortName: 'ANS12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[85]'
+  }
+  properties: {
+    PortPinId: 85,
+    __shortName: 'GPIO85',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[22]'
+  }
+  properties: {
+    PortPinId: 85,
+    __shortName: 'E0UC22',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS3_2,
+    group: CS3_2,
+    name: 'CS3_2'
+  }
+  properties: {
+    PortPinId: 85,
+    __shortName: 'CS3_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[13]'
+  }
+  properties: {
+    PortPinId: 85,
+    __shortName: 'ANS13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[86]'
+  }
+  properties: {
+    PortPinId: 86,
+    __shortName: 'GPIO86',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[23]'
+  }
+  properties: {
+    PortPinId: 86,
+    __shortName: 'E0UC23',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[14]'
+  }
+  properties: {
+    PortPinId: 86,
+    __shortName: 'ANS14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[87]'
+  }
+  properties: {
+    PortPinId: 87,
+    __shortName: 'GPIO87',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: ANS,
+    group: ANS,
+    name: 'ANS[15]'
+  }
+  properties: {
+    PortPinId: 87,
+    __shortName: 'ANS15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_GPIO_APC,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[88]'
+  }
+  properties: {
+    PortPinId: 88,
+    __shortName: 'GPIO88',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN3TX14,
+    group: CAN3TX14,
+    name: 'CAN3TX14'
+  }
+  properties: {
+    PortPinId: 88,
+    __shortName: 'CAN3TX14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS4_0,
+    group: CS4_0,
+    name: 'CS4_0'
+  }
+  properties: {
+    PortPinId: 88,
+    __shortName: 'CS4_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN2TX15,
+    group: CAN2TX15,
+    name: 'CAN2TX15'
+  }
+  properties: {
+    PortPinId: 88,
+    __shortName: 'CAN2TX15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[89]'
+  }
+  properties: {
+    PortPinId: 89,
+    __shortName: 'GPIO89',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS5_0,
+    group: CS5_0,
+    name: 'CS5_0'
+  }
+  properties: {
+    PortPinId: 89,
+    __shortName: 'CS5_0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN2RX,
+    group: CAN2RX,
+    name: 'CAN2RX'
+  }
+  properties: {
+    PortPinId: 89,
+    __shortName: 'CAN2RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN3RX,
+    group: CAN3RX,
+    name: 'CAN3RX'
+  }
+  properties: {
+    PortPinId: 89,
+    __shortName: 'CAN3RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[90]'
+  }
+  properties: {
+    PortPinId: 90,
+    __shortName: 'GPIO90',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[91]'
+  }
+  properties: {
+    PortPinId: 91,
+    __shortName: 'GPIO91',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[15]'
+  }
+  properties: {
+    PortPinId: 91,
+    __shortName: 'WKPU15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[92]'
+  }
+  properties: {
+    PortPinId: 92,
+    __shortName: 'GPIO92',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[25]'
+  }
+  properties: {
+    PortPinId: 92,
+    __shortName: 'E1UC25',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[93]'
+  }
+  properties: {
+    PortPinId: 93,
+    __shortName: 'GPIO93',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[26]'
+  }
+  properties: {
+    PortPinId: 93,
+    __shortName: 'E1UC26',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[16]'
+  }
+  properties: {
+    PortPinId: 93,
+    __shortName: 'WKPU16',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[94]'
+  }
+  properties: {
+    PortPinId: 94,
+    __shortName: 'GPIO94',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN4TX,
+    group: CAN4TX,
+    name: 'CAN4TX'
+  }
+  properties: {
+    PortPinId: 94,
+    __shortName: 'CAN4TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[27]'
+  }
+  properties: {
+    PortPinId: 94,
+    __shortName: 'E1UC27',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN1TX,
+    group: CAN1TX,
+    name: 'CAN1TX'
+  }
+  properties: {
+    PortPinId: 94,
+    __shortName: 'CAN1TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[95]'
+  }
+  properties: {
+    PortPinId: 95,
+    __shortName: 'GPIO95',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN1RX,
+    group: CAN1RX,
+    name: 'CAN1RX'
+  }
+  properties: {
+    PortPinId: 95,
+    __shortName: 'CAN1RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN4RX,
+    group: CAN4RX,
+    name: 'CAN4RX'
+  }
+  properties: {
+    PortPinId: 95,
+    __shortName: 'CAN4RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[13]'
+  }
+  properties: {
+    PortPinId: 95,
+    __shortName: 'EIRQ13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[96]'
+  }
+  properties: {
+    PortPinId: 96,
+    __shortName: 'GPIO96',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN5TX,
+    group: CAN5TX,
+    name: 'CAN5TX'
+  }
+  properties: {
+    PortPinId: 96,
+    __shortName: 'CAN5TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[23]'
+  }
+  properties: {
+    PortPinId: 96,
+    __shortName: 'E1UC23',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[97]'
+  }
+  properties: {
+    PortPinId: 97,
+    __shortName: 'GPIO97',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[24]'
+  }
+  properties: {
+    PortPinId: 97,
+    __shortName: 'E1UC24',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN5RX,
+    group: CAN5RX,
+    name: 'CAN5RX'
+  }
+  properties: {
+    PortPinId: 97,
+    __shortName: 'CAN5RX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[14]'
+  }
+  properties: {
+    PortPinId: 97,
+    __shortName: 'EIRQ14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[98]'
+  }
+  properties: {
+    PortPinId: 98,
+    __shortName: 'GPIO98',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[11]'
+  }
+  properties: {
+    PortPinId: 98,
+    __shortName: 'E1UC11',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[99]'
+  }
+  properties: {
+    PortPinId: 99,
+    __shortName: 'GPIO99',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[12]'
+  }
+  properties: {
+    PortPinId: 99,
+    __shortName: 'E1UC12',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[17]'
+  }
+  properties: {
+    PortPinId: 99,
+    __shortName: 'WKPU17',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[100]'
+  }
+  properties: {
+    PortPinId: 100,
+    __shortName: 'GPIO100',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[13]'
+  }
+  properties: {
+    PortPinId: 100,
+    __shortName: 'E1UC13',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[101]'
+  }
+  properties: {
+    PortPinId: 101,
+    __shortName: 'GPIO101',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[14]'
+  }
+  properties: {
+    PortPinId: 101,
+    __shortName: 'E1UC14',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: WKPU,
+    group: WKPU,
+    name: 'WKPU[18]'
+  }
+  properties: {
+    PortPinId: 101,
+    __shortName: 'WKPU18',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[102]'
+  }
+  properties: {
+    PortPinId: 102,
+    __shortName: 'GPIO102',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[15]'
+  }
+  properties: {
+    PortPinId: 102,
+    __shortName: 'E1UC15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[103]'
+  }
+  properties: {
+    PortPinId: 103,
+    __shortName: 'GPIO103',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[16]'
+  }
+  properties: {
+    PortPinId: 103,
+    __shortName: 'E1UC16',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[104]'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'GPIO104',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[17]'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'E1UC17',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_2,
+    group: CS0_2,
+    name: 'CS0_2'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'CS0_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: EIRQ,
+    group: EIRQ,
+    name: 'EIRQ[15]'
+  }
+  properties: {
+    PortPinId: 104,
+    __shortName: 'EIRQ15',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[105]'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'GPIO105',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[18]'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'E1UC18',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_2,
+    group: SCK_2,
+    name: 'SCK_2'
+  }
+  properties: {
+    PortPinId: 105,
+    __shortName: 'SCK_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[106]'
+  }
+  properties: {
+    PortPinId: 106,
+    __shortName: 'GPIO106',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[24]'
+  }
+  properties: {
+    PortPinId: 106,
+    __shortName: 'E0UC24',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[107]'
+  }
+  properties: {
+    PortPinId: 107,
+    __shortName: 'GPIO107',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[25]'
+  }
+  properties: {
+    PortPinId: 107,
+    __shortName: 'E0UC25',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[108]'
+  }
+  properties: {
+    PortPinId: 108,
+    __shortName: 'GPIO108',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[26]'
+  }
+  properties: {
+    PortPinId: 108,
+    __shortName: 'E0UC26',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[109]'
+  }
+  properties: {
+    PortPinId: 109,
+    __shortName: 'GPIO109',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[27]'
+  }
+  properties: {
+    PortPinId: 109,
+    __shortName: 'E0UC27',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[110]'
+  }
+  properties: {
+    PortPinId: 110,
+    __shortName: 'GPIO110',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[0]'
+  }
+  properties: {
+    PortPinId: 110,
+    __shortName: 'E1UC0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[111]'
+  }
+  properties: {
+    PortPinId: 111,
+    __shortName: 'GPIO111',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[1]'
+  }
+  properties: {
+    PortPinId: 111,
+    __shortName: 'E1UC1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[112]'
+  }
+  properties: {
+    PortPinId: 112,
+    __shortName: 'GPIO112',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[2]'
+  }
+  properties: {
+    PortPinId: 112,
+    __shortName: 'E1UC2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SIN1,
+    group: SIN1,
+    name: 'SIN1'
+  }
+  properties: {
+    PortPinId: 112,
+    __shortName: 'SIN1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[113]'
+  }
+  properties: {
+    PortPinId: 113,
+    __shortName: 'GPIO113',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[3]'
+  }
+  properties: {
+    PortPinId: 113,
+    __shortName: 'E1UC3',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SOUT1,
+    group: SOUT1,
+    name: 'SOUT1'
+  }
+  properties: {
+    PortPinId: 113,
+    __shortName: 'SOUT1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[114]'
+  }
+  properties: {
+    PortPinId: 114,
+    __shortName: 'GPIO114',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[4]'
+  }
+  properties: {
+    PortPinId: 114,
+    __shortName: 'E1UC4',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: SCK_1,
+    group: SCK_1,
+    name: 'SCK_1'
+  }
+  properties: {
+    PortPinId: 114,
+    __shortName: 'SCK_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_OTHER0,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER0,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[115]'
+  }
+  properties: {
+    PortPinId: 115,
+    __shortName: 'GPIO115',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[5]'
+  }
+  properties: {
+    PortPinId: 115,
+    __shortName: 'E1UC5',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS0_1,
+    group: CS0_1,
+    name: 'CS0_1'
+  }
+  properties: {
+    PortPinId: 115,
+    __shortName: 'CS0_1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[116]'
+  }
+  properties: {
+    PortPinId: 116,
+    __shortName: 'GPIO116',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[6]'
+  }
+  properties: {
+    PortPinId: 116,
+    __shortName: 'E1UC6',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[117]'
+  }
+  properties: {
+    PortPinId: 117,
+    __shortName: 'GPIO117',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[7]'
+  }
+  properties: {
+    PortPinId: 117,
+    __shortName: 'E1UC7',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[118]'
+  }
+  properties: {
+    PortPinId: 118,
+    __shortName: 'GPIO118',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[8]'
+  }
+  properties: {
+    PortPinId: 118,
+    __shortName: 'E1UC8',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[2]'
+  }
+  properties: {
+    PortPinId: 118,
+    __shortName: 'MA2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[119]'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'GPIO119',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[9]'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'E1UC9',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS3_2,
+    group: CS3_2,
+    name: 'CS3_2'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'CS3_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[1]'
+  }
+  properties: {
+    PortPinId: 119,
+    __shortName: 'MA1',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[120]'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'GPIO120',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E1UC,
+    group: E1UC,
+    name: 'E1UC[10]'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'E1UC10',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CS2_2,
+    group: CS2_2,
+    name: 'CS2_2'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'CS2_2',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_SPI,
+    PortPinInitialMode: PORT_PIN_MODE_SPI,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: MA,
+    group: MA,
+    name: 'MA[0]'
+  }
+  properties: {
+    PortPinId: 120,
+    __shortName: 'MA0',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC3,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_ADC,
+    PortPinInitialMode: PORT_PIN_MODE_ADC,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[121]'
+  }
+  properties: {
+    PortPinId: 121,
+    __shortName: 'GPIO121',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: TCK,
+    group: TCK,
+    name: 'TCK'
+  }
+  properties: {
+    PortPinId: 121,
+    __shortName: 'TCK',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER1,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER1,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[122]'
+  }
+  properties: {
+    PortPinId: 122,
+    __shortName: 'GPIO122',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: TMS,
+    group: TMS,
+    name: 'TMS'
+  }
+  properties: {
+    PortPinId: 122,
+    __shortName: 'TMS',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC2,
+    PortPinDirection: PORT_PIN_IN,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: GPIO,
+    group: GPIO,
+    name: 'GPIO[65]'
+  }
+  properties: {
+    PortPinId: 65,
+    __shortName: 'GPIO65',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinMode: PORT_PIN_MODE_DIO,
+    PortPinInitialMode: PORT_PIN_MODE_DIO,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: E0UC,
+    group: E0UC,
+    name: 'E0UC[17]'
+  }
+  properties: {
+    PortPinId: 65,
+    __shortName: 'E0UC17',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC1,
+    PortPinMode: PORT_PIN_MODE_OTHER,
+    PortPinInitialMode: PORT_PIN_MODE_OTHER,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+
+- !!com.arccore.common.yaml.data.GroupedElement
+  meta: {
+    description: CAN5TX,
+    group: CAN5TX,
+    name: 'CAN5TX'
+  }
+  properties: {
+    PortPinId: 65,
+    __shortName: 'CAN5TX',
+    PortPinConfigurationMacro: PORT_PIN_CONFIG_FUNC0,
+    PortPinDirection: PORT_PIN_OUT,
+    PortPinMode: PORT_PIN_MODE_CAN,
+    PortPinInitialMode: PORT_PIN_MODE_CAN,
+    PortPinDirectionChangeable: 0,
+    PortPinModeChangeable: 0,
+    PortPinLevelValue: PORT_PIN_LEVEL_LOW
+  }
+

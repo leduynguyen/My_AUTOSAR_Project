@@ -1,0 +1,90 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# Container CalAsymDecrypt
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalAsymDecrypt
+  
+ # Container CalAsymEncrypt
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalAsymEncrypt
+  
+# Container CalHash
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalHash
+  
+# Container CalChecksum
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalChecksum
+  
+# Container AsymPrivateKeyExtract
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalAsymPrivateKeyExtract 
+  
+# Container AsymPrivateKeyWrapAsym
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalAsymPrivateKeyWrapAsym  
+  
+# Container CalAsymPrivateKeyWrapSym
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalAsymPrivateKeyWrapSym  
+  
+# Container CalAsymPublicKeyExtract
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalAsymPublicKeyExtract    
+  
+# Container CalKeyDerive
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalKeyDerive    
+  
+# Container CalKeyExchangeCalcPubVal
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalKeyExchangeCalcPubVal    
+  
+# Container CalKeyExchangeCalcSecret
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalKeyExchangeCalcSecret    
+
+# Container CalRandomGenerate
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalRandomGenerate    
+  
+# Container CalRandomSeed
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalRandomSeed
+
+# Container CalSignatureGenerate
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSignatureGenerate
+  
+# Container CalSignatureVerify
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSignatureVerify
+  
+# Container CalSymBlockDecrypt
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymBlockDecrypt
+  
+# Container CalSymBlockEncrypt
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymBlockEncrypt
+  
+# Container CalSymDecrypt
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymDecrypt  
+  
+# Container CalSymEncrypt
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymEncrypt  
+    
+# Container CalSymKeyExtract
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymKeyExtract  
+    
+# Container CalSymKeyWrapAsym
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymKeyWrapAsym  
+    
+# Container CalSymKeyWrapSym
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CalSymKeyWrapSym   

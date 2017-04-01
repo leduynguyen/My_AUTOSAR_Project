@@ -1,0 +1,105 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#FrNmGlobalConfig ::FrNmGlobalFeatures
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmDualChannelPduEnable
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPduRxIndicationEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPnEiraCalcEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPnResetTime  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmRemoteSleepIndicationEnabled   
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPnEiraRxNSduRef 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmStateChangeIndicationEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmBusSynchronizationEnabled 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCoordinatorSyncSupport 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCycleCounterEmulation 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmHwVoteEnable
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmVotingNextToLastRepetitionCycleDisable 
+             
+  
+#FrNmChannelConfig::FrNmChannel ::FrNmChannelIdentifiers  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCarWakeUpBitPosition
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCarWakeUpBytePosition
+   
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCarWakeUpFilterEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCarWakeUpFilterNodeId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmCarWakeUpRxEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPnEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPnEraCalcEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmPnEraRxNSduRef
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmRepeatMessageBitActive
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmSynchronizationPointEnabled
+  
+#FrNmChannelConfig::FrNmChannel::FrNmChannelTiming 
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmRemoteSleepIndTime 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmRxPduId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmTxConfirmationPduId  
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmTxUserDataPduId   
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmVoteInhibitionEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrNmSyncLossTimer
+  
+##########################################################
+# Disabled containers
+##########################################################
+
+# Excluded features and requirements as per Specification of FrNm and FrSm Development
+# The feature Extension for Partial Network is not supported
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: FrNmPnInfo  
+  
+  

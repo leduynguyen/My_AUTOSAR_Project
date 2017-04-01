@@ -1,0 +1,65 @@
+
+MEMORY
+{
+	#include "memory_mcu.ldf"
+}
+
+SECTIONS
+{
+    // Internal flash, 4mb size
+    .dummy NOLOAD : {    
+      . += L_BOOT_RESERVED_SPACE;
+    } > L_FLASH_CODE_0     
+    .ebase_tbl		align(4)   ABS  : > L_FLASH_CODE_0
+    .rosdata        align(4)        : > .
+    .rodata         align(4)        : > .
+    .text           align(4)        : > .
+    .syscall        align(4)        : > .
+    .secinfo        align(4)        : > .
+    .fixaddr        align(4)        : > .
+    .fixtype        align(4)        : > .
+    
+    . = align(16);
+    
+    ___DATA_ROM = .; 
+    .ROM.data           ROM(.data) : > .
+    .ROM.sdata          ROM(.sdata) : > .  
+    .ROM.tdata          ROM(.tdata) : > .
+    __rom_end = .;
+
+    // Start of retention RAM
+    .ethData           align(8)        : > L_SRAM_4  
+
+    // Start of local RAM
+    .data           align(4)        : > L_SRAM_0  
+    .sdabase 		align(4)        : > .     
+    .sdata 			align(4)    	: > .
+    .tdata          align(4) max_size(256) : > .
+    .ram_no_cache_data              : > .
+    ___DATA_END	= .;
+    .sbss 			       		    : > .
+    .bss 					      	: > .
+    ___BSS_END = .;
+    .ramlog                         : > .
+	.calibration                    : > .  
+
+	.ram_no_init NOLOAD ALIGN(0x10) : {
+		   *(.ramlog .dem_eventmemory_pri)
+	}
+
+	.ram_no_cache_bss NOLOAD ALIGN(0x10) : {
+		*(.ram_no_cache_bss)
+	}
+
+	__heap_start = .;
+//	__ram_end = .;
+    
+    ___BSS_START	= ADDR(.sbss);
+	__SP_INIT    = MEMENDADDR(L_SRAM_0);
+	__ram_end = MEMENDADDR(L_SRAM_0);
+	__heap_end = __SP_INIT;
+	__ram_start  = ADDR(L_SRAM_0);
+	___DATA_RAM = ADDR(L_SRAM_0);
+	__SP_END     = __SP_INIT - 1024;
+	__SDA_BASE   = ADDR(.sdabase);
+}

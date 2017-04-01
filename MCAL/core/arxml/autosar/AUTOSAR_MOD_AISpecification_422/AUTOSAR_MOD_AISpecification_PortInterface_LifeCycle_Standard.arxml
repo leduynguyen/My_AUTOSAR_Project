@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <LONG-NAME>
+        <L-4 L="EN">AUTOSAR</L-4>
+      </LONG-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>AISpecification</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">AISpecification</L-4>
+          </LONG-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>LifeCycleInfoSets</SHORT-NAME>
+              <CATEGORY>STANDARD</CATEGORY>
+              <REFERENCE-BASES>
+                <REFERENCE-BASE>
+                  <SHORT-LABEL>PortInterfaces</SHORT-LABEL>
+                  <IS-DEFAULT>false</IS-DEFAULT>
+                  <IS-GLOBAL>false</IS-GLOBAL>
+                  <BASE-IS-THIS-PACKAGE>false</BASE-IS-THIS-PACKAGE>
+                  <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR/AISpecification/PortInterfaces_Blueprint</PACKAGE-REF>
+                </REFERENCE-BASE>
+              </REFERENCE-BASES>
+              <ELEMENTS>
+                <LIFE-CYCLE-INFO-SET>
+                  <SHORT-NAME>PortIfObslt</SHORT-NAME>
+                  <DEFAULT-LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</DEFAULT-LC-STATE-REF>
+                  <LIFE-CYCLE-INFOS>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmTqDftlAxleFrntAct1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmTqDftlAxleFrntConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmTqDftlAxleReAct1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmTqDftlAxleReConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmTqDftlTrfAct1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmTqDftlTrfConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmRatGearAct1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmRatGearConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmCluStAct1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmCluStConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmNrGearAct1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmNrGearConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmRatTqPtAct1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface short name changed, keyword Act replaced by Consold</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrsmRatTqPtConsold1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ActrBodyLvlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ActrBodyLvlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ActvSuspSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ActvSuspSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AlrmSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AlrmSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AntithftPasSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AntithftPasSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CarHeiSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CarHeiSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ChdProtnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ChdProtnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CrashSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CrashSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CrsCtrlAndAccSwtStsEngd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CrsCtrlAndAccSwtStEngd1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DamprSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DamprSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DefrstSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DefrstSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DftlCoorrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DftlCoorrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DoorHndlSenSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DoorHndlSenSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DoorHndlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DoorHndlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DoorSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DoorSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DtTqDistbnStsIndcn1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DtTqDistbnStIndcn1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EgyMngtSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EgyMngtSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EngHoodSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EngHoodSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EpbActrFltSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EpbActrFltSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EpbBtnCtrlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EpbBtnCtrlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EscSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EscSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EscStsIndcn1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">EscStIndcn1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">FltStsOfSeatClima1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">FltStOfSeatClima1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HldOnDmdSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HldOnDmdSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HoopRollSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HoopRollSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HornSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HornSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HtlModSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HtlModSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">IdCfmdSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">IdCfmdSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ImobSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ImobSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">InclnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">InclnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">KeyInsertSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">KeyInsertSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LiFltSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LiFltSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LockSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LockSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LockStsOfSteerCol1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LockStOfSteerCol1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LockgCenSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LockgCenSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LvlDefrstSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">LvlDefrstSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MassgAdjSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MassgAdjSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrActnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrActnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrFltSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrFltSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrMoveSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrMoveSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrPosnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrPosnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrTintgSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">MirrTintgSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">NozHeatrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">NozHeatrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">OpendClsdSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">OpendClsdSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">OperModSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">OperModSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">OutdBriSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">OutdBriSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PanicAlrmSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PanicAlrmSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PaseActvnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PaseActvnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PaseKeylsInvldSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PaseKeylsInvldSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PosnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PosnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ProfPenSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ProfPenSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PwrSplySts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PwrSplySt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RadioSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RadioSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RainAmntSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RainAmntSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RoadCdnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RoadCdnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RoofCnvtbSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">RoofCnvtbSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatAxisPosnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatAxisPosnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatFixaSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatFixaSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatMoveSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatMoveSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatStorePosnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SeatStorePosnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrAlrmSimpleSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrAlrmSimpleSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrAlrmSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrAlrmSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrGlassBreakSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrGlassBreakSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrInclnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrInclnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrIntrScanrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrIntrScanrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrRoofCnvtbSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrRoofCnvtbSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrSoundrBattBackedSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrSoundrBattBackedSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SsmSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SsmSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">StabrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">StabrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SteerDrvrAsscSysStsIndcn1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SteerDrvrAsscSysStIndcn1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SteerSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SteerSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SteerTqSuppsnFrntSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SteerTqSuppsnFrntSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SwilSprgSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SwilSprgSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SwtStrtSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SwtStrtSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TerminalPosnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TerminalPosnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TintgAutSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TintgAutSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TirePMonCalStsIndcnPerWhl1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TirePMonCalStIndcnPerWhl1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TirePMonSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TirePMonSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrlrHitchSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrlrHitchSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrlrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TrlrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">VehHldSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">VehHldSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WinHeatrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WinHeatrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WiprSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WiprSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WshrFldSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WshrFldSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WshrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">WshrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ACenForOccptPedSfty1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">changed data type specification</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">ACenForOccptPedSfty2</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AExtForOccptPedSfty1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">changed data type specification</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AExtForOccptPedSfty2</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CogPosnEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">CogPosn1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DamprCoeffEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DamprCoeff1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DamprFEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">DamprF1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">FricCoeffEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">FricCoeff1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrInclInhbReq1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Correction of used keyword abbreviation</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SnsrInclnInhbReq1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SprgCoeffEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SprgCoeff1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SprgFEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">SprgF1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TirePEstimdPerWhl1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TirePPerWhl1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TireTEstimdPerWhl1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">TireTPerWhl1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">VehMEstimd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Interface Name Harmonization (removal of "Estimd")</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">VehM1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HvacTqReq1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AcTqReq1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PtFlgHvacDeactvt1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PtFlgAcDeactvt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PtTqMaxHvac1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">PtTqMaxAc1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">HvacTq1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="PortInterfaces" DEST="SENDER-RECEIVER-INTERFACE">AcTq1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                  </LIFE-CYCLE-INFOS>
+                  <USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF DEST="LIFE-CYCLE-STATE-DEFINITION-GROUP">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates</USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF>
+                </LIFE-CYCLE-INFO-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

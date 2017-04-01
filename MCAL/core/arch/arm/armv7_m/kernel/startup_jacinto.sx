@@ -1,0 +1,333 @@
+/*-------------------------------- Arctic Core ------------------------------
+ * Copyright (C) 2013, ArcCore AB, Sweden, www.arccore.com.
+ * Contact: <contact@arccore.com>
+ * 
+ * You may ONLY use this file:
+ * 1)if you have a valid commercial ArcCore license and then in accordance with  
+ * the terms contained in the written license agreement between you and ArcCore, 
+ * or alternatively
+ * 2)if you follow the terms found in GNU General Public License version 2 as 
+ * published by the Free Software Foundation and appearing in the file 
+ * LICENSE.GPL included in the packaging of this file or here 
+ * <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+ *-------------------------------- Arctic Core -----------------------------*/
+    
+  .syntax unified
+	.cpu cortex-m3
+	.fpu softvfp
+	.thumb
+
+.global	g_pfnVectors
+.global	Default_Handler
+
+.word	_sidata
+.word	_sdata
+.word	_edata
+.word	_sbss
+.word	_ebss
+
+/******************************************************************************
+* Startup vector table for a Cortex M3. Vectors start at addr 0x0.
+******************************************************************************/
+	.section	.vecbase,"a",%progbits
+	.type	g_pfnVectors, %object
+    .long	0
+    .long   Default_Reset_Handler
+	.word	NMI_Handler
+#if defined(CFG_T1_ENABLE) && !defined(CFG_T1_DISABLE_FLEX)
+	.word	T1_HardFaultHandler
+#else
+	.word	HardFault_Handler
+#endif
+	.word	MemManage_Handler
+	.word	BusFault_Handler
+	.word	UsageFault_Handler
+	.word	0
+	.word	0
+	.word	0
+	.word	0
+	.word	SVC_Handler
+#if defined(CFG_T1_ENABLE) && !defined(CFG_T1_DISABLE_FLEX)
+	.word	T1_DebugMonitorHandler
+#else
+	.word 	DebugMon_Handler
+#endif
+
+/******************************************************************************
+* Default Reset Handler, address 0 is used for halting core1 if any
+******************************************************************************/
+    .section	.text.Default_Reset_Handler
+	.weak	Default_Reset_Handler
+	.type	Default_Reset_Handler, %function
+Default_Reset_Handler:
+	ldr     r0, coreid /* Get current core id */
+	ldr     r0, [r0]
+	cmp     r0, #0 /* Check if core0 or core1 */
+	bne     Core1
+
+Core0:
+	/* Write 4 to halt Core 1 */
+	mov     r0, #0
+	mov     r1, #4
+	str     r1, [r0]
+
+	/* Jump to reset handler for Core0 */
+	ldr     lr, Reset_Handler_Address_Core0
+	ldr     lr, [lr]
+	bx      lr
+
+
+Core1:
+	mov     r0, #200
+
+Waitloop:
+	subs    r0, r0, #1
+	bne     Waitloop
+
+CheckLoop:
+	mov     r0, #0
+	ldr     r0, [r0]
+	cmp     r0, #0
+	bne     CheckLoop
+
+	/* Jump to reset handler for Core1 */
+	ldr     lr, Reset_Handler_Address_Core1
+	ldr     lr, [lr]
+	bx      lr
+loop: 
+	b	  loop	/* problem */
+
+
+coreid: .word   0xE00FFFE0
+Reset_Handler_Address_Core0: .word   0x00000404
+#if defined(CFG_CORE1_BARE_METAL)
+Reset_Handler_Address_Core1: .word   0x00000804
+#else
+Reset_Handler_Address_Core1: .word   0x00000404
+#endif
+
+
+
+/**
+ * @brief  This is the code that gets called when the processor first
+ *          starts execution following a reset event. Only the absolutely
+ *          necessary set is performed, after which the application
+ *          supplied main() routine is called.
+ * @param  None
+ * @retval : None
+*/
+    .section	.text.Reset_Handler
+	.weak	Reset_Handler
+	.type	Reset_Handler, %function
+Reset_Handler:
+
+   	/* Init PSP */
+	ldr     r0, =_estack
+    msr     PSP, r0
+
+	ldr     r0, =_estack
+    msr     MSP, r0
+
+
+	/* Set CONTROL 
+	* nPRIV = 0 - 0  Thread mode has privileged access.
+	* SPSEL = 1 - 1  In Thread mode, use SP_process as the current stack. 
+	*                In Handler mode, this value is reserved.
+	*/	
+    movs    r0, #2
+    msr     CONTROL, r0
+    isb
+    
+    ldr     r0, =_emspstack
+    msr     MSP, r0
+        
+#if defined(CFG_BRD_JAC6_VAYU_EVM)
+	/* Disable interrupts */
+	cpsid i
+	dsb
+	isb
+	
+	/* Disable cache */
+	ldr     r0, =0x55080004			
+	ldr     r1, =0			/* r1 = 0 */
+	str		r1,[r0]
+	
+	/* First setup TLB, VA=PA=0 and enable it */
+	ldr     r0, =0x55080800	/* IPU1 : CACHE_MMU_LARGE_ADDR_j */
+	ldr     r1, =0			/* r1 = 0 */
+	str     r1, [r0]		/* CACHE_MMU_LARGE_ADDR_j = 0 */
+	adds    r0,r0,#32
+	ldr     r1, =0			/* r1 = 0 */
+	str     r1, [r0]		/* IPU1 : CACHE_MMU_LARGE_XLTE_j = 0 */
+	adds    r0,r0,#32		
+	ldr     r1, =0x00001	/* 0 - ENABLE */	
+	str     r1, [r0]        /* CACHE_MMU_LARGE_POLICY_j = 1 */
+#else
+	/* First setup TLB, VA=PA=0 and enable it */
+	ldr     r0, =0x55080860	/* IPU1 : CACHE_MMU_MED_ADDR_j */
+	ldr     r1, =0			/* r1 = 0 */
+	str     r1, [r0]		/* CACHE_MMU_LARGE_ADDR_j = 0 */
+	adds    r0,r0,#64
+	ldr     r1, =0			/* r1 = 0 */
+	str     r1, [r0]		/* IPU1 : CACHE_MMU_LARGE_XLTE_j = 0 */
+	adds    r0,r0,#64		
+	ldr     r1, =0x00007	/* 0 - ENABLE */	
+	str     r1, [r0]        /* CACHE_MMU_LARGE_POLICY_j = 1 */
+#endif
+
+	/* Copy the data segment initializers from flash to SRAM */
+	ldr	sp, =_estack       /* sp holds stack pointer */
+	bl Mcu_Arc_InitMM
+
+#if defined(CFG_CORE1_BARE_METAL)
+	/* After initialization of MMU, Write 0 to 0 to get out Core 1 from lock step*/
+	mov     r0, #0
+	mov     r1, #0
+	str     r1, [r0]
+#endif
+
+	ldr	r0, =_sdata       /* r0 holds start of data in ram */
+	ldr	r3, =_edata       /* r3 holds end of data in ram */
+	ldr	r5, =_sidata      /* r5 start of data in flash */
+	movs	r1, #0
+	b	LoopCopyDataInit
+
+CopyDataInit:
+	ldr	r4, [r5, r1]          /* read current position in flash */
+	str	r4, [r0, r1]          /* store current position in ram */
+	adds	r1, r1, #4        /* increment counter */
+    
+LoopCopyDataInit:
+	adds	r2, r0, r1        /* are we at the final position? */
+	cmp	r2, r3                /* ... */
+	bcc	CopyDataInit          /* nope, continue */
+	ldr	r2, =_sbss
+	b	LoopFillZerobss
+
+/* Zero fill the bss segment. */  
+FillZerobss:
+	movs	r3, #0
+	str	r3, [r2], #4
+    
+LoopFillZerobss:
+	ldr	r3, = _ebss
+	cmp	r2, r3
+	bcc	FillZerobss
+
+
+/* Fill MSP stack */
+	ldr	r2, =_smspstack
+	ldr	r4, = _emspstack
+	ldr r3,=0x42424242
+  
+_Stackfill:
+	str	r3, [r2], #4
+    
+_LoopStackfill:
+	cmp	r2, r4
+	bcc	_Stackfill
+
+
+#if defined(CFG_HW_FLOAT)
+	/* Init FPU */
+ 	// CPACR is located at address 0xE000ED88
+	LDR.W   R0, =0xE000ED88
+	// Read CPACR
+	LDR     R1, [R0]
+	// Set bits 20-23 to enable CP10 and CP11 coprocessors
+	ORR     R1, R1, #(0xF << 20)
+	// Write back the modified value to the CPACR
+	STR     R1, [R0]	//  wait for store to complete
+	DSB
+	// reset pipeline now the FPU is enabled
+	ISB
+#endif
+
+/* Call the application's entry point.*/
+	bl	main
+	bx	lr    
+.size	Reset_Handler, .-Reset_Handler
+
+/**
+ * @brief  This is the code that gets called when the processor receives an 
+ *         unexpected interrupt.  This simply enters an infinite loop, preserving
+ *         the system state for examination by a debugger.
+ *
+ * @param  None     
+ * @retval : None       
+*/
+    .section	.text.Default_Handler,"ax",%progbits
+Default_Handler:
+Infinite_Loop:
+	b	Infinite_Loop
+	.size	Default_Handler, .-Default_Handler
+/******************************************************************************
+* Vector table for a Cortex M3 core. Vectors will be placed at 0x400 for core0 and 0x800 for core1
+******************************************************************************/    
+ 	.section	.isr_vector,"a",%progbits
+	.type	g_pfnVectors, %object
+//	.size	g_pfnVectors, .-g_pfnVectors
+
+	.extern Irq_Handler
+	.extern SVC_Handler
+	.extern PendSV_Handler
+
+	.word	_estack
+	.word	Reset_Handler
+	.word	NMI_Handler
+#if defined(CFG_T1_ENABLE) && !defined(CFG_T1_DISABLE_FLEX)
+	.word	T1_HardFaultHandler
+#else
+	.word	HardFault_Handler+1
+#endif
+	.word	MemManage_Handler
+	.word	BusFault_Handler
+	.word	UsageFault_Handler
+	.word	0
+	.word	0
+	.word	0
+	.word	0
+	.word	SVC_Handler
+#if defined(CFG_T1_ENABLE) && !defined(CFG_T1_DISABLE_FLEX)
+	.word	T1_DebugMonitorHandler
+#else
+	.word 	DebugMon_Handler
+#endif
+	.word	0
+	.word	PendSV_Handler
+	.word   Irq_Handler		/* SysTick */
+	.rept   83
+	.word	Irq_Handler
+	.endr
+    
+      .weak	NMI_Handler
+	.thumb_set NMI_Handler,Default_Handler
+
+#if defined(CFG_T1_ENABLE) && !defined(CFG_T1_DISABLE_FLEX)
+  	.weak	T1_HardFaultHandler
+	.thumb_set T1_HardFaultHandler,Default_Handler
+
+	.weak	T1_DebugMonitorHandler
+	.thumb_set T1_DebugMonitorHandler,Default_Handler
+#else
+  	.weak	HardFault_Handler
+	.thumb_set HardFault_Handler,Default_Handler
+
+	.weak	DebugMon_Handler
+	.thumb_set DebugMon_Handler,Default_Handler
+#endif
+
+  	.weak	MemManage_Handler
+	.thumb_set MemManage_Handler,Default_Handler
+
+  	.weak	BusFault_Handler
+	.thumb_set BusFault_Handler,Default_Handler
+
+	.weak	UsageFault_Handler
+	.thumb_set UsageFault_Handler,Default_Handler
+
+	.weak	SVC_Handler
+	.thumb_set SVC_Handler,Default_Handler
+
+	.weak	PendSV_Handler
+	.thumb_set PendSV_Handler,Default_Handler

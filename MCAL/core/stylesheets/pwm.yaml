@@ -1,0 +1,69 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+########################################################
+# Hidden parameters in PwmGeneral
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmDutycycleUpdatedEndperiod
+  mcals: [STM32F103, STM32F107, MPC560x, MPC551x, MPC5567, MPC5668, MPC5744P, MPC5746C, MPC5748G, MPC5634M, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, zynq, JACINTO5, JACINTO6 , RH850F1L, RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPwmGlobalPrescalerDivisorEMIOS1
+  mcals: [MPC5668]
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcPwmGlobalPrescalerDivisorEMIOS2
+  mcals: [STM32F103, STM32F107, MPC560x, MPC551x, MPC5567, MPC5668, MPC5744P, MPC5746C, MPC5634M, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, zynq, JACINTO5, JACINTO6 , RH850F1L, RH850F1H]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmIndex
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmPeriodUpdatedEndperiod
+  mcals: [STM32F103, STM32F107, MPC560x, MPC551x, MPC5567, MPC5668, MPC5744P, MPC5746C, MPC5748G, MPC5634M, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, zynq, JACINTO5, JACINTO6 , RH850F1L , RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmPowerState
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmPowerStateAsynchTransitionMode
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmLowPowerStatesSupport
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: PwmPowerStateConfig
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: PwmDevErorDetect
+  display: PwmDevErorDetect (Deprecated)
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmNotificationSupported
+  mcals: [JACINTO5, RH850F1L , RH850F1H]
+
+########################################################
+# Hidden parameters in PwmChannel
+########################################################
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmIdleState
+  mcals: [ STM32F103, STM32F107]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmNotification
+  mcals: [JACINTO5, RH850F1L , RH850F1H]  
+  
+########################################################
+# Hidden parameters in PwmConfigurationOfOptApiServices
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PwmGetOutputState
+  mcals: [ STM32F103, STM32F107, zynq, MPC5744P, MPC5643L, SPC56XL70, JACINTO5, JACINTO6 ]
+  
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################    
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: PwmDevErorDetect

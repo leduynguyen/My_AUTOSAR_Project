@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <LONG-NAME>
+        <L-4 L="EN">AUTOSAR</L-4>
+      </LONG-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>AISpecification</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">AISpecification</L-4>
+          </LONG-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>PhysicalDimensions</SHORT-NAME>
+              <CATEGORY>STANDARD</CATEGORY>
+              <ELEMENTS>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Amnt1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Quantity of substance 1</L-4>
+                  </LONG-NAME>
+                  <MOLAR-AMOUNT-EXP>1</MOLAR-AMOUNT-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>I1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Electric current 1</L-4>
+                  </LONG-NAME>
+                  <CURRENT-EXP>1</CURRENT-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Illmn1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Luminous intensity 1</L-4>
+                  </LONG-NAME>
+                  <LUMINOUS-INTENSITY-EXP>1</LUMINOUS-INTENSITY-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 1</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>1</LENGTH-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len1M1TiNeg2</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 1 Mass 1 Time -2</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>1</LENGTH-EXP>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-2</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len1TiNeg1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 1 Time -1</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>1</LENGTH-EXP>
+                  <TIME-EXP>-1</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len1TiNeg2</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 1 Time -2</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>1</LENGTH-EXP>
+                  <TIME-EXP>-2</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len1TiNeg3</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 1 Time -3</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>1</LENGTH-EXP>
+                  <TIME-EXP>-3</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len2M1TiNeg2</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 2 Mass 1 Time -2</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>2</LENGTH-EXP>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-2</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len2M1TiNeg3</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 2 Mass 1 Time -3</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>2</LENGTH-EXP>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-3</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Len2M1TiNeg3INeg1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length 2 Mass 1 Time -3 Electric current -1</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>2</LENGTH-EXP>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-3</TIME-EXP>
+                  <CURRENT-EXP>-1</CURRENT-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>LenNeg1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length -1</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>-1</LENGTH-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>LenNeg1M1TiNeg2</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Length -1 Mass 1 Time -2</L-4>
+                  </LONG-NAME>
+                  <LENGTH-EXP>-1</LENGTH-EXP>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-2</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>M1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Mass 1</L-4>
+                  </LONG-NAME>
+                  <MASS-EXP>1</MASS-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>M1TiNeg1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Mass 1 Time -1</L-4>
+                  </LONG-NAME>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-1</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>M1TiNeg2</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Mass 1 Time -2</L-4>
+                  </LONG-NAME>
+                  <MASS-EXP>1</MASS-EXP>
+                  <TIME-EXP>-2</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>NoDimension</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">No Dimension</L-4>
+                  </LONG-NAME>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>T1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Temperature 1</L-4>
+                  </LONG-NAME>
+                  <TEMPERATURE-EXP>1</TEMPERATURE-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>Ti1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Time 1</L-4>
+                  </LONG-NAME>
+                  <TIME-EXP>1</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>TiNeg1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Time -1</L-4>
+                  </LONG-NAME>
+                  <TIME-EXP>-1</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+                <PHYSICAL-DIMENSION>
+                  <SHORT-NAME>TiNeg2</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Time -2</L-4>
+                  </LONG-NAME>
+                  <TIME-EXP>-2</TIME-EXP>
+                </PHYSICAL-DIMENSION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

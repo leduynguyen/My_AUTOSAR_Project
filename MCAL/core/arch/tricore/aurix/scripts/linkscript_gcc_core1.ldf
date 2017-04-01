@@ -1,0 +1,372 @@
+OUTPUT_FORMAT("elf32-tricore")
+
+__ISTACK_SIZE = DEFINED (__ISTACK_SIZE) ? __ISTACK_SIZE : 8K;
+__USTACK_SIZE = DEFINED (__USTACK_SIZE) ? __USTACK_SIZE : 8K;
+__HEAP_SIZE = DEFINED (__HEAP_SIZE) ? __HEAP_SIZE : 4K ;
+__CSA_SIZE = DEFINED (__CSA_SIZE) ? __CSA_SIZE : 4K ;
+
+MEMORY
+{
+	/* Flash is 0x8000_0000 to 0x807F_FFFF */
+	/* PFLASH1 is 0x8020_0000 to 0x8040_0000 */
+
+	PMU_PFLASH1_HEADER (rx!p): org = 0x80200000, len = 0x100 /* complete compatible block, version info */
+    PMU_TRAPTAB1 (rx!p): org = 0x80200100, len = 0x300 /* trap vector tables */
+    /* Wasted space here */
+    PMU_INTTAB_TC1 (rx!p) : org = 0x80208000 , len = 0x2000 /* interrupt vector table */
+    PMU_PFLASH1 (rx!p)  : org = 0x80208000 + 0x2000 , len = 2008K /*Program Flash Memory (PFLASH1)*/
+    
+    /* 0x100 bytes of DSPR is reserved for sbst_tcx_dspr */
+    CPU0_DMI_DSPR (w!xp): org = 0x70000100, len = 120K - 0x100
+    CPU1_DMI_DSPR (w!xp): org = 0x60000100, len = 240K - 0x100
+
+    LMU_SRAM (w!xp)     : org = 0xB0000000, len = 32K
+}
+
+__CORE_EXEC_START_ADDR = ADDR(.SHARED_CODE);
+
+SECTIONS
+{
+
+#if defined(CFG_COMPLETE_COMPATIBLE) || defined(CFG_PROJ_VERSION_INFO)
+  .CPU1_HEADER_CODE :
+  {
+#if defined(CFG_COMPLETE_COMPATIBLE)
+    PROVIDE(__CPU1_COMPLETE_COMPATIBLE_start = .);
+    KEEP(*(.complete_compatible))
+    PROVIDE(__CPU1_COMPLETE_COMPATIBLE_end = .);
+#endif
+    
+    // Fixed offset.
+    . = 0x40;
+#if defined(CFG_PROJ_VERSION_INFO)
+    PROVIDE(__CPU1_PROJ_VERSION_INFO_start = .);
+    KEEP(*(.proj_version_info))
+    PROVIDE(__CPU1_PROJ_VERSION_INFO_end = .);
+#endif
+  } > PMU_PFLASH1_HEADER
+#endif
+
+ /*
+  * Allocate trap and interrupt vector tables.
+  */
+
+  .CPU1_TRAP_HANDLER :
+  {
+    __TRAPTAB_CPU1 = .;
+    KEEP(*(.trap_tbl_cpu1));
+  } > PMU_TRAPTAB1
+
+
+  .CPU1_INT_HANDLER :
+  {
+    __INTTAB_START_ADDR = .;
+    KEEP(*(.int_tbl));
+  } > PMU_INTTAB_TC1
+
+  .SHARED_CODE : FLAGS(axl)
+  {
+    PROVIDE(__SHARED_CODE_start = .);
+
+    /* By convention the entry point of Core 1 is the start of the PMU_PFLASH1 memory area */
+    KEEP(IfxCpu_CStart1.o(.text.START_CORE1))
+
+    KEEP(IfxCpu_CStart1.o(.text*))
+    KEEP(*(.text.Shared*))
+    *(.text)
+    *(.text*)
+    *(.gnu.linkonce.t.*)
+    KEEP(*(.init)) /*Code executed before calling main*/
+    KEEP(*(.init*))
+    KEEP(*(.fini)) /*Code executed before exiting program*/
+    KEEP(*(.fini*))
+    *(.eh_frame) /*Exception handling frame for C++ exceptions*/
+    *(.eh_frame*)
+    KEEP(*(.ctors)) /*Section for constructors*/
+    KEEP(*(.ctors*))
+    KEEP(*(.dtors)) /*Section for destructors*/
+    KEEP(*(.dtors*))
+    . = ALIGN(8);
+
+    PROVIDE(__SHARED_CODE_end = .);
+  } > PMU_PFLASH1
+
+  .RODATA   :
+  {
+    PROVIDE(__RODATA_start = .);
+    *(.rodata)
+    *(.rodata*)
+    *(.rodata.*)
+    *(.rodata.Shared.DEFAULT_CONST_FAR_UNSPECIFIED)
+    *(.gnu.linkonce.r.*)
+    *(.jcr.*)
+
+    PROVIDE(__RODATA_end = .);
+  } > PMU_PFLASH1
+
+
+
+  /* Data allocation */
+  /* Initialized data section */
+  .CPU1_PRIVATE_DATA  :
+  {
+    PROVIDE(__CPU1_PRIVATE_DATA_start = .);
+    KEEP(*(.data.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_DATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+  .SHARED_DATA  :
+  {
+    PROVIDE(__SHARED_DATA_start = .);
+    KEEP(*(.data.Shared*))
+    *(.ramlog)
+    *(.data)
+    *(.data*)
+    *(.gnu.linkonce.d.*)
+    PROVIDE(__SHARED_DATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+  /* Initialized sdata section */
+  .CPU1_PRIVATE_SDATA  :
+  {
+    PROVIDE(__CPU1_SMALL_DATA = . + 0x8000);
+        KEEP(*(.sdata.CPU1.Private*))
+        KEEP(*(.sdata.Shared*))
+    *(.sdata)
+    *(.sdata*)
+    *(.gnu.linkonce.s.*)
+
+    PROVIDE(__CPU1_SMALL_DATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+  /* Initialized sdata section */
+  .CPU1_PRIVATE_SDATA2  :
+  {
+    PROVIDE(__CPU1_SMALL_DATA2 = . + 0x8000);
+        KEEP(*(.sdata.rodata.CPU1.Private*))
+        KEEP(*(.sdata.rodata.Shared*))
+    *(.sdata.rodata)
+    *(.sdata.rodata*)
+    *(.gnu.linkonce.sr.*)
+
+    PROVIDE(__CPU1_SMALL_DATA2_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+
+  /* Initialized zdata section */
+  .CPU1_PRIVATE_ZDATA  :
+  {
+    PROVIDE(__CPU1_PRIVATE_ZDATA_start = .);
+    KEEP(*(.zdata.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_ZDATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+  .SHARED_ZDATA  :
+  {
+    PROVIDE(__SHARED_ZDATA_start = .);
+    KEEP(*(.zdata.Shared*))
+    *(.zdata)
+    *(.zdata*)
+    *(.gnu.linkonce.zb.*)
+    PROVIDE(__SHARED_ZDATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+  /* Initialized bit data section */
+  .CPU1_PRIVATE_BDATA  :
+  {
+    PROVIDE(__CPU1_PRIVATE_BDATA_start = .);
+    KEEP(*(.bdata.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_BDATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+
+  .SHARED_BDATA  :
+  {
+    PROVIDE(__SHARED_BDATA_start = .);
+    KEEP(*(.bdata.Shared*))
+    *(.bdata)
+    *(.bdata*)
+    PROVIDE(__SHARED_BDATA_end = .);
+  } > CPU1_DMI_DSPR AT > PMU_PFLASH1
+
+
+
+  /* BSS section */
+  .CPU1_PRIVATE_BSS  :
+  {
+    PROVIDE(__CPU1_PRIVATE_BSS_start = .);
+    KEEP(*(.bss.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_BSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+  .SHARED_BSS  :
+  {
+    PROVIDE(__SHARED_BSS_start = .);
+    KEEP(*(.bss.Shared*))
+    *(.bss)
+    *(.bss*)
+    *(.gnu.linkonce.b.*)
+    PROVIDE(__SHARED_BSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+  /* SBSS section */
+  .CPU1_PRIVATE_SBSS  :
+  {
+    PROVIDE(__CPU1_PRIVATE_SBSS_start = .);
+    KEEP(*(.sbss.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_SBSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+  .SHARED_SBSS  :
+  {
+    PROVIDE(__SHARED_SBSS_start = .);
+    KEEP(*(.sbss.Shared*))
+    *(.sbss)
+    *(.sbss*)
+    *(.gnu.linkonce.b.*)
+    PROVIDE(__SHARED_SBSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+  /* ZBSS section */
+  .CPU1_PRIVATE_ZBSS  :
+  {
+    PROVIDE(__CPU1_PRIVATE_ZBSS_start = .);
+    KEEP(*(.zbss.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_ZBSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+  .SHARED_ZBSS  :
+  {
+    PROVIDE(__SHARED_ZBSS_start = .);
+    KEEP(*(.zbss.Shared*))
+    *(.zbss)
+    *(.zbss*)
+    *(.gnu.linkonce.zb.*)
+    PROVIDE(__SHARED_ZBSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+
+  /* BBSS section */
+  .CPU1_PRIVATE_BBSS  :
+  {
+    PROVIDE(__CPU1_PRIVATE_BBSS_start = .);
+    KEEP(*(.bbss.CPU1.Private*))
+    PROVIDE(__CPU1_PRIVATE_BBSS_end = .);
+  } > CPU1_DMI_DSPR
+
+
+  .SHARED_BBSS  :
+  {
+    PROVIDE(__SHARED_BBSS_start = .);
+    KEEP(*(.bbss.Shared*))
+    *(.bbss)
+    *(.bbss*)
+    PROVIDE(__SHARED_BBSS_end = .);
+  } > CPU1_DMI_DSPR
+
+  .clear_sec :
+  {
+    . = ALIGN(8);
+    PROVIDE(__shared_clear_table = .) ;
+
+    LONG(0 + ADDR(.SHARED_BSS));  LONG(SIZEOF(.SHARED_BSS));
+    LONG(0 + ADDR(.SHARED_SBSS)); LONG(SIZEOF(.SHARED_SBSS));
+    LONG(0 + ADDR(.SHARED_ZBSS)); LONG(SIZEOF(.SHARED_ZBSS));
+    LONG(0 + ADDR(.SHARED_BBSS)); LONG(SIZEOF(.SHARED_BBSS));
+
+    PROVIDE(__clear_table = .) ;
+
+    LONG(0 + ADDR(.CPU1_PRIVATE_BBSS)); LONG(SIZEOF(.CPU1_PRIVATE_BSS));
+    LONG(0 + ADDR(.CPU1_PRIVATE_SBSS)); LONG(SIZEOF(.CPU1_PRIVATE_SBSS));
+    LONG(0 + ADDR(.CPU1_PRIVATE_ZBSS)); LONG(SIZEOF(.CPU1_PRIVATE_ZBSS));
+    LONG(0 + ADDR(.CPU1_PRIVATE_BBSS)); LONG(SIZEOF(.CPU1_PRIVATE_BBSS));
+
+    LONG(-1);                 LONG(-1);
+
+  } > PMU_PFLASH1
+
+  .copy_sec :
+  {
+    . = ALIGN(8);
+    PROVIDE(__shared_copy_table = .) ;
+
+    LONG(LOADADDR(.SHARED_DATA)); LONG(0 + ADDR(.SHARED_DATA)); LONG(SIZEOF(.SHARED_DATA));
+    LONG(LOADADDR(.SHARED_ZDATA));  LONG(0 + ADDR(.SHARED_ZDATA));  LONG(SIZEOF(.SHARED_ZDATA));
+    LONG(LOADADDR(.SHARED_BDATA));  LONG(0 + ADDR(.SHARED_BDATA));  LONG(SIZEOF(.SHARED_BDATA));
+
+
+    PROVIDE(__copy_table = .) ;
+
+    LONG(LOADADDR(.CPU1_PRIVATE_DATA)); LONG(0 + ADDR(.CPU1_PRIVATE_DATA)); LONG(SIZEOF(.CPU1_PRIVATE_DATA));
+    LONG(LOADADDR(.CPU1_PRIVATE_SDATA));  LONG(0 + ADDR(.CPU1_PRIVATE_SDATA));  LONG(SIZEOF(.CPU1_PRIVATE_SDATA));
+    LONG(LOADADDR(.CPU1_PRIVATE_ZDATA));  LONG(0 + ADDR(.CPU1_PRIVATE_ZDATA));  LONG(SIZEOF(.CPU1_PRIVATE_ZDATA));
+    LONG(LOADADDR(.CPU1_PRIVATE_BDATA));  LONG(0 + ADDR(.CPU1_PRIVATE_BDATA));  LONG(SIZEOF(.CPU1_PRIVATE_BDATA));
+//    LONG(LOADADDR(.FLSLOADERRAMCODE));      LONG(0 + ADDR(.FLSLOADERRAMCODE)); LONG(SIZEOF(.FLSLOADERRAMCODE));
+
+    /*PROTECTED REGION ID(Protection: iROM copy section) ENABLED START*/
+      /*Protection-Area for your own LDF-Code*/
+    /*PROTECTED REGION END*/
+    LONG(-1);                 LONG(-1);                  LONG(-1);
+  } > PMU_PFLASH1
+  
+#if defined(CFG_COMPLETE_COMPATIBLE)
+  .CPU1_END_OF_APP :
+  {
+    KEEP(*(.end_of_app))
+  } > PMU_PFLASH1
+#endif
+
+
+  .cpu1_csa :
+  {
+     . = ALIGN(64);
+     __CPU1_CSA_BEGIN = . ;
+     __CSA1 = .;
+     . += __CSA_SIZE;
+     __CPU1_CSA_END = .;
+     __CSA1_END = .;
+  } > CPU1_DMI_DSPR
+
+#if 0
+  .heap :
+  {
+    . =  ALIGN(8);
+    __HEAP = .;
+    . += __HEAP_SIZE;
+    . =  ALIGN(8);
+    __HEAP_END = .;
+  } > DMI_DSPR
+#endif
+
+  .cpu1_istack :
+  {
+    . =  ALIGN(8);
+    . += __ISTACK_SIZE;
+    __CPU1_ISTACK = .;
+  } > CPU1_DMI_DSPR
+
+  .cpu1_ustack :
+  {
+    . =  ALIGN(8);
+    . += __USTACK_SIZE;
+    __CPU1_USTACK = .;
+    __USTACK1 = .;
+  } > CPU1_DMI_DSPR
+
+}
+
+// include the script containing the shared buffers section
+#include "linkscript_gcc_common.ldf"

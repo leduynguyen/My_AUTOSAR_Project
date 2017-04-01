@@ -1,0 +1,255 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuNumberOfMcuModes
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuRamSectors
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuMode
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuResetSetting
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuClockSettingId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuPublishedInformation
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuResetReason
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuClockSrcFailureNotification 
+  mcals: [zynq, JACINTO5, JACINTO6] 
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuGetRamStateApi
+  mcals: [zynq, JACINTO5, JACINTO6] 
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: McuDemEventParameterRefs
+  mcals: [zynq, JACINTO5, JACINTO6] 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuNoPll
+  mcals: [RH850F1H, JACINTO5, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: McuNoPll
+  display: Mcu No PLL
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: Frequency
+  display: Frequency (Deprecated)
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: McuRamSectorSettingConf
+  mcals: [JACINTO5, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: McuResetReasonConf
+  mcals: [JACINTO5, JACINTO6] 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: McuInitClock
+  mcals: [JACINTO5, JACINTO6]
+      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_9
+  mcals: [JACINTO5]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_10
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_11
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_12
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_13
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_14
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_15
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_Timer_16
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_CAN0
+  mcals: [JACINTO5]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: Enable_CAN1
+  mcals: [JACINTO5]
+  
+#########################################################
+# ParameterGroup
+#########################################################
+# zynq
+# An active clock is often CLKACT or CLKACT0 and CLKACT1 if many peripherals
+# Try to keep it as <reg>_<field>
+# e.g GEM0_DIVISOR1, GEM0_DIVISOR, GEM0_CLKACT
+ 
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Can Clocks
+  members: [ CAN_DIVISOR, CAN_DIVISOR1, CAN_CLKACT,  CAN_CLKACT1, CAN_MIOCLK_CTRL ] 
+  mcals: [zynq]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Eth0 Clocks
+  members: [ GEM0_DIVISOR, GEM0_DIVISOR1, GEM0_CLKACT, GEM0_RCLK_CTRL,GEM0_RCLK_CLKACT ]
+  mcals: [zynq]
+      
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Eth1 Clocks
+  members: [ GEM1_DIVISOR, GEM1_DIVISOR1, GEM1_CLKACT, GEM1_RCLK_CTRL,GEM1_RCLK_CLKACT ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Cpu
+  members: [ CPU_DIVISOR, CPU_1XCLKACT, CPU_2XCLKACT, CPU_3OR2XCLKACT, CPU_6OR4XCLKACT, CPU_PERI_CLKACT ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Uart
+  members: [ UART_DIVISOR, UART_CLKACT,  UART_CLKACT1 ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Sdio
+  members: [ SDIO_DIVISOR, SDIO_CLKACT, SDIO_CLKACT1 ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Smc
+  members: [ SMC_DIVISOR, SMC_CLKACT ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: LQSPI
+  members: [ LQSPI_DIVISOR, LQSPI_CLKACT ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: SPI
+  members: [ SPI_DIVISOR, SPI_CLKACT, SPI_CLKACT1  ]
+  mcals: [zynq]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: PCAP
+  members: [ PCAP_DIVISOR, PCAP_CLKACT ]
+  mcals: [zynq]
+  
+#########################################################
+# ParameterGroup
+#########################################################
+# rh850
+# Try to keep it as <reg>_<field>
+# e.g GEM0_DIVISOR1, GEM0_DIVISOR, GEM0_CLKACT
+
+##### PLL 
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: PLL0 - Modulation
+  members: [ PLL0MD, PLL0MF, PLL0ADJ ] 
+  mcals: [RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: PLL0 - Max 120Mhz (Freq = (crystal * (PLL0N+1)/(PLL0M+1)) / 2^(PLL0P))
+  members: [ PLL0P, PLL0N, PLL0M ] 
+  mcals: [RH850F1H]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: PLL1 - Max 80Mhz (Freq = (crystal * (PLL1N+1)/(PLL1M+1)) / {4,6,8,16}[PLL1P-2] )
+  members: [ PLL1P, PLL1N, PLL1M ] 
+  mcals: [RH850F1H]
+
+##### Clocks
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Always On Clocks ( CKSC_A<name>S_CTL/CKSC_A<name>D_CTL )
+  members: [ C_AWO_WDTA ] 
+  mcals: [RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Isolated Clocks ( CKSC_I<name>S_CTL/CKSC_I<name>D_CTL ) 
+  members: [ C_ISO_CPUCLK ] 
+  mcals: [RH850F1H]
+
+
+#########################################################
+# ParameterGroup
+#########################################################
+# mpc5744p
+
+##### PLL 
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: PLL0 - Max 160Mhz, NOT moduleted 
+  members: [ PLL0_MFD, PLL0_PREDIV, PLL0_RFDPHI ] 
+  mcals: [MPC5744P]
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: PLL1 - FMPLL, Max 200Mhz
+  members: [ PLL1_MFD, PLL1_RFDPHI ] 
+  mcals: [MPC5744P]
+
+#- !!com.arccore.common.yaml.data.styles.ParameterGroup
+#  name: PLL1 - Modulation
+#  members: [ PLL1FM_MODEN, PLL1FM_MODPRD, PLL1FM_INCSTP ] 
+#  mcals: [MPC5744P]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PLL1 - Modulation
+  mcals: [MPC5744P]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PLL1FM_MODEN
+  mcals: [MPC5744P]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PLL1FM_MODPRD
+  mcals: [MPC5744P]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: PLL1FM_INCSTP
+  mcals: [MPC5744P]
+
+  
+#########################################################
+# ParameterGroup
+#########################################################
+# jacinto5, jacinto6
+# Try to keep it as <reg>_<field>
+# e.g GEM0_DIVISOR1, GEM0_DIVISOR, GEM0_CLKACT
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Enable Timer
+  members: [ Enable_Timer_1, Enable_Timer_2, Enable_Timer_3, Enable_Timer_4, Enable_Timer_5, Enable_Timer_6, Enable_Timer_7, Enable_Timer_8, Enable_Timer_9, Enable_Timer_10, Enable_Timer_11, Enable_Timer_12, Enable_Timer_13, Enable_Timer_14, Enable_Timer_15, Enable_Timer_16] 
+  mcals: [JACINTO5, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Enable CAN
+  members: [ Enable_CAN0, Enable_CAN1] 
+  mcals: [JACINTO5, JACINTO6]
+
+#########################################################
+# Excluded from generic validation
+#########################################################   
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: Frequency 
+  

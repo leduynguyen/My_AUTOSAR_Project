@@ -1,0 +1,115 @@
+# 1.0
+# com.arccore.bsw.stylesheet
+
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: XcpOdtEntryAddress
+  
+  
+#########################################################
+# Disabled Container
+######################################################### 
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: XcpDemEventParameterRefs
+ 
+- !!com.arccore.common.yaml.data.styles.DisabledContainer  
+  name: ArcXcpSegmentation
+
+#########################################################
+# Hidden parameters
+#########################################################
+
+# XcpDaqList
+
+# XcpOdtEntryMaxSize  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpOdtEntryMaxSize  
+   
+# XcpGeneral
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpOnFlexRayEnabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpOnCddEnabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpOdtEntrySizeDaq
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpOdtEntrySizeStim
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpMainFunctionPeriod
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpMaxEventChannel 
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpPrescalerSupported
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpSuppressTxSupport  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpEventChannelPriority
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpEventChannelConsistency  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpOdt2DtoMapping
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpRxPduId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpTxPduId 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcXcpFeatureDio
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: XcpMinDaq 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcXcpFeatureStim
+  
+      
+#########################################################
+# Parameter groups
+#########################################################
+# Container XcpGeneral
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Dynamic DAQ Parameters
+  members: [ XcpDaqCount, XcpOdtCount, XcpOdtEntriesCount]
+
+# Container XcpGeneral
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Supported features of Xcp protocol
+  members: [ ArcXcpFeatureProtection, ArcXcpFeatureBlockMode, ArcXcpFeatureCalibrationPage, ArcXcpFeatureProgram, ArcXcpFeatureGetSlaveId ]
+  
+# Container XcpGeneral
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Parameters of GetSlaveId feature
+  members: [ ArcXcpCanIdRx, ArcXcpPduIdBroadcastRef ] 
+  
+# Container XcpGeneral
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Parameters of Timestamp
+  members: [ XcpTimestampTicks, XcpTimestampType, XcpTimestampUnit ]
+  
+# Container XcpGeneral
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Communication specific layer selection
+  members: [ XcpOnCanEnabled, XcpOnCddEnabled, XcpOnEthernetEnabled, XcpOnFlexRayEnabled ] 
+  
+ # Container XcpGeneral
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Protected feature selection for Seed & Key algorithm
+  members: [ ArcXcpSelectProtectedFeature ]     

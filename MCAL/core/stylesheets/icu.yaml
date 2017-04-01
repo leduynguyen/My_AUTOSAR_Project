@@ -1,0 +1,55 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# Container IcuConfigSet
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuMaxChannel
+
+# Container IcuChannel
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuWakeupCapability
+
+# Container IcuGeneral
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuReportWakeupSource
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuIndex
+ 
+# Container IcuOptionalApis
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuDisableWakeupApi    
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuEnableWakeupApi 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuWakeupFunctionalityApi  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuGetDutyCycleValuesApi
+  mcals: [zynq,MPC5606S]    
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuGetTimeElapsedApi
+  mcals: [zynq,MPC5606S]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IcuSignalMeasurementApi
+  mcals: [zynq,MPC5606S]
+########################################################
+# Disabled containers
+########################################################  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: IcuSignalMeasurement
+  mcals: [MPC5606S]
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: IcuWakeup 
+      
+########################################################
+# Display names
+########################################################  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: IcuChannelId
+  display: Icu Physical Channel Id 

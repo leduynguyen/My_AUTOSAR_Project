@@ -1,0 +1,38 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+########################################################
+# Hidden parameters in LinGeneral
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LinIndex
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LinTimeoutDuration
+
+########################################################
+# Hidden parameters in LinChannel
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LinChannelWakeupSupport
+  mcals: [ MPC5567, MPC560x, MPC551x, MPC5744P, MPC5748G, MPC5746C, MPC5634M, SPC56XL70, MPC5644A, MPC5645S, MPC5606B, MPC5606S, MPC5607B, MPC5643L, MPC5777M, STM32F103, STM32F107, RH850F1H, TMS570, TMS570LC43X, SPC560B54, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LinChannelEcuMWakeupSource
+  mcals: [ MPC5567, MPC560x, MPC551x, MPC5744P, MPC5748G, MPC5746C, MPC5634M, SPC56XL70, MPC5644A, MPC5645S, MPC5606B, MPC5606S, MPC5607B, MPC5643L, MPC5777M, STM32F103, STM32F107, RH850F1H, TMS570, TMS570LC43X, SPC560B54, JACINTO6]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcUartChannel
+  mcals: [ JACINTO6]
+
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LinClockRef
+  
+  
+########################################################
+# Hidden parameters in LinDemEventParameterRefs
+########################################################
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LIN_E_TIMEOUT

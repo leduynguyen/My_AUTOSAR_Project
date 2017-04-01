@@ -1,0 +1,41 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# Rx channel
+# Container J1939TpRxPg
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpRxDirectNPduId
+
+# Container J1939TpRxCmNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpRxCmNPduId
+
+# Container J1939TpRxDtNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpRxDtNPduId
+  
+# Container J1939TpTxFcNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpTxFcNPduTxConfId 
+  
+# Tx channel
+# Container J1939TpTxNSdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpTxNSduId
+  
+# Container J1939TpTxDirectNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpTxDirectNPduTxConfId   
+  
+# Container J1939TpTxDtNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpTxDtNPduTxConfId    
+  
+# Container J1939TpTxCmNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpTxCmNPduTxConfId   
+ 
+# Container J1939TpRxFcNPdu
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: J1939TpRxFcNPduId   
+  

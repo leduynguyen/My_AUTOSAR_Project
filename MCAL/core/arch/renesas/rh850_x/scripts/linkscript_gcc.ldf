@@ -1,0 +1,94 @@
+/* 
+ * Copyright (C) 2014  ArcCore AB <contact@arccore.com> 
+ */
+
+OUTPUT_FORMAT("elf32-v850-rh850", "elf32-v850-rh850","elf32-v850-rh850")
+OUTPUT_ARCH(v850-rh850)
+ENTRY(_start)
+EXTERN(__ep __gp);
+
+MEMORY
+{
+	#include "memory_mcu.ldf"
+}
+
+SECTIONS
+{
+
+    .text :
+	{
+		KEEP(*(.reset .exception_tbl));
+    	*(.text .text.*);
+	} > L_FLASH_CODE_0
+	
+	
+	/* Small data */ 
+	.sdata ALIGN(4) :	{
+	    PROVIDE (__gp = . + 0x8000);	/* small data pointer */
+		*(.sdata)
+	} > L_FLASH_CODE_0
+
+    .rosdata ALIGN (4) :
+    {
+	   *(.rosdata)
+    } > L_FLASH_CODE_0
+
+	.data : {
+		__DATA_RAM = .;
+		PROVIDE (__ep = .);	/* Move!!! */ 
+		*(.data .data.* ); 
+		PROVIDE(___DATA_END = .);
+	} > L_SRAM_4 AT> L_FLASH_CODE_0 
+
+
+    .bss :	{
+		__SBSS_END__ = .;
+		___BSS_START = .;
+		*(.bss .bss.*);
+		___BSS_END 	= .; 
+	} > L_SRAM_4
+
+	/* Eth descriptors and data buffers must be in retention RAM */
+    .ethData :	{
+		*(.ethData .ethData.*);
+	} > L_SRAM_4
+	
+	/* Always place last in RAM */
+	.heap ALIGN(0x4): {
+		PROVIDE(__heap_start = .);
+	} > L_SRAM_2
+}
+
+__ram_start = ORIGIN(L_SRAM_2);
+__ram_end = ORIGIN(L_SRAM_2) + LENGTH(L_SRAM_2);
+__SP_INIT = __ram_end; 
+//__heap_end = __ram_end; 
+__heap_end = ORIGIN(L_SRAM_2) + LENGTH(L_SRAM_2);
+//__heap_start = __heap_end;
+
+__TEXT_START    	= ADDR(.text);
+___DATA_RAM  		= ADDR(.data);
+___DATA_ROM          = LOADADDR(.data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

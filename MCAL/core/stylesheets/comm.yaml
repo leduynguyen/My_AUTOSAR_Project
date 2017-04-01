@@ -1,0 +1,71 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters in ComMGeneral
+######################################################### 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMDirectUserMapping  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMEcuGroupClassification
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMSynchronousWakeUp
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMWakeupInhibitionEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMGlobalNvMBlockDescriptor
+  
+#########################################################
+# Hidden parameters in ComMConfigSet
+#########################################################   
+
+  
+#########################################################
+# Hidden parameters in ComMUser
+#########################################################  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMUserIdentifier
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMUserEcucPartitionRef
+  
+#########################################################
+# Hidden parameters in ComMChannel
+#########################################################   
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMChannelId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMFullCommRequestNotificationEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMGlobalNvmBlockDescriptor
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMNoWakeup
+  
+# To do hide ComMNoCom. Currently identical parameter under ComMGeneral  
+  
+#########################################################
+# Hidden parameters in ComMNetworkManagement
+#########################################################   
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ComMPncNmRequest
+  
+#########################################################
+# Hidden parameters in ComMPnc
+#########################################################   
+
+  
+#########################################################
+# Hidden parameters in ComMPncComSignal
+#########################################################   
+ 
+ 
+#########################################################
+# Disabled containers
+#########################################################  

@@ -1,0 +1,233 @@
+#define _ASSEMBLER_
+#include "asm_rh850.h"
+
+
+
+	.extern _Exception_Handler
+
+	/* The OS should set
+	 *
+	 *  SR      
+	 * ----------------------------------------- 
+	 *  SR5,0   PSW		RH850F1H will set this to 0x0000_0020 at reset.
+	 * 						-> PSW.ID  = 1 (interrupts disabled)
+	 *						-> PSW.EBV = 0 ( RBASE is used as exception base address)
+	 *  SR2,1   RBASE   RH850F1H will set this to 0x0000_0000 at reset.
+	 *  					Used if  PSW.EBV = 0
+     *  					RBASE[0] is called RINT and controls if there should be one vector for
+     *						each priority in the vector table( RINT=0) or just one (RINT=1)  
+	 */
+
+	/*
+	 * RBASE = EBASE 
+	 */
+
+	.section ".ebase_tbl","ax" //  text
+ebase_tbl:	
+	ASM_BALIGN(512)	
+	jr	_start // RESET
+
+	ASM_BALIGN(16)
+	MOV32(EXC_SYSERR,r6)
+	jr	_Exception_Handler // SYSERR
+
+	ASM_BALIGN(16)
+	MOV32(EXC_HVTRAP,r6)
+	jr	_Exception_Handler // HVTRAP
+
+	ASM_BALIGN(16)
+	MOV32(EXC_FETRAP,r6)
+	jr	_Exception_Handler // FETRAP
+
+	ASM_BALIGN(16)
+	MOV32(EXC_TRAP0,r6)
+	jr	_Exception_Handler // TRAP0
+
+	ASM_BALIGN(16)
+	MOV32(EXC_TRAP1,r6)	
+	jr	_Exception_Handler // TRAP1
+
+	ASM_BALIGN(16)
+	MOV32(EXC_RIE,r6)	
+	jr	_Exception_Handler // RIE
+
+	ASM_BALIGN(16)
+	MOV32(EXC_FPP_FPI,r6)
+	jr	_Exception_Handler // FPP/FPI
+
+	ASM_BALIGN(16)
+	MOV32(EXC_UCPOP,r6)
+	jr	_Exception_Handler // UCPOP
+
+	ASM_BALIGN(16)
+	MOV32(EXC_MIP_MDP,r6)	
+	jr	_Exception_Handler // MIP/MDP/ITLBE/DTLBE
+
+	ASM_BALIGN(16)
+	MOV32(EXC_PIE,r6)	
+	jr	_Exception_Handler // PIE
+
+	ASM_BALIGN(16)
+	MOV32(EXC_DEBUG,r6)	
+	jr	_Exception_Handler // Debug
+
+	ASM_BALIGN(16)
+	MOV32(EXC_MAE,r6)	
+	jr	_Exception_Handler // MAE
+
+	ASM_BALIGN(16)
+	MOV32(EXC_RFU,r6)	
+	jr	_Exception_Handler // (R.F.U)
+
+	ASM_BALIGN(16)
+	MOV32(EXC_FENMI,r6)		
+	jr	_Exception_Handler // FENMI
+
+	ASM_BALIGN(16)
+	MOV32(EXC_FEINT,r6)			
+	jr	_Exception_Handler // FEINT
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority0)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority1)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority2)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority3)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority4)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority5)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority6)
+
+	ASM_BALIGN(16)
+	jr	_Irq_Handler // INTn(priority7)
+
+
+#if 0
+/* r6 will contain the vector */
+    .extern __SP_INIT // gcc ?
+	.section ".text", "ax" // text
+	ASM_BALIGN(2)
+_Dummy:
+	br	_Dummy
+
+_Dummy_EI:
+	br	_Dummy_EI
+
+#endif
+
+	.extern __SDA_BASE
+	.extern __SP_END
+	.extern __DATA_ROM
+	.extern rcw
+	.extern text
+	.extern exit
+	.extern main
+	.extern init
+	.extern ShutdownOS
+	
+.section .text	
+ASM_BALIGN(4)
+.globl	_start
+.type	_start,@function
+_start:
+    ASM_NEED(_exit)
+    
+    //Initialize gp, tp & sp.
+    /* GHS use predefined symbols _tp and _gp */ 
+    
+    MOV32(__SP_INIT-4,sp)
+    MOV32(__gp,gp)
+    MOV32(__ep,ep)
+    
+    mov -4,r1
+    and r1,sp
+    mov lp,r29
+       
+    mov 0,r20 // Initialize registers to a known value.
+    mov 0,r21
+    mov 0,r22
+    mov 0,r23
+    mov 0,r24
+    mov 0,r25
+    mov 0,r26
+    mov 0,r27
+    mov 0,r28 // Clear FP
+
+	// Set EBASE and use EBASE for exceptions
+	MOV32(ebase_tbl,r6)
+	ldsr r6,3,1
+
+	// Set PSW
+    stsr    5, r6 , 0
+#if defined(CFG_HW_FLOAT)    
+    mov 0x00018000, r11
+#else
+	mov 0x00008000, r11
+#endif
+    or  r11,r6
+    ldsr r6, 5 , 0
+
+	// Run local init            
+    jarl init_ram, lp
+    
+    //Run init
+    jarl _init, lp
+    
+    //Go to main.
+    mov 1, r6 
+    jarl _main, lp
+    
+    jr _exit
+
+init_ram:
+    MOV32(__ram_start,ep)
+    MOV32(__ram_end,r13)
+    addi    -32, r13, r14
+    mov 0x0, r12
+
+ram_16loop:
+    sst.w   r12, 0x00[ep]
+    sst.w   r12, 0x04[ep]
+    sst.w   r12, 0x08[ep]
+    sst.w   r12, 0x0c[ep]
+    sst.w   r12, 0x10[ep]
+    sst.w   r12, 0x14[ep]
+    sst.w   r12, 0x18[ep]
+    sst.w   r12, 0x1c[ep]
+    addi    0x20, ep, ep
+        
+    cmp     r14, ep
+    ble ram_16loop
+
+    cmp r13, ep
+    
+ram_1loop:
+    be  return
+    sst.w   r12, 0x00[ep]
+    addi    0x4, ep, ep
+
+    cmp r13, ep
+    ble ram_1loop
+    
+    jr return
+
+return:
+    jmp [lp]
+
+    .globl  _exit
+_exit:
+#if defined(KERNEL)
+    mov 30, r6
+    jr ShutdownOS
+#endif
+    jr _exit

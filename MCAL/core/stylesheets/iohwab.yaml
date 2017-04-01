@@ -1,0 +1,44 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbDigitalDemEventParameterRef
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbDigitalDiagnosticType  
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbExternalDeviceDriverRef  
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbDioChannelRef
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbPwmChannel
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbAdcChannel
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbAdcGroup
+ 
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcIoHwAbExternalDeviceAnalogMaxValue 
+  
+#########################################################
+# Parameter groups
+#########################################################
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Analog Settings
+  members: [ ArcIoHwAbExternalDeviceAnalogMaxValue, ArcIoHwAbAnalogSupport ]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Digital Settings
+  members: [ ArcIoHwAbDigitalSupport ]
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Pwm Settings
+  members: [ ArcIoHwAbPwmSupport ]

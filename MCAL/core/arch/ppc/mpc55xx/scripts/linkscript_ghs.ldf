@@ -1,0 +1,110 @@
+
+MEMORY
+{
+	#include "memory_mcu.ldf"
+}
+
+
+SECTIONS
+{
+    .dummy NOLOAD : {    
+      . += L_BOOT_RESERVED_SPACE;
+    } > L_FLASH_CODE_0     
+    .rcw						: > L_FLASH_CODE_0
+    
+//
+// RAM SECTIONS
+//
+
+    __ramstart  ABS : > L_SRAM_0
+    
+#if defined(CFG_MPC5645S) || defined(CFG_MPC5607B)
+    __LP_TEXT_START = .;
+    .lowpower_text  : > .
+    __LP_TEXT_END = .;
+    
+     .lowpower_bss : > . 
+#endif   
+
+    .PPC.EMB.sdata0      ALIGN(16) ABS : > .
+    .PPC.EMB.sbss0           CLEAR ABS : > .
+   
+    .sdabase   ALIGN(16): > L_SRAM_0    
+    __DATA_RAM = .;	
+    .sdata              : > L_SRAM_0    
+    .data               : > .
+    .ram_no_cache_data  : > .
+    __DATA_END	= .;
+    .sbss     ALIGN(16)	: > .
+    .bss                : > .
+    __BSS_END = .;
+    
+#if defined(USE_ETH)
+	.eth_ahb_buf ALIGN(64) : > .
+#endif
+    
+    .ramlog             : > .
+	.calibration        : > .  
+
+	.ram_no_init NOLOAD ALIGN(0x10) : {
+		   *(.ramlog .dem_eventmemory_pri)
+	}
+
+	.ram_no_cache_bss NOLOAD ALIGN(0x10) : {
+		*(.ram_no_cache_bss)
+	}
+
+	_heap_start = .;
+	__ram_end = .;
+    
+//    .heap                  ALIGN(16) PAD(heap_reserve)  : > .   
+//    .stack                 ALIGN(16) PAD(stack_reserve) : > .
+
+//
+// ROM SECTIONS
+//
+
+    .exception_tbl				: > L_FLASH_CODE_0	
+    .text						: > .
+    .vletext						: > .
+    .syscall						: > .
+
+    .rodata		align(16) pad(16)	 				: > .
+    .sdata2 	align(16) pad(16)					: > .
+
+    .secinfo 						: > .
+    .fixaddr 						: > .
+    .fixtype 	pad(16)					: > .
+	
+	__DATA_ROM = .; 
+    .ROM.PPC.EMB.sdata0 ROM(.PPC.EMB.sdata0) : > .
+    .ROM.sdata          ROM(.sdata) : > .
+    .ROM.data           ROM(.data) : > .
+    
+#if defined(CFG_MPC5645S) || defined(CFG_MPC5607B)
+    __LP_TEXT_ROM=.;
+    .ROM.lowpower_text  ROM(.lowpower_text) : >.
+#endif
+    
+	__rom_end = .;
+
+#if defined(CFG_MPC5516)
+	.Mcu_Arc_LowPowerRecoverFlash 0x000ff000 : {
+	    *(.lowpower_text)
+	} 
+
+	.lowpower_vector 0x000ffffc : {
+	    *(.lowpower_vector)
+	} 
+#endif
+
+    __BSS_START	= ADDR(.sbss);
+	__SP_INIT    = MEMENDADDR(L_SRAM_0);
+	__ram_start  = ADDR(L_SRAM_0);
+	__rom_start  = ADDR(.rcw);
+	_heap_end = __SP_INIT;
+	__SP_END     = __SP_INIT - 1024;
+	__SP_INIT_Z0 = __SP_INIT;
+
+	
+}

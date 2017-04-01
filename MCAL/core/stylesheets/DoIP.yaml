@@ -1,0 +1,15 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+#container DoIPChannel
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DoIPPduRRxPduId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DoIPPduRTxPduId
+
+#container DoIPTcpConnection and DoIPUdpConnection
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DoIPSoAdRxPduId
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DoIPSoAdTxPduId

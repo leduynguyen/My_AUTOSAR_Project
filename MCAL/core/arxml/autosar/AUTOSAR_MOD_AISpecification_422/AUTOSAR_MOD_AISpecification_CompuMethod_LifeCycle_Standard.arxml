@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <LONG-NAME>
+        <L-4 L="EN">AUTOSAR</L-4>
+      </LONG-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>AISpecification</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">AISpecification</L-4>
+          </LONG-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>LifeCycleInfoSets</SHORT-NAME>
+              <CATEGORY>STANDARD</CATEGORY>
+              <REFERENCE-BASES>
+                <REFERENCE-BASE>
+                  <SHORT-LABEL>CompuMethods</SHORT-LABEL>
+                  <IS-DEFAULT>false</IS-DEFAULT>
+                  <IS-GLOBAL>false</IS-GLOBAL>
+                  <BASE-IS-THIS-PACKAGE>false</BASE-IS-THIS-PACKAGE>
+                  <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR/AISpecification/CompuMethods_Blueprint</PACKAGE-REF>
+                </REFERENCE-BASE>
+              </REFERENCE-BASES>
+              <ELEMENTS>
+                <LIFE-CYCLE-INFO-SET>
+                  <SHORT-NAME>CompuMethodObslt</SHORT-NAME>
+                  <DEFAULT-LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</DEFAULT-LC-STATE-REF>
+                  <LIFE-CYCLE-INFOS>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">AckSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">AckSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">AlrmSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">AlrmSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">AvlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">AvlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">CalSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">CalSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">CrashSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">CrashSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">CrsCtrlAndAccSwtSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">CrsCtrlAndAccSwtSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">CtrlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">CtrlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DetnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DetnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSts2</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSt2</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSts3</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSt3</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSts4</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevErrSt4</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSts4</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSt4</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSts5</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSt5</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSts6</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSt6</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSts7</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DevSt7</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DoorHndlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DoorHndlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">DoorSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">DoorSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">EgyMngtSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">EgyMngtSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">EpbBtnCtrlSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">EpbBtnCtrlSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">ImobSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">ImobSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">ImpctSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">ImpctSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">IndcrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">IndcrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">KeyInsertSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">KeyInsertSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">KeySts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">KeySt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">LockSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">LockSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">LockSts2</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">LockSt2</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">LockStsOfSteerCol1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">LockStOfSteerCol1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">MoveSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">MoveSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">ObstclDstInPrkgSegSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">ObstclDstInPrkgSegSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">OperModSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">OperModSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">OutdBriSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">OutdBriSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">OvrdnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">OvrdnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">ProfPenSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">ProfPenSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">ReqSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">ReqSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">ReqSts2</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">ReqSt2</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">RoadSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">RoadSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">StabrSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">StabrSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">StsOfObjMeasd1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">StOfObjMeasd1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">TSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">TSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">TirePMonWarnSts1</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">TirePMonWarnSt1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">TirePMonWarnSts2</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">TirePMonWarnSt2</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">TirePMonWarnSts3</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">Change of shortname</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">TirePMonWarnSt3</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">A8</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">changed specification</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">A13</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">A9</LC-OBJECT-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.1.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <REMARK>
+                        <P>
+                          <L-1 L="EN">changed specification</L-1>
+                        </P>
+                      </REMARK>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">A14</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF BASE="CompuMethods" DEST="COMPU-METHOD">WhlRotlDirStd1</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/obsolete</LC-STATE-REF>
+                      <PERIOD-BEGIN>
+                        <AR-RELEASE-VERSION>4.2.1</AR-RELEASE-VERSION>
+                      </PERIOD-BEGIN>
+                      <USE-INSTEAD-REFS>
+                        <USE-INSTEAD-REF BASE="CompuMethods" DEST="COMPU-METHOD">WhlRotlDirMeasd1</USE-INSTEAD-REF>
+                      </USE-INSTEAD-REFS>
+                    </LIFE-CYCLE-INFO>
+                  </LIFE-CYCLE-INFOS>
+                  <USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF DEST="LIFE-CYCLE-STATE-DEFINITION-GROUP">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates</USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF>
+                </LIFE-CYCLE-INFO-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

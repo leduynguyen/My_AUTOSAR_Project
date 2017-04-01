@@ -1,0 +1,112 @@
+/*-------------------------------- Arctic Core ------------------------------
+ * Copyright (C) 2013, ArcCore AB, Sweden, www.arccore.com.
+ * Contact: <contact@arccore.com>
+ * 
+ * You may ONLY use this file:
+ * 1)if you have a valid commercial ArcCore license and then in accordance with  
+ * the terms contained in the written license agreement between you and ArcCore, 
+ * or alternatively
+ * 2)if you follow the terms found in GNU General Public License version 2 as 
+ * published by the Free Software Foundation and appearing in the file 
+ * LICENSE.GPL included in the packaging of this file or here 
+ * <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+ *-------------------------------- Arctic Core -----------------------------*/
+
+#define _ASSEMBLER_
+#include "asm_offset.h"
+#include "arch_offset.h"
+#include "arch_stack.h"
+
+
+
+#define IRQ_ENABLE() 		cpsie 	i;dsb;isb
+#define IRQ_DISABLE()		cpsid 	i;dsb;isb
+
+#define SCB_ICSR 		0xE000ED04
+#define ICSR_VECTACTIVE	0x1ff
+
+#define REG_SAVE r4-r11
+
+.extern Os_Sys
+
+	.syntax unified
+	.thumb
+
+	.section .text
+
+ 	.global Irq_Handler
+    .type	Irq_Handler, %function
+ 	.global SVC_Handler
+    .type	SVC_Handler, %function
+ 	.global ContextRestore
+    .type	ContextRestore, %function
+
+
+/* 
+ * Swap context and then flow down to trigger pendsv
+ * We are on PSP stack here.
+ */
+
+	.global Os_ArchSwapAndTrigPendSv
+Os_ArchSwapAndTrigPendSv:
+	bl 		Os_ArchDoSwap	/* Call C-function for readability */ 
+		
+	.globl  Os_ArchTrigPendSV
+Os_ArchTrigPendSV:
+    ldr 	r0,=0xE000ED04
+    ldr 	r1,=0x10000000
+    str		r1,[r0,#0]
+    IRQ_ENABLE()
+waitForIt: 
+	b waitForIt
+	
+
+/**
+ * Os_ArchSetSpAndCall
+ *
+ * @param sp Pointer to the stack
+ * @param f  Pointer to the function to call
+ */
+
+ 	.global Os_ArchSetSpAndCall
+ 	.type	Os_ArchSetSpAndCall, %function
+Os_ArchSetSpAndCall:
+	mov.w	sp,r0
+	mov.w	lr,r1
+	bx		lr
+
+
+
+/**
+ * Os_ArchSwapContext
+ *
+ * @param r0 - pcb for old task
+ * @param r1 - pcb for new task
+ *
+ */
+ 	.global Os_ArchSwapContext
+ 	.type	Os_ArchSwapContext, %function
+Os_ArchSwapContext:
+	// Save function call registers
+    push    {REG_SAVE,lr}
+
+    // store old stack for old task
+    mov.w	r4,sp
+    str     r4,[r0,#PCB_STACK_CURR_P]
+
+	// Flow down
+	// R1 - new PCB
+	.global Os_ArchSwapContextTo
+	.type	Os_ArchSwapContextTo, %function
+Os_ArchSwapContextTo:
+
+    // Get stack for new task
+    ldr 	r4,[r1,#PCB_STACK_CURR_P]
+    mov.w 	sp,r4
+    
+	// Set new current pcb
+    ldr     r5,= Os_Sys
+    str     r1,[r5,#SYS_CURR_PCB_P]
+    
+    pop    {REG_SAVE,pc}
+    

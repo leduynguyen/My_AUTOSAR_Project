@@ -1,0 +1,90 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters
+#########################################################
+# DltGeneral 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltGptChannel
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementExtendedHeader
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementNVRamStorage
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementSWCInjection
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementVfbTrace
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltVfbTraceLogLevel
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementTimestamp
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementVerboseMode
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltImplementAppIdContextIdQuery
+  
+# DltGeneral 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltInitBufferSize
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltMaxCountAppIds
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltMaxCountContextIds
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltMaxCountContextIdsPerAppId
+ 
+# DltMultipleConfigurationContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltNvRamBlockRef
+  
+# DltMultipleConfigurationContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltBandwidthForComModule
+
+# DltMultipleConfigurationContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltBandwidthForDiagChannel
+
+# DltMultipleConfigurationContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltTimePeriodTrafficShaping
+
+# DltMultipleConfigurationContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltDefaultTraceStatus
+
+# DltMultipleConfigurationContainer
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DltFactoryDefaultMaxLogLevel
+
+#########################################################
+# Parameter groups
+#########################################################
+# DemConfigSet->DemEventParameter
+#- !!com.arccore.common.yaml.data.styles.ParameterGroup
+#  name: Freeze Frame Settings
+#  members: [ DemFreezeFrameRecNumClassRef, DemFreezeFrameClassRef, DemMaxNumberFreezeFrameRecords ]
+
+#########################################################
+# Disabled containers
+#########################################################  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DltBandwidth
+    
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+#- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+#  name: DemDebounceCounterJumpDownValue

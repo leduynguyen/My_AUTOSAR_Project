@@ -1,0 +1,569 @@
+/*-------------------------------- Arctic Core ------------------------------
+ * Copyright (C) 2013, ArcCore AB, Sweden, www.arccore.com.
+ * Contact: <contact@arccore.com>
+ * 
+ * You may ONLY use this file:
+ * 1)if you have a valid commercial ArcCore license and then in accordance with  
+ * the terms contained in the written license agreement between you and ArcCore, 
+ * or alternatively
+ * 2)if you follow the terms found in GNU General Public License version 2 as 
+ * published by the Free Software Foundation and appearing in the file 
+ * LICENSE.GPL included in the packaging of this file or here 
+ * <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+ *-------------------------------- Arctic Core -----------------------------*/
+
+#define _ASSEMBLER_
+#include "asm_offset.h"
+#include "arch_offset.h"
+#include "arch_stack.h"	
+#include "asm_arm.h"
+
+#define FIQINDEX		 				0xFFFFFE04
+
+#if defined(__GNUC__)
+	.syntax unified
+	.thumb
+	.section .text
+#elif defined(__ghs__)
+	.thumb2
+	.section .text
+#else
+	PRESERVE8 {TRUE}
+	AREA	||.text||,CODE,READONLY
+#endif
+
+
+ 	ASM_GLOBAL(Irq_Handler)
+    ASM_TYPE(Irq_Handler, %function)
+
+ 	ASM_GLOBAL(Fiq_Handler)
+ 	ASM_WEAK(Fiq_Handler)
+    ASM_TYPE(Fiq_Handler, %function)
+    
+	ASM_GLOBAL(SupervisorCall_Handler)
+    ASM_TYPE(SupervisorCall_Handler, %function)
+
+	ASM_GLOBAL(Data_Exc_Handler)
+    ASM_TYPE(Data_Exc_Handler, %function)
+    
+    ASM_GLOBAL(Prefetch_Exc_Handler)
+    ASM_TYPE(Prefetch_Exc_Handler, %function)
+    
+    ASM_GLOBAL(Dummy_Irq)
+    ASM_TYPE(Dummy_Irq, %function)
+
+    ASM_GLOBAL(Undefined_Instruction_Handler)
+    ASM_TYPE(Undefined_Instruction_Handler, %function)
+    
+
+
+// Registers part of context.
+#define REG_SAVE 		r0-r12
+#define REG_SAVE_SC		r4-r8,r10,r11
+
+
+/*
+ * Fiq Handler:
+ * - We start on FIQ stack here, ie SR_fiq
+ * - Banked registers for FIQ are: r8 - r14 
+ */ 
+ASM_LABEL(Fiq_Handler)
+	// Setup return address. This requires subtraction from LR.
+	sub		lr, lr, #4
+#if (CFG_TMS570)
+	/* Save LR_fiq and SPSR_fiq on FIQ stack */
+	srsdb	#17!
+#else	
+	/* Save LR_fiq and SPSR_fiq on System stack ("11111b" is System Mode = 0x1f = 31) */
+	srsdb	#31!
+	/* Change to System Mode */
+	cps		#31
+#endif    
+    // Push volatile registers on stack
+	push    {r0-r3,lr}
+	
+#if !defined(CFG_FIQ_NO_VFPU_SAVE_RESTORE)
+	// Save S0-S31/D0-> registers  
+	vpush	{d0-d15}
+	vmrs 	r3, FPSCR 	/* Read Floating-Point Status and Control Register */
+	push	{r3}		/* push it */
+#endif
+	
+	ldr      r3,=FIQINDEX
+	ldr		 r3,[r3,#0]		/* Load it */
+	subs	 r3,#1			/* Adjust channel */
+noSSI:	     	 			
+	ldr      r2,=Irq_VectorTable
+	ldr.w	 r2,[ r2,r3, lsl #2]
+	
+	/* Make the call, subroutine preserves r4-r8, r10, r11 and r13(SP) */
+	blx 	 r2				/* Make the call */
+#if !defined(CFG_FIQ_NO_VFPU_SAVE_RESTORE)
+	pop		{r3}
+	vmsr    FPSCR,r3
+	vpop	{d0-d15}
+#endif
+    
+    // Restore registers
+    pop     {r0-r3,lr}
+
+    rfeia	sp!
+
+
+
+ 	ASM_GLOBAL(Os_ArchSysCall_4_S)
+    ASM_TYPE(Os_ArchSysCall_4_S, %function)
+    /* r0 - 
+     * r1 - 
+     * r2 - 64_bit - low
+     * r3 - 64_bit - high
+     */ 
+    
+ASM_LABEL(Os_ArchSysCall_4_S)
+	svc #0	
+	bx	lr	
+
+
+ 	ASM_GLOBAL(Os_ArchSysCall_4)
+    ASM_TYPE(Os_ArchSysCall, %function)
+    /*
+     * According to AAPCS registers r0-r3...if more is needed stack will be used. 
+     * r0 - arg1
+     * r1 - arg2
+     * r2 - arg3 
+     * r3 - arg4      
+     */    
+ASM_LABEL(Os_ArchSysCall_4)
+	svc #0	
+	bx	lr	
+
+
+	/* HW does:
+	 * - CPSR copied to SPSR_IRQ
+	 * - Swich to IRQ state (mode bits in CPSR)
+	 * - LR set to return address
+     */ 
+     
+          
+ASM_LABEL(Irq_Handler)
+	// Setup return address. This requires subtraction from LR.
+	sub		lr, lr, #4
+
+
+//ASM_LABEL(Svc_Handler)
+
+	// IMPROVEMENT: 
+	// If memory protection is used we should probably check IRQ_SPSR
+	// to what mode we came from and save the information there instead
+	// of just assuming system mode here.. 
+
+	// Store return LR_IRQ and CPSR on system mode's stack
+#if defined(__ghs__)
+	// ghs have a bug in the assembler, make it the manual way.
+	// Correct should be 0x2de81fc0.. and in little endian we have
+	.long 	0xc01fe82d 
+#else	
+	srsdb	sp!, #31 // 31 = System mode   (db=decrement before)
+#endif
+	
+	// Switch to system mode, disable IRQ
+	cpsid 	i, #31  // 31 = system mode 
+    
+    // Push registers on stack
+	push    {REG_SAVE,lr}
+	
+	// Check if we should save VFP regs, s0-s31/d0-dx
+	ldr      r4,=Os_Sys
+	ldr      r5,[r4,#SYS_CURR_PCB_P]
+	ldr      r4,[r5,#PCB_REGS]				// Get flags
+	cmp 	 r4,#0
+	beq 	 noCoRegs
+
+	// Save S0-S31/D0-> registers  
+	// TODO: Save more registers here? (status registers for float/simd, etc)
+	vpush	{d0-d15}
+	vmrs 	r4, FPSCR 	/* Read Floating-Point Status and Control Register */
+	push	{r4}		/* push it */
+
+	/* 	VMSR FPSCR, <Rt> ; Write Floating-Point Status and Control Register */
+	sub.w   sp,sp,#C_SIZE
+	mov.w   r4,#LCF_PATTERN
+	
+    b		cc		
+    	
+ASM_LABEL(noCoRegs)	
+    sub.w   sp,sp,#C_SIZE
+    mov.w   r4,#LC_PATTERN
+ASM_LABEL(cc)
+    str     r4,[sp,#C_CONTEXT_OFFS]
+    
+    // Put stack as first arg to Irq_Entry    
+    mov 	r0,sp			
+    
+	// When at interrupt nest count = 0, load interrupt stack    
+	ldr      r4,=Os_Sys
+	ldr      r5,[r4,#SYS_INT_NEST_CNT]
+	cmp      r5, #0
+	bgt      arggg
+	ldr      sp,[r4,#SYS_INT_STACK]   
+      
+ASM_LABEL(arggg)
+    bl      Irq_Entry
+    mov     sp, r0			// pop from returned stack
+
+    ldr     r6,[sp,#C_CONTEXT_OFFS]    
+    cmp     r6,#LC_PATTERN
+    beq     os_lc_restore
+    cmp     r6,#LCF_PATTERN
+    beq     os_lcf_restore
+ASM_LABEL(baaaad)	
+	b	baaaad
+
+
+/**
+ * Os_ArchSetSpAndCall
+ *
+ * @param sp Pointer to the stack
+ * @param f  Pointer to the function to call
+ */
+
+ 	ASM_GLOBAL(Os_ArchSetSpAndCall)
+ 	ASM_TYPE(Os_ArchSetSpAndCall, %function)
+ASM_LABEL(Os_ArchSetSpAndCall)
+	mov.w	sp,r0
+	mov.w	lr,r1
+	bx		lr
+
+
+/**
+ * Os_ArchSwapContext
+ *
+ * @param r0 - pcb for old task
+ * @param r1 - pcb for new task
+ *
+ * -------------- higher addr
+ * r4-r8,etc
+ * -------
+ * 4 - Large or Small context indicator
+ * 0 - ?
+ * ----------
+ *
+ */
+ 	ASM_GLOBAL(Os_ArchSwapContext)
+ 	ASM_TYPE(Os_ArchSwapContext, %function)
+ASM_LABEL(Os_ArchSwapContext)
+	// Save function call registers
+    push    {REG_SAVE_SC,lr}
+
+	// Check if we should save VFP regs, s0-s31/d0-dx
+	ldr      r4,[r0,#PCB_REGS]		// Get flags
+	cmp 	 r4,#0
+	beq 	 _noCoRegs
+	
+	vpush	{d8-d15}
+	vmrs 	r4, FPSCR 	/* Read Floating-Point Status and Control Register */
+	push	{r4}		/* push it */
+
+	/* 	VMSR FPSCR, <Rt> ; Write Floating-Point Status and Control Register */
+	sub.w   sp,sp,#C_SIZE
+	mov.w   r4,#SCF_PATTERN		/* 	// Save small-context float indicator */
+	
+    b		_cc		
+
+ASM_LABEL(_noCoRegs)
+	// Store the context frame
+    sub.w   sp,sp,#C_SIZE
+
+	// Save small-context indicator
+    mov.w   r4,#SC_PATTERN
+ASM_LABEL(_cc)
+    str     r4,[sp,#C_CONTEXT_OFFS]
+	// ---> We have saved NVGPR+C
+	
+    // store old stack for old task
+    mov.w	r4,sp
+    str     r4,[r0,#PCB_STACK_CURR_P]
+
+	// Flow down
+	// RO - 0 (old pcb) 
+	// R1 - new PCB
+	ASM_GLOBAL(Os_ArchSwapContextTo)
+	ASM_TYPE(Os_ArchSwapContextTo, %function)
+
+ASM_LABEL(Os_ArchSwapContextTo)
+
+    // Get stack for new task
+    ldr 	r2,[r1,#PCB_STACK_CURR_P]
+    mov.w 	sp,r2
+
+#if defined(OS_SC3_ASM)
+	
+	push	{r0,r1}
+	mov.w 	r0,r1
+	bl 	Os_MMSetUserMode
+	pop		{r0,r1}
+	
+#endif
+    
+	// Set new current pcb
+    ldr     r5,= Os_Sys
+    str     r1,[r5,#SYS_CURR_PCB_P]
+
+	// Restore C context
+    ldr     r6,[sp,#C_CONTEXT_OFFS]
+    cmp     r6,#SC_PATTERN
+    beq     os_sc_restore
+    cmp     r6,#SCF_PATTERN
+    beq     os_scf_restore
+    cmp     r6,#LC_PATTERN
+    beq     os_lc_restore
+    cmp     r6,#LCF_PATTERN
+    beq     os_lcf_restore
+    
+ASM_LABEL(os_stack_problem)
+// IMPROVEMENT: Jump to error handler
+    b os_stack_problem
+
+
+/* Restore the small context. Cases:
+ *  - "Normal" context switch between processes.
+ *  - We are in handler mode (this task preemted another task in interrupt
+ *    context). We need to terminate handler mode ( set to LR=0xffff_fff9 )
+ *    and
+ */
+ASM_LABEL(os_sc_restore)
+    add.w   sp,sp,#C_SIZE
+    pop     {REG_SAVE_SC,lr}
+    bx      lr
+
+ASM_LABEL(os_scf_restore)
+    add.w   sp,sp,#C_SIZE
+	pop		{r3}
+	vmsr    FPSCR,r3	/* write FPSCR */
+    vpop	{d8-d15}
+    pop     {REG_SAVE_SC,lr}
+    bx      lr
+
+
+
+/* Restore the large context. Cases:
+ *  1. Directly from Irq_Handler()
+ *    (the preempted task got swapped in directly)
+ *  2. The preempted task, got preemted by a task and
+ *    we have already returned from handler mode.
+ *
+ * NOTE ! Only case 2 is covered here, case 1 is handled in Irq_Handler
+ *        prologue
+ */
+ 
+ASM_LABEL(os_lc_restore)
+	/* Do a normal exception return */
+    add.w   sp,sp,#C_SIZE
+    
+    // Restore registers
+    pop     {REG_SAVE,lr}
+    
+	// Return using stuff from stack.
+    rfeia	sp!
+
+ASM_LABEL(os_lcf_restore)
+	/* Do a normal exception return */
+    add.w   sp,sp,#C_SIZE
+
+	pop		{r3}
+	vmsr    FPSCR,r3
+	vpop	{d0-d15}
+    
+    // Restore registers
+    pop     {REG_SAVE,lr}
+
+    rfeia	sp!
+
+
+/*
+ * "svc" call.
+ */
+
+#if defined(OS_SC3_ASM) || defined(OS_SC4_ASM) 
+	/* r0 - arg1
+	 * r1 - arg2
+	 * r2 - arg3
+	 * r3 - index 
+	 * 
+	 * Exception Entry : 
+	 *  LR_Sup = Return Address
+	 *  SPSR = CPSR
+	 */
+	
+ASM_LABEL(SupervisorCall_Handler)
+	// Store return LR_SUP and CPSR on system mode's stack
+	srsdb	sp!, #31 // 31 = System mode   (db=decrement before)	
+	// Switch to system mode, disable IRQ
+	cpsid 	i, #31  // 31 = system mode 
+	
+	push {r4,r5,r6,r7,lr}
+	mov r7, r3		/* Save index for later */
+	
+	ldr  r4,=Os_ServiceList
+	ldr  r4,[r4,r3,lsl #2]
+	
+	/* Extract i,f bits from SPSR and put into CPSR */ 
+	ldr  r5,[sp,#24] 
+	and  r5,r5,#0xc0		
+	mrs  r6, cpsr	
+	bic  r6,r6,#0xc0
+	orr  r6,r5
+	msr  cpsr_c, r6
+	
+	/* Call function */
+	blx  r4	
+
+	/* Check if call could change interrupt state */	
+	cmp  r7,#6
+	bhi	 no_context_change
+
+	/* Extract i,f bits from CPSR and put into SPSR */ 
+	mrs  r6, cpsr	
+	and  r6,r6,#0xc0	/* extracted i,f from CPSR */		
+	ldr  r5,[sp,#24] 
+	bic  r5,r5,#0xc0	
+	orr  r5,r6
+	str	 r5,[sp,#24]	/* Save over SPSR with new value */	
+
+no_context_change:			
+	/* Save cpsr for later */					
+	cpsid if
+	pop {r4,r5,r6,r7,lr}
+	rfeia	sp!
+		
+	
+#else 
+ASM_LABEL(SupervisorCall_Handler)
+	stmfd   sp!, {r0 - r12, lr}
+	mov r1, sp
+	ldr r0, =EXC_SVC_CALL
+	bl	Mcu_Arc_HandleException
+	ldmfd   r13!, {r0 - r12, lr}
+	subs    pc, lr, #8
+#endif
+
+/*
+ * IFSR :  holds information about a Prefetch Abort exception
+ * IFAR :  holds the faulting address of a Prefetch Abort exception
+ */
+ASM_LABEL(Prefetch_Exc_Handler)
+	srsdb	sp!, #31
+	cpsid 	i, #31
+	
+	push {r0 - r12, lr}
+	mov r1, sp
+	ldr r0, =EXC_PREFETCH_ABORT
+	bl	Mcu_Arc_HandleException
+	pop {r0 - r12, lr}
+	subs    pc, lr, 4	/* return */		
+
+
+#if 0
+	stmfd   sp!, {r0 - r12, lr}
+	mov r1, sp
+	ldr r0, =EXC_PREFETCH_ABORT
+	bl	Mcu_Arc_HandleException
+	ldmfd   r13!, {r0 - r12, lr}
+	subs    pc, lr, #4
+#endif
+
+/*
+ * DFSR :  holds information about a Prefetch Abort exception
+ * DFAR :  holds the faulting address of a Prefetch Abort exception
+ */
+
+ASM_LABEL(Data_Exc_Handler)
+	sub		lr,lr,#8
+	srsdb	sp!, #31
+	cpsid 	i, #31
+	
+	push {r0 - r12, lr}
+	mov r1, sp
+	ldr r0, =EXC_DATA_ABORT
+	bl	Mcu_Arc_HandleException
+	pop {r0 - r12, lr}
+	
+	rfeia	sp!
+//	subs    pc, lr, #8	/* return */		
+	
+
+#if 0
+ 	stmfd   sp!, {r0 - r12, lr}
+	mov r1, sp
+	ldr r0, =EXC_DATA_ABORT
+	bl	Mcu_Arc_HandleException
+	
+	/* If we come back here we may have adjusted the return address
+	 * New return address in r0, adjust 
+	 */ 
+	
+	ldmfd   r13!, {r0 - r12, lr}
+	subs    pc, lr, #8
+#endif
+
+
+
+ASM_LABEL(Undefined_Instruction_Handler)
+	 /* http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0363g/Beijdcef.html */
+	 
+	/* store LR and CPSR */ 
+	srsdb	sp!, #27  // 27 = undefined
+	push 	{r3,r4}		/* work regs */
+	
+	
+	/* Grab instruction, violating instruction in r14 */
+	sub 	r14,r14,#2
+	str 	r14,[sp, #8]		/* Write over return address with new one */
+	ldrh 	r3,[r14]
+
+	/* Check for coprocessor insruction.. according to ARM that is 
+	 * If bits [27:24] = b1110 or b110x, the instruction is a coprocessor instruction, 0x0e00/0x0c00/0x0d00 */
+	and 	r3,r3,#0x0f00	
+	cmp		r3,#0x0e00
+	beq		isCop
+	cmp		r3,#0x0c00
+	beq		isCop
+	cmp		r3,#0x0d00
+	beq		isCop
+	b 		noCop
+ASM_LABEL(isCop)
+	/* Enable VFP, 
+	 * see http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0449b/ch02s01s02.html 
+	 */	
+	ldr 	r0, =(0xF << 20)
+	mcr 	p15, 0, r0, c1, c0, 2
+	
+	mov 	r3, #0x40000000 
+	vmsr 	FPEXC, r3
+	
+	/* Inform Os to save the VFP regs also. */
+	ldr      r4,=Os_Sys
+	ldr      r4,[r4,#SYS_CURR_PCB_P]
+	mov		 r3,#1
+	str      r3,[r4,#PCB_REGS]				// store in regs[0]
+	
+ASM_LABEL(noCop)
+	
+	pop 	{r3,r4}
+	rfeia	sp!
+	
+#if defined(__ARMCC_VERSION)
+	ALIGN	4	 	
+	END
+#endif	
+	
+/* In order to get anything right in the disassembler */	
+#if defined(__ghs__)	
+	.type Fiq_Handler,$function
+	.size Fiq_Handler,.-Fiq_Handler
+#endif
+	
+	
+	
+	
+

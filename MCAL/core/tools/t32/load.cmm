@@ -1,0 +1,263 @@
+// 
+// load.cmm
+//
+
+LOCAL &cmd &arg1 &arg2
+ENTRY &cmd &arg1 &arg2
+
+if CPU()=="HC12DG128A"
+(
+  LOCAL &var
+  &var="&cmd"+"_"+"&cfg_cpu_g"
+  gosub &var
+)
+ELSE
+  gosub &cmd &arg1
+
+
+
+enddo
+
+
+//-------------------------------------------------------------
+// a file dialog
+dialog:
+  LOCAL &file
+  dialog.file "&cfg_project_path_g"/*.elf
+  ENTRY &file
+  print "&file"
+  RETURN
+  enddo
+
+
+//-------------------------------------------------------------
+orti_load:
+  LOCAL &ofile
+  &ofile=STRING.CUT("&cfg_loadfile_g",-4)
+
+  IF OS.FILE(&ofile.orti)
+  (
+	  task.orti &ofile.orti
+    task.stack.pattern 0x42
+  ) 
+  ELSE
+  (
+    print "No ORTI file found, " "&ofile"
+  )
+  RETURN
+
+
+
+//-------------------------------------------------------------
+load:
+  LOCAL &file
+  ENTRY &file
+  IF "&file"==""
+  (
+    dialog.file "&cfg_project_path_g"/*.elf
+    ENTRY &file
+  )
+  IF OS.FILE("&file")
+    &cfg_loadfile_g="&file"
+
+  do config save
+  GOSUB preload_&cfg_cpu_g
+  data.load.elf &cfg_loadfile_g /GNU
+  gosub orti_load
+//  do flash close
+  GOSUB postload_all  
+  GOSUB postload_&cfg_cpu_g
+  print "&cfg_loadfile_g"
+  enddo
+
+//-------------------------------------------------------------
+reload:
+  print "&cfg_loadfile_g"
+  sys.up
+  r.reset
+  GOSUB preload_&cfg_cpu_g
+  data.load.elf &cfg_loadfile_g /GNU
+  gosub orti_load
+  
+  GOSUB postload_all
+  GOSUB postload_&cfg_cpu_g
+
+  enddo
+
+//-------------------------------------------------------------
+reload_HC12DG128A:
+  print "&cfg_loadfile_g"
+  sys.up
+  r.reset
+  do flash init
+  do flash open
+  y.reset
+  map.reset
+  mmu.reset
+  sys.option MEMEXP ON
+  mmu.create 0x388000--0x3883ff a:0x0f0000
+;  mmu.trans 0x0f0000--0x0f3fff
+  mmu.on
+  data.load.elf &cfg_loadfile_g /GNU /CYGDRIVE
+//  y.reloc (a:0x388000-0x8000)
+// /CYGDRIVE
+  do flash close
+
+  GOSUB postload_&cfg_cpu_g
+  enddo
+
+//-------------------------------------------------------------
+
+preload_all:
+  RETURN
+
+preload_CortexM3:
+preload_MPC5606S:
+preload_MPC5516:
+preload_MPC5554:
+preload_mpc5633M:
+preload_SPC56EL70:
+preload_HC12DG128A:
+preload_CortexR4F:
+preload_TC297TE:
+preload_DRA74XIPU1-CORE0:
+  RETURN
+
+postload_all:
+  // If we reload or load, init trace again
+  trace.init
+  RETURN
+
+postload_CortexM3:
+  r.s MSP 0x20005000
+  RETURN
+  
+postlost_all:
+  // If we reload or load, init trace again
+  trace.init
+  RETURN
+
+postload_CortexM3:
+  r.s MSP 0x20005000
+  RETURN
+
+postload_MPC5606S:
+postload_MPC5516:
+postload_MPC5554:
+postload_mpc5633M:
+postload_SPC56EL70:
+postload_HC12DG128A:
+postload_CortexR4F:
+postload_TC297TE:
+  RETURN
+
+preload_STM32F107VC:
+  FLASH.ReProgram ALL  
+  RETURN
+
+postload_STM32F107VC:
+  FLASH.ReProgram OFF
+//  screen.off
+  RETURN
+
+preload_ZYNQ-7000:
+
+  do setup setup_ZYNQ-7000 
+
+  RETURN
+
+postload_ZYNQ-7000:
+  ; ETM SETUP
+  IF analyzer()
+  (
+     ETM.PortSize 16       // Set the trace port width to 16
+     ETM.PortMode Wrapped
+     ETM.ON                // Turn ETM on
+
+     Analyzer.TestFocus    // test trace port
+     IF FOUND()            // if trace port test failed...
+     (
+	   PRINT "Performing AutoFocus..."
+	   Analyzer.AutoFocus    // Set threshold and sampling points automatically
+     )
+  )
+  RETURN
+  
+postload_DRA74XIPU1-CORE0:
+  RETURN
+  
+  
+
+
+//-------------------------------------------------------------
+
+path_fast:
+  y.spath.SETRECURSEDIR &cfg_project_path_g
+  RETURN
+
+//-------------------------------------------------------------
+path:
+  y.spath.reset
+  y.spath + &cfg_project_path_g/arch/arm/arm_cm3/kernel
+  y.spath + &cfg_project_path_g/arch/arm/arm_cm3/drivers
+  y.spath + &cfg_project_path_g/system/kernel
+  y.spath.SETRECURSEDIR &cfg_project_path_g
+  RETURN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+/* 
+ * Copyright (C) ArcCore AB <contact@arccore.com>
+ *
+ * ST startup variables: 
+ * _sidata - Start of .data in flash 
+ * _sdata  - start address of .data in RAM
+ * _edata  - end address of .data  in RAM
+ * _sbss   - start address of .bss
+ * _ebss   - end address of .bss
+ * _etext  - ?
+ */
+
+// OUTPUT_FORMAT("elf32-bigarm")
+//OUTPUT_ARCH(arm)
+ENTRY(Reset_Handler)
+
+//#define intvecs flash
+
+
+MEMORY
+{
+#include "memory_mcu.ldf"
+}
+
+SECTIONS
+{
+	/* Exception vectors must be placed at 0x0000_0000 
+	 * (or 0xffff_0000 depending on V-flag ) */
+    .int_vecs :
+    {
+        KEEP(*(.int_vecs))
+    } > L_SRAM_0
+
+    .text :
+	{
+    	*(.text .text.* );
+
+    	/* ST/ARM special variable to initialize .data */
+    	_etext = .;
+	} > L_DDR_0
+
+	/* Read-only data section. */
+	.rodata :	{ 
+		*(.rodata .rodata.* .gnu.linkonce.r.*)
+		_sidata = ALIGN(.,4);
+	} > L_DDR_0
+  
+  .init_array     :
+  {
+    _init_array_start = .;
+    KEEP (*(.init_array ))
+    _init_array_end = .;
+  }	 > L_DDR_0
+	
+
+	.data :	 {
+		_sdata = ALIGN(.,4); 
+		*(.data .data.* .gnu.linkonce.d.* .gnu.linkonce.r.* .eh_frame)
+		_edata = ALIGN(.,4);		
+	} > L_DDR_0 AT > L_DDR_0
+
+	.bss : {
+		_sbss = ., 
+		*(.bss .bss.* COMMON .gnu.linkonce.b.*);
+		_ebss = .; 
+	} 	> L_SRAM_0
+	
+#if defined(USE_ETH)	
+	/* Eth descriptors must be in non-cached memory, max 2048 bytes */
+    .eth_desc :	{
+    	 KEEP(*(.eth_desc))		
+	} > L_SRAM_0
+#endif
+	
+	
+	.init_stack ALIGN(16) (NOLOAD) : 
+	{	
+		_sstack = .;
+		. = . + 8000; 	
+		_estack	= .; 
+		. = . + 1;
+		. = ALIGN(4);
+	} > L_SRAM_0
+	
+	PROVIDE(_heap_start = .);
+		
+}
+
+_sidata = LOADADDR(.data);
+
+__EXCEPT_START__	= 0x0;
+__EXCEPT_END__		= 0x0;
+
+_heap_end = ORIGIN(L_SRAM_0) + LENGTH(L_SRAM_0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,408 @@
+OUTPUT_FORMAT("elf32-tricore")
+
+ENTRY(_START)
+
+__ISTACK_SIZE = DEFINED (__ISTACK_SIZE) ? __ISTACK_SIZE : 8K;
+__USTACK_SIZE = DEFINED (__USTACK_SIZE) ? __USTACK_SIZE : 8K;
+__HEAP_SIZE = DEFINED (__HEAP_SIZE) ? __HEAP_SIZE : 4K ;
+__CSA_SIZE = DEFINED (__CSA_SIZE) ? __CSA_SIZE : 4K ;
+
+MEMORY
+{
+	/* Flash is 0x8000_0000 to 0x807F_FFFF */
+	/* PFLASH0 is 0x8000_0000 to 0x8020_0000 */
+
+    PMU_PFLASH0_BMI (rx!p): org = 0x80000000, len = 32  /* boot header */
+    PMU_STARTUP (rx!p)    : org = 0x80000020, len = 0xE0  /* startup code */
+    PMU_TRAPTAB (rx!p): org = 0x80000100, len = 0x300 /* trap vector tables */
+    PMU_INTTAB_TC0 (rx!p):  org = 0x80000400, len = 0x10000 /* interrupt vector table */
+    PMU_PFLASH0_HEADER (rx!p): org = 0x80010400, len = 0x100 /* complete compatible block, version info */
+    PMU_PFLASH0 (rx!p)  : org = 0x80010800, len = 1982K /*Program Flash Memory (PFLASH0)*/
+
+    PMU_PFLASH1 (rx!p)  : org = 0x80210400, len = 1983K /*Program Flash Memory (PFLASH1)*/
+    PMU_PFLASH2 (rx!p)  : org = 0x80410400, len = 1983K /*Program Flash Memory (PFLASH2)*/
+
+    /* 0x100 bytes of DSPR is reserved for sbst_tcx_dspr */
+    CPU0_DMI_DSPR (w!xp): org = 0x70000100, len = 120K - 0x100
+    CPU1_DMI_DSPR (w!xp): org = 0x60000100, len = 240K - 0x100
+
+    /* We temporarily use three quarters of the RAM from CPU2 to store SWC data.
+     * Remove this when we can properly allocate SWCs to cores. */
+    CPU2_DMI_DSPR (w!xp): org = 0x50000100, len = 180K - 0x100
+
+    DMI_DSPR (w!xp)     : org = 0xD0019000, len = 12K /*Local Data RAM (DSPR)*/
+    LMU_SRAM (w!xp)     : org = 0xB0000000, len = 32K  /*Local Data RAM (DSPR)*/
+}
+
+/* Entry point addresses of the other cores. */
+TRICORE1_START_ADDRESS = ORIGIN(PMU_PFLASH1);
+TRICORE2_START_ADDRESS = ORIGIN(PMU_PFLASH2);
+
+SECTIONS
+{
+
+  /* Code Allocation */
+  .BMD_HDR_CONST_FAR_UNSPECIFIED   :
+  {
+    KEEP(*(.BMD_HDR_CONST_FAR_UNSPECIFIED))
+  } > PMU_PFLASH0_BMI
+
+  /*
+   * The startup code should be placed where the CPU expects it after a reset,
+   * so we try to locate it first, no matter where it appears in the list of
+   * objects and libraries (note: because the wildcard pattern doesn't match
+   * directories, we'll try to find crt0.o in various (sub)directories).
+   */
+  .start :
+  {
+    KEEP (*(.start))
+    . = ALIGN(8);
+  } > PMU_STARTUP
+
+  /*
+  * Allocate trap and interrupt vector tables.
+  */
+
+  .CPU0_TRAP_HANDLER :
+  {
+    __TRAPTAB_CPU0 = .;
+    KEEP(*(.trap_tbl_cpu0));
+  } > PMU_TRAPTAB
+
+
+  .CPU0_INT_HANDLER :
+  {
+    __INTTAB_START_ADDR = .;
+    KEEP(*(.int_tbl));
+  } > PMU_INTTAB_TC0
+
+
+#if defined(CFG_COMPLETE_COMPATIBLE) || defined(CFG_PROJ_VERSION_INFO)
+  .CPU0_HEADER_CODE :
+  {
+#if defined(CFG_COMPLETE_COMPATIBLE)
+    PROVIDE(__CPU0_COMPLETE_COMPATIBLE_start = .);
+    KEEP(*(.complete_compatible))
+    PROVIDE(__CPU0_COMPLETE_COMPATIBLE_end = .);
+#endif
+    
+    // Fixed offset.
+    . = 0x40;
+#if defined(CFG_PROJ_VERSION_INFO)
+    PROVIDE(__CPU0_PROJ_VERSION_INFO_start = .);
+    KEEP(*(.proj_version_info))
+    PROVIDE(__CPU0_PROJ_VERSION_INFO_end = .);
+#endif
+  } > PMU_PFLASH0_HEADER
+#endif
+
+  .CPU0_PRIVATE_CODE :
+  {
+    PROVIDE(__CPU0_PRIVATE_CODE_start = .);
+    KEEP(*(.text.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_CODE_end = .);
+  } > PMU_PFLASH0
+
+  .SHARED_CODE : FLAGS(axl)
+  {
+    PROVIDE(__SHARED_CODE_start = .);
+    KEEP(*(.text.Shared*))
+    *(.text)
+    *(.text*)
+    *(.gnu.linkonce.t.*)
+    KEEP(*(.init)) /*Code executed before calling main*/
+    KEEP(*(.init*))
+    KEEP(*(.fini)) /*Code executed before exiting program*/
+    KEEP(*(.fini*))
+    *(.eh_frame) /*Exception handling frame for C++ exceptions*/
+    *(.eh_frame*)
+    KEEP(*(.ctors)) /*Section for constructors*/
+    KEEP(*(.ctors*))
+    KEEP(*(.dtors)) /*Section for destructors*/
+    KEEP(*(.dtors*))
+    . = ALIGN(8);
+
+    PROVIDE(__SHARED_CODE_end = .);
+  } > PMU_PFLASH0
+
+  .RODATA   :
+  {
+    PROVIDE(__RODATA_start = .);
+    *(.rodata)
+    *(.rodata*)
+    *(.rodata.*)
+    *(.rodata.Shared.DEFAULT_CONST_FAR_UNSPECIFIED)
+    *(.gnu.linkonce.r.*)
+    *(.jcr.*)
+
+    PROVIDE(__RODATA_end = .);
+  } > PMU_PFLASH0
+
+
+
+  /* Data allocation */
+  /* Initialized data section */
+  .CPU0_PRIVATE_DATA  :
+  {
+    PROVIDE(__CPU0_PRIVATE_DATA_start = .);
+    KEEP(*(.data.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_DATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+  .SHARED_DATA :
+  {
+    PROVIDE(__SHARED_DATA_start = .);
+    KEEP(*(.data.Shared*))
+    *(.ramlog)
+    *(.data)
+    *(.data*)
+    *(.gnu.linkonce.d.*)
+    PROVIDE(__SHARED_DATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+  /* Initialized sdata section */
+  .CPU0_PRIVATE_SDATA  :
+  {
+    PROVIDE(__CPU0_SMALL_DATA = . + 0x8000);
+        KEEP(*(.sdata.CPU0.Private*))
+        KEEP(*(.sdata.Shared*))
+    *(.sdata)
+    *(.sdata*)
+    *(.gnu.linkonce.s.*)
+
+    PROVIDE(__CPU0_SMALL_DATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+
+  /* Initialized sdata section */
+  .CPU0_PRIVATE_SDATA2  :
+  {
+    PROVIDE(__CPU0_SMALL_DATA2 = . + 0x8000);
+        KEEP(*(.sdata.rodata.CPU0.Private*))
+        KEEP(*(.sdata.rodata.Shared*))
+    *(.sdata.rodata)
+    *(.sdata.rodata*)
+    *(.gnu.linkonce.sr.*)
+
+    PROVIDE(__CPU0_SMALL_DATA2_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+
+
+  /* Initialized zdata section */
+  .CPU0_PRIVATE_ZDATA  :
+  {
+    PROVIDE(__CPU0_PRIVATE_ZDATA_start = .);
+    KEEP(*(.zdata.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_ZDATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+
+  .SHARED_ZDATA  :
+  {
+    PROVIDE(__SHARED_ZDATA_start = .);
+    KEEP(*(.zdata.Shared*))
+    *(.zdata)
+    *(.zdata*)
+    *(.gnu.linkonce.zb.*)
+    PROVIDE(__SHARED_ZDATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+
+  /* Initialized bit data section */
+  .CPU0_PRIVATE_BDATA  :
+  {
+    PROVIDE(__CPU0_PRIVATE_BDATA_start = .);
+    KEEP(*(.bdata.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_BDATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+
+
+  .SHARED_BDATA  :
+  {
+    PROVIDE(__SHARED_BDATA_start = .);
+    KEEP(*(.bdata.Shared*))
+    *(.bdata)
+    *(.bdata*)
+    PROVIDE(__SHARED_BDATA_end = .);
+  } > CPU0_DMI_DSPR AT > PMU_PFLASH0
+
+
+
+  /* BSS section */
+  .CPU0_PRIVATE_BSS  :
+  {
+    PROVIDE(__CPU0_PRIVATE_BSS_start = .);
+    KEEP(*(.bss.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_BSS_end = .);
+  } > CPU0_DMI_DSPR
+
+
+  .SHARED_BSS  :
+  {
+    PROVIDE(__SHARED_BSS_start = .);
+    KEEP(*(.bss.Shared*))
+    *(.bss)
+    *(.bss*)
+    *(.gnu.linkonce.b.*)
+    PROVIDE(__SHARED_BSS_end = .);
+  } > CPU2_DMI_DSPR
+  //} > CPU0_DMI_DSPR
+
+
+  /* SBSS section */
+  .CPU0_PRIVATE_SBSS  :
+  {
+    PROVIDE(__CPU0_PRIVATE_SBSS_start = .);
+    KEEP(*(.sbss.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_SBSS_end = .);
+  } > CPU0_DMI_DSPR
+
+
+  .SHARED_SBSS  :
+  {
+    PROVIDE(__SHARED_SBSS_start = .);
+    KEEP(*(.sbss.Shared*))
+    *(.sbss)
+    *(.sbss*)
+    *(.gnu.linkonce.b.*)
+    PROVIDE(__SHARED_SBSS_end = .);
+  } > CPU0_DMI_DSPR
+
+
+  /* ZBSS section */
+  .CPU0_PRIVATE_ZBSS  :
+  {
+    PROVIDE(__CPU0_PRIVATE_ZBSS_start = .);
+    KEEP(*(.zbss.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_ZBSS_end = .);
+  } > CPU0_DMI_DSPR
+
+
+  .SHARED_ZBSS  :
+  {
+    PROVIDE(__SHARED_ZBSS_start = .);
+    KEEP(*(.zbss.Shared*))
+    *(.zbss)
+    *(.zbss*)
+    *(.gnu.linkonce.zb.*)
+    PROVIDE(__SHARED_ZBSS_end = .);
+  } > CPU0_DMI_DSPR
+
+
+
+  /* BBSS section */
+  .CPU0_PRIVATE_BBSS  :
+  {
+    PROVIDE(__CPU0_PRIVATE_BBSS_start = .);
+    KEEP(*(.bbss.CPU0.Private*))
+    PROVIDE(__CPU0_PRIVATE_BBSS_end = .);
+  } > CPU0_DMI_DSPR
+
+
+  .SHARED_BBSS  :
+  {
+    PROVIDE(__SHARED_BBSS_start = .);
+    KEEP(*(.bbss.Shared*))
+    *(.bbss)
+    *(.bbss*)
+    PROVIDE(__SHARED_BBSS_end = .);
+  } > CPU0_DMI_DSPR
+
+  .clear_sec :
+  {
+    . = ALIGN(8);
+    PROVIDE(__shared_clear_table = .) ;
+
+    LONG(0 + ADDR(.SHARED_BSS));  LONG(SIZEOF(.SHARED_BSS));
+    LONG(0 + ADDR(.SHARED_SBSS)); LONG(SIZEOF(.SHARED_SBSS));
+    LONG(0 + ADDR(.SHARED_ZBSS)); LONG(SIZEOF(.SHARED_ZBSS));
+    LONG(0 + ADDR(.SHARED_BBSS)); LONG(SIZEOF(.SHARED_BBSS));
+
+    PROVIDE(__clear_table = .) ;
+
+    LONG(0 + ADDR(.CPU0_PRIVATE_BBSS)); LONG(SIZEOF(.CPU0_PRIVATE_BSS));
+    LONG(0 + ADDR(.CPU0_PRIVATE_SBSS)); LONG(SIZEOF(.CPU0_PRIVATE_SBSS));
+    LONG(0 + ADDR(.CPU0_PRIVATE_ZBSS)); LONG(SIZEOF(.CPU0_PRIVATE_ZBSS));
+    LONG(0 + ADDR(.CPU0_PRIVATE_BBSS)); LONG(SIZEOF(.CPU0_PRIVATE_BBSS));
+
+    LONG(-1);                 LONG(-1);
+
+  } > PMU_PFLASH0
+
+  .copy_sec :
+  {
+    . = ALIGN(8);
+    PROVIDE(__shared_copy_table = .) ;
+
+    LONG(LOADADDR(.SHARED_DATA)); LONG(0 + ADDR(.SHARED_DATA)); LONG(SIZEOF(.SHARED_DATA));
+    LONG(LOADADDR(.SHARED_ZDATA));  LONG(0 + ADDR(.SHARED_ZDATA));  LONG(SIZEOF(.SHARED_ZDATA));
+    LONG(LOADADDR(.SHARED_BDATA));  LONG(0 + ADDR(.SHARED_BDATA));  LONG(SIZEOF(.SHARED_BDATA));
+
+
+    PROVIDE(__copy_table = .) ;
+
+    LONG(LOADADDR(.CPU0_PRIVATE_DATA)); LONG(0 + ADDR(.CPU0_PRIVATE_DATA)); LONG(SIZEOF(.CPU0_PRIVATE_DATA));
+    LONG(LOADADDR(.CPU0_PRIVATE_SDATA));  LONG(0 + ADDR(.CPU0_PRIVATE_SDATA));  LONG(SIZEOF(.CPU0_PRIVATE_SDATA));
+    LONG(LOADADDR(.CPU0_PRIVATE_ZDATA));  LONG(0 + ADDR(.CPU0_PRIVATE_ZDATA));  LONG(SIZEOF(.CPU0_PRIVATE_ZDATA));
+    LONG(LOADADDR(.CPU0_PRIVATE_BDATA));  LONG(0 + ADDR(.CPU0_PRIVATE_BDATA));  LONG(SIZEOF(.CPU0_PRIVATE_BDATA));
+//    LONG(LOADADDR(.FLSLOADERRAMCODE));      LONG(0 + ADDR(.FLSLOADERRAMCODE)); LONG(SIZEOF(.FLSLOADERRAMCODE));
+
+    /*PROTECTED REGION ID(Protection: iROM copy section) ENABLED START*/
+      /*Protection-Area for your own LDF-Code*/
+    /*PROTECTED REGION END*/
+    LONG(-1);                 LONG(-1);                  LONG(-1);
+  } > PMU_PFLASH0
+
+#if 0
+  /* Flsloader code executed from RAM */
+  .FLSLOADERRAMCODE :
+  {
+         _code_ram_start = ABSOLUTE (.);
+         *(.FLSLOADERRAMCODE*)
+         . = ALIGN(4);
+         _code_ram_end = ABSOLUTE (.);
+         _code_rom_start = LOADADDR (.FLSLOADERRAMCODE);
+  } > FLSLOADER_RAM_CODE AT> PMU_PFLASH0
+#endif
+
+
+  .cpu0_csa :
+  {
+     . = ALIGN(64);
+     __CPU0_CSA_BEGIN = . ;
+     __CSA0 = .;
+     . += __CSA_SIZE;
+     __CPU0_CSA_END = .;
+     __CSA0_END = .;
+  } > CPU0_DMI_DSPR
+
+  .cpu0_heap :
+  {
+    . =  ALIGN(8);
+    __HEAP = .;
+    . += __HEAP_SIZE;
+    . =  ALIGN(8);
+    __HEAP_END = .;
+  } > DMI_DSPR
+
+  .cpu0_istack :
+  {
+    . =  ALIGN(8);
+    . += __ISTACK_SIZE;
+    __CPU0_ISTACK = .;
+  } > CPU0_DMI_DSPR
+
+  .cpu0_ustack :
+  {
+    . =  ALIGN(8);
+    . += __USTACK_SIZE;
+    __CPU0_USTACK = .;
+    __USTACK0 = .;
+  } > CPU0_DMI_DSPR
+
+}
+
+// include the script containing the shared buffers section
+//#include "linkscript_gcc_common.ldf"

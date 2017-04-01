@@ -1,0 +1,139 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+ 
+########################################################
+# Hidden parameters in TcpIpConfig
+########################################################      
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpDhcpServerConfig
+
+########################################################
+# Hidden parameters in TcpIpIpConfig
+########################################################      
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpIpV6Config
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpTcpConfig
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpUdpConfig
+########################################################
+# Hidden parameters in TcpIpCtrl
+########################################################   
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpDhcpServerConfigRef
+
+
+########################################################
+# Hidden parameters in TcpIpIpVXCtrl
+########################################################      
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpIpV6Ctrl
+
+########################################################
+# Hidden parameters in TcpIpIpV4Ctrl
+########################################################      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpAutoIpConfigRef
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpDhcpConfigRef
+#!!com.arccore.common.yaml.data.styles.HiddenParameter
+#  name: TcpIpFragmentationConfigRef
+  
+########################################################
+# Hidden parameters in TcpIpAutoIpConfigRef
+########################################################      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpAutoIpInitTimeout
+
+
+########################################################
+# Hidden parameters in TcpIpIpV4Config
+########################################################      
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpAutoIpConfig
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpDhcpConfig
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpIcmpConfig
+#- !!com.arccore.common.yaml.data.styles.DisabledContainer
+#  name: TcpIpIpFragmentationConfig
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpIpNumFragments
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpIpNumReassDgrams
+#- !!com.arccore.common.yaml.data.styles.HiddenParameter
+#  name: TcpIpIpReassTimeout
+  
+########################################################
+# Hidden parameters in TcpIpArpConfig
+########################################################      
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpArpNumGratuitousARPonStartup
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpArpPacketQueueEnabled
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpArpTableEntryTimeout
+
+########################################################
+# Hidden parameters in TcpIpLocalAddr
+########################################################      
+#- !!com.arccore.common.yaml.data.styles.HiddenParameter
+#  name: TcpIpCtrlRef
+
+########################################################
+# Hidden parameters in TcpIpGeneral
+########################################################      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpDhcpServerEnabled
+
+########################################################
+# Hidden parameters in TcpIpIPv4General(ICMP, disable that make your product non-compliant to RFC1122. 
+########################################################      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpIcmpEnabled
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpArpEnabled
+#- !!com.arccore.common.yaml.data.styles.HiddenParameter
+#  name: TcpIpLocalAddrIpv4EntriesMax
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpPathMtuDiscoveryEnabled
+  
+########################################################
+# Hidden parameters in TcpIpIPv6General
+########################################################   
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpDhcpV6ClientEnabled
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpIpV6Enabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpIpV6PathMtuDiscoveryEnabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpLocalAddrIpv6EntriesMax
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpNdpAddressResolutionUnrechabilityDetectionEnabled
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: TcpIpNdpPrefixAndRouterDiscoveryEnabled
+  
+########################################################
+# Hidden parameters in ArcLwIpConfig, remove this later
+########################################################      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: LwIpTrcvAddress
+
+#########################################################
+# Parameter groups
+#########################################################
+# TcpIpGeneral
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: TcpIpIpV6General
+
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: TcpIpIpV6General
+  members: [ TcpIpDhcpV6ClientEnabled, TcpIpIpV6Enabled, TcpIpIpV6PathMtuDiscoveryEnabled, TcpIpLocalAddrIpv6EntriesMax, TcpIpNdpAddressResolutionUnrechabilityDetectionEnabled,TcpIpNdpPrefixAndRouterDiscoveryEnabled ]

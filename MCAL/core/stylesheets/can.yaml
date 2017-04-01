@@ -1,0 +1,232 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+########################################################
+# Hidden parameters in CanGeneral
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanChangeBaudrateApi
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanHardwareCancellation
+  mcals: [STM32F103, STM32F107, MPC5567, MPC551x, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6, ZYNQ]  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanIdenticalIdCancellation
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanIndex
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanLPduReceiveCalloutFunction
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionBusoffPeriod
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionModePeriod
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionWakeupPeriod
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMultiplexedTransmission
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTimeoutDuration
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanCounterRef
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanSupportTTCANRef
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanSetBaudrateApi
+  
+########################################################
+# Hidden parameters in CanController 
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanControllerBaseAddress
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanWakeupSupport
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanCpuClockRef
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanWakeupSourceRef
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanWakeupFunctionalityAPI
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTxProcessing
+  mcals: [STM32F103, STM32F107, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6, RH850F1H, RH850F1L]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanRxProcessing
+  mcals: [STM32F103, STM32F107, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6, RH850F1H, RH850F1L]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanBusoffProcessing
+  mcals: [STM32F103, STM32F107, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6, RH850F1H, RH850F1L]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanWakeupProcessing  
+########################################################
+# Hidden parameters in CanTTController
+########################################################  
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanTTController
+  
+########################################################
+# Hidden parameters in CanControllerBaudrateConfig  
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanControllerBaudRateConfigID
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanControllerSyncJumpWidth
+  mcals: [TMS570, TMS570LC43X, TMS570LS1114,  JACINTO5, JACINTO6]
+
+########################################################
+# Hidden parameters in CanControllerFdBaudrateConfig  
+########################################################
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanControllerFdBaudrateConfig
+ 
+########################################################
+# Hidden parameters in CanFilterMask  
+########################################################
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanFilterMask
+              
+########################################################
+# Hidden parameters in CanHardwareObject  
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanObjectId
+  mcals: [STM32F103, STM32F107, TMS570, TMS570LC43X, TMS570LS1114, RH850F1H, RH850F1L, MPC5777M, JACINTO5, JACINTO6]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionRWPeriodRef 
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanIdValue
+  mcals: [STM32F103, STM32F107]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanHwObjectCount
+  mcals: [STM32F103, STM32F107, RH850F1H, RH850F1L, ZYNQ]
+  
+########################################################
+# Hidden parameters in CanTTHardwareObjectTrigger  
+########################################################
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanTTHardwareObjectTrigger
+    
+########################################################
+# Hidden parameters in CanMainFunctionRWPeriods  
+########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionReadPeriod
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionWritePeriod
+  
+  
+########################################################
+# Hidden parameters in CanMainFunctionRWPeriods  
+########################################################
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanMainFunctionRWPeriods  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanMainFunctionRWPeriods  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTTHardwareObjectBaseCycle
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTTHardwareObjectCycleRepetition
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTTHardwareObjectTimeMark
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTTHardwareObjectTriggerId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: CanTTHardwareObjectTriggerType
+  
+########################################################
+# Hidden parameters in CanIcom
+########################################################
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanIcom  
+
+########################################################
+# Hidden parameters in CanIcomGeneral
+########################################################
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: CanIcomGeneral  
+  
+########################################################
+# Parameter groups
+######################################################## 
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Controller Event Processing
+  members: [ CanBusoffProcessing, CanRxProcessing, CanTxProcessing, CanWakeupProcessing, ArcCanErrorProcessing ] 
+  
+- !!com.arccore.common.yaml.data.styles.ParameterGroup
+  name: Filter
+  members: [ CanIdValue, CanFilterMaskRef ]   
+
+########################################################
+# Dsiplay names
+########################################################   
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: CanIdValue
+  display: CanIdValue (deprecated)  
+
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: CanFilterMaskRef
+  display: CanFilterMaskRef (deprecated)  
+  
+- !!com.arccore.common.yaml.data.styles.DisplayName
+  name: ArcCanMessageboxesPerHwObj
+  display: ArcCanMessageboxesPerHwObj (deprecated)   
+  
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanFilterMaskRef
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanFilterMask
+    
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanIdValue    
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcCanMessageboxesPerHwObj   
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: ArcCanFifoEnable   
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanHwFilterCode
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanHwFilterMask
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanObjectId
+  mcals: [ MPC5567, MPC560x, MPC551x, MPC5744P, MPC5634M, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, MPC5643L, MPC5777M, MPC5744P, MPC5748G,MPC5746C, MPC5668]
+  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: CanControllerId
+  mcals: [ MPC5567, MPC560x, MPC551x, MPC5744P, MPC5634M, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, MPC5643L, MPC5777M, MPC5744P, MPC5668, STM32F103, STM32F107, RH850F1H, RH850F1L, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]

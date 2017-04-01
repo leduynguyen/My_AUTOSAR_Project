@@ -1,0 +1,947 @@
+/* 
+ *
+ *  The Irq_IsrTypeTable does not exist any more.
+ *  The Irq_VectorTable is now a pure function table (not mixed pcb and functions )
+ *  The PPC interrupt handling is a bit faster.
+ * 
+ *
+ *   New files for arch offsets? 
+ *   Bypassed Irq_Entry()...
+ *  NOTE:
+ *    Move pre/post hooks into swap code?
+ *
+ *
+ * IMPLEMENTATION NOTES
+ *  OPT: For ISR1 (interrupts always off) the there is no need to save r13-r31 since
+ *  it will be saved by the C-function. 
+ */
+	
+/*
+ * Small assembler school
+ *  Compare imm(32-bit)
+ *   $ cmpwi rA,100
+ *  Extract bits and right adjust
+ *   $ extrwi rA,rS,n,b  ( n-number of bits, b- startbit )
+ *  Use of @ha,@h,@l. Use @ha for arithmetic instructions to compensate for sign.
+ *  To cause less confusion use load and logical instructions instead of arithmetic ones.
+ *   $ lis r3,0x8000@h    
+ *   $ ori r3,r3,0x08000@l
+ *  is the same as 
+ *   $ addis r3,0x8000@ha    
+ *   $ addi r3,r3,0x08000@l
+ *
+ * Note!
+ */
+
+
+/* ----------------------------[includes]------------------------------------*/
+#define _ASSEMBLER_
+#include "asm_ppc.h"
+#include "arch_offset.h"
+#include "asm_offset.h"
+#include "arch_stack.h"
+
+// #include "asm_book_e.h"
+.extern os_intc_pcb_tbl
+.extern os_intc_types_tbl
+.extern Os_Sys
+.extern Os_ArchPanic
+
+
+/* ----------------------------[private define]------------------------------*/
+
+/* ECC */
+#if defined (CFG_MPC5668)
+#define ECSM_BASE 	0xfff40000
+#define ECSM_ESR    0x47
+#endif
+/* ----------------------------[private macro]-------------------------------*/
+
+#define	LOCK()			wrteei	0
+#define	UNLOCK()		wrteei	1
+
+#if ISR_FRM_PATTERN!=FUNC_FRM_PATTERN
+#error Context pattern must be in the same place
+#endif
+
+/* ----------------------------[private typedef]-----------------------------*/
+/* ----------------------------[private function prototypes]-----------------*/
+/* ----------------------------[private variables]---------------------------*/
+/* ----------------------------[private functions]---------------------------*/
+/* ----------------------------[public functions]----------------------------*/
+
+.extern Os_Isr
+#if defined(OS_SC3_ASM)
+.extern Os_MMSetUserMode
+#endif
+
+.extern exception_IVOR0
+.extern exception_IVOR1
+.extern exception_IVOR2
+.extern exception_IVOR3
+//.extern exception_IVOR4
+.extern exception_IVOR5
+.extern exception_IVOR6
+.extern exception_IVOR7
+#if defined(OS_SC3_ASM)||defined(OS_SC4_ASM)
+.global exception_IVOR8
+#else
+.extern exception_IVOR8
+#endif
+.extern exception_IVOR9
+//.extern exception_IVOR10
+.extern exception_IVOR11
+.extern exception_IVOR12
+.extern exception_IVOR13
+.extern exception_IVOR14
+
+.global exception_IVOR4
+.global exception_IVOR10
+.global Os_ArchSwapContextTo
+.global Os_ArchSwapContext
+.global Os_ArchSetSpAndCall
+.global GetCoreID
+.global Os_ArchGetStackPtr
+.global Os_ArchGetSpinlock
+.global Os_ArchTryToGetSpinlock
+.global Os_ArchReleaseSpinlock
+
+ASM_SECTION_TEXT(.text)
+ASM_CODE_DIRECTIVE()
+
+Os_ArchGetStackPtr:
+	mr r3,r1
+	blr
+
+
+	.global Os_ArchSetStackPointer
+Os_ArchSetStackPointer:
+	mr r1,r3
+	blr
+
+
+Os_ArchSetSpAndCall:
+		mr r1,r3
+		mtlr r4
+		blr
+
+/**
+ * void Os_ArchSwapContext(pcb_t *old, pcb_t *new )
+ *
+ * Saves a function context on current stack, pops a new one from new context
+ *
+ * r3 - pcb for old task
+ * r4 - pcb for new task
+ *
+ */
+Os_ArchSwapContext:
+#if FUNC_FRM_SIZE > 127 && defined(CFG_VLE)
+	
+	stw 	sp,-FUNC_FRM_SIZE(sp)
+	addi	sp, sp, -FUNC_FRM_SIZE
+#else
+	stwu 	sp,-FUNC_FRM_SIZE(sp)
+#endif
+	mflr 	r0
+	stw		r0,FUNC_FRM_LR(sp)
+	mfcr	r0
+	stw		r0,FUNC_FRM_CR(sp)
+	
+	/* Save context indicator */
+	li		r0,FUNC_PATTERN
+	stw		r0,FUNC_FRM_PATTERN(sp)
+
+#if defined(CFG_SPE)
+	evstdd		r14, FUNC_FRM_R14(sp)
+	evstdd		r15, FUNC_FRM_R15(sp)
+	evstdd		r16, FUNC_FRM_R16(sp)
+	evstdd		r17, FUNC_FRM_R17(sp)
+	evstdd		r18, FUNC_FRM_R18(sp)
+	evstdd		r19, FUNC_FRM_R19(sp)
+	evstdd		r20, FUNC_FRM_R20(sp)
+	evstdd		r21, FUNC_FRM_R21(sp)
+	evstdd		r22, FUNC_FRM_R22(sp)
+	evstdd		r23, FUNC_FRM_R23(sp)
+	evstdd		r24, FUNC_FRM_R24(sp)
+	evstdd		r25, FUNC_FRM_R25(sp)
+	evstdd		r26, FUNC_FRM_R26(sp)
+	evstdd		r27, FUNC_FRM_R27(sp)
+	evstdd		r28, FUNC_FRM_R28(sp)
+	evstdd		r29, FUNC_FRM_R29(sp)
+	evstdd		r30, FUNC_FRM_R30(sp)
+	evstdd		r31, FUNC_FRM_R31(sp)
+
+#else
+	/* Save registers preserved by function call */
+	stw		r14, FUNC_FRM_R14(sp)
+	stw		r15, FUNC_FRM_R15(sp)
+	stw		r16, FUNC_FRM_R16(sp)
+	stw		r17, FUNC_FRM_R17(sp)
+	stw		r18, FUNC_FRM_R18(sp)
+	stw		r19, FUNC_FRM_R19(sp)
+	stw		r20, FUNC_FRM_R20(sp)
+	stw		r21, FUNC_FRM_R21(sp)
+	stw		r22, FUNC_FRM_R22(sp)
+	stw		r23, FUNC_FRM_R23(sp)
+	stw		r24, FUNC_FRM_R24(sp)
+	stw		r25, FUNC_FRM_R25(sp)
+	stw		r26, FUNC_FRM_R26(sp)
+	stw		r27, FUNC_FRM_R27(sp)
+	stw		r28, FUNC_FRM_R28(sp)
+	stw		r29, FUNC_FRM_R29(sp)
+	stw		r30, FUNC_FRM_R30(sp)
+	stw		r31, FUNC_FRM_R31(sp)
+#endif
+
+	/* Save stack ptr... */
+	stw		sp,PCB_STACK_CURR_P(r3)
+
+	/* NOTE: Call Os_PretaskHook()? */ 
+	
+	/* 	Flow down  */
+	
+/**
+ * void Os_ArchSwapContextTo( NULL, pcb_t *new )
+ * r3 - always NULL
+ * r4 - The pcb to switch to.
+ */ 	
+Os_ArchSwapContextTo:
+	/* Get stack for new task */
+	lwz		sp,PCB_STACK_CURR_P(r4)
+
+#if defined(OS_SC3_ASM)
+
+	mr		r3,r4
+	subi 	sp,sp,16
+	stw		r4,12(sp)
+
+	bl 	Os_MMSetUserMode
+	
+	lwz		r4,12(sp)
+	addi 	sp,sp,16
+#endif
+
+
+	/* Set new current task */
+#if defined(CFG_MULTICORE)
+	bl GetCoreID
+	bl loadSys
+#else
+	LOAD_ADDR_32(3,Os_Sys)
+#endif
+	stw		r4,SYS_CURR_PCB_P(r3)
+
+	/* Restore C context */
+	lwz     r0,FUNC_FRM_CR(sp)
+    mtcr    r0
+    lwz     r0,FUNC_FRM_LR (sp)
+    mtlr    r0
+
+	/* Get the context type */
+	lwz		r0, FUNC_FRM_PATTERN(sp)
+	cmplwi	r0, FUNC_PATTERN
+	beq  	restoreFuncContext
+	cmplwi	r0,ISR_PATTERN
+#if defined(__GNUC__) && defined(CFG_VLE)	
+	beq 	restoreIsrContext2
+#else
+	beq 	restoreIsrContext
+#endif	
+	/* Something have overwritten the context, bail out */
+	li 		r3, E_OS_BAD_CONTEXT_ASM
+	b		ShutdownOS
+
+
+restoreFuncContext:
+#if defined(CFG_SPE)
+	evldd	r14, FUNC_FRM_R14(sp)
+	evldd	r15, FUNC_FRM_R15(sp)
+	evldd	r16, FUNC_FRM_R16(sp)
+	evldd	r17, FUNC_FRM_R17(sp)
+	evldd	r18, FUNC_FRM_R18(sp)
+	evldd	r19, FUNC_FRM_R19(sp)
+	evldd	r20, FUNC_FRM_R20(sp)
+	evldd	r21, FUNC_FRM_R21(sp)
+	evldd	r22, FUNC_FRM_R22(sp)
+	evldd	r23, FUNC_FRM_R23(sp)
+	evldd	r24, FUNC_FRM_R24(sp)
+	evldd	r25, FUNC_FRM_R25(sp)
+	evldd	r26, FUNC_FRM_R26(sp)
+	evldd	r27, FUNC_FRM_R27(sp)
+	evldd	r28, FUNC_FRM_R28(sp)
+	evldd	r29, FUNC_FRM_R29(sp)
+	evldd	r30, FUNC_FRM_R30(sp)
+	evldd	r31, FUNC_FRM_R31(sp)
+	addi 	sp,sp,(FUNC_FRM_SIZE)
+#else 
+	lwz		r14, FUNC_FRM_R14(sp)
+	lwz		r15, FUNC_FRM_R15(sp)
+	lwz		r16, FUNC_FRM_R16(sp)
+	lwz		r17, FUNC_FRM_R17(sp)
+	lwz		r18, FUNC_FRM_R18(sp)
+	lwz		r19, FUNC_FRM_R19(sp)
+	lwz		r20, FUNC_FRM_R20(sp)
+	lwz		r21, FUNC_FRM_R21(sp)
+	lwz		r22, FUNC_FRM_R22(sp)
+	lwz		r23, FUNC_FRM_R23(sp)
+	lwz		r24, FUNC_FRM_R24(sp)
+	lwz		r25, FUNC_FRM_R25(sp)
+	lwz		r26, FUNC_FRM_R26(sp)
+	lwz		r27, FUNC_FRM_R27(sp)
+	lwz		r28, FUNC_FRM_R28(sp)
+	lwz		r29, FUNC_FRM_R29(sp)
+	lwz		r30, FUNC_FRM_R30(sp)
+	lwz		r31, FUNC_FRM_R31(sp)
+	addi 	sp,sp,(FUNC_FRM_SIZE)
+#endif	
+	/* NOTE: Call Os_PosttaskHook()? */
+	
+	blr
+
+
+#if defined(__GNUC__) && defined(CFG_VLE)
+restoreIsrContext2:
+	b restoreIsrContext
+#endif
+
+/**
+ * External input exception handlers 
+ */ 
+ #if 0
+ #if defined(CFG_MPC5668)
+ 		.global exception_IVOR2
+		.balign 16
+exception_IVOR2:
+	/* Push register r8 and r9 on stack */
+    stwu  	r8,-8(sp)
+    stw   	r9,4(sp)
+    
+	/* Check for ECC problems */
+	//Store err reg
+	LOAD_ADDR_32(r8,ECSM_BASE)
+	lbz  r9,ECSM_ESR(r8)
+	LOAD_ADDR_32(r8,EccErrReg)
+	stw		r9,0(r8)
+	// Jump to next instruction
+	mfspr 	r9,srr0
+	addi  	r9,r9,4
+	mtspr	srr0,r9
+	
+	/* Pop r8 and r9 */
+	lwz     r8,0(sp)
+    lwz     r9,4(sp)
+    addi  	sp,sp,8
+    
+	rfi	
+#endif
+#endif
+
+		.global exception_IVOR4
+		.global restoreIsrContext
+		.balign 16
+exception_IVOR4:
+
+	/* Save the exception frame */
+	stwu	sp,-EXC_FRM_SIZE(sp)
+
+	stw  	r3,EXC_FRM_R3(sp)
+
+	mfsrr0 	r3
+	stw 	r3, EXC_FRM_SRR0(sp)
+	mfsrr1 	r3
+	stw 	r3, EXC_FRM_SRR1(sp)
+
+	mfcr 	r3
+	stw 	r3, EXC_FRM_CR(sp)	
+	mfxer 	r3 
+	stw 	r3, EXC_FRM_XER(sp)
+	mfctr 	r3
+	stw 	r3, EXC_FRM_CTR(sp)
+	mflr 	r3
+	stw 	r3, EXC_FRM_LR(sp)
+#if defined(OS_SC3_ASM)||defined(OS_SC4_ASM)
+	mfspr 	r3,256
+	stw 	r3, EXC_FRM_USPRG0(sp)	
+#endif
+	
+	li		r3,4
+	stw 	r3, EXC_FRM_VECTOR(sp)
+#if defined(CFG_SPE) || defined(CFG_SPE_INIT)	
+	/* Enable SPE (exceptions turns it off) */
+	mfmsr		r3
+    OR2IS(r3,0x0200)
+	mtmsr 		r3
+	isync
+#endif
+
+#if defined(CFG_SPE)
+
+	/* Create the frame */
+	addi 	sp,sp,-ISR_FRM_SIZE
+	evstdd		r3, ISR_FRM_R3(sp)		/* Save work reg */	
+	
+	/* SPEFSCR	*/
+	mfspr		r3,SPR_SPEFSCR
+	stw			r3,ISR_FRM_SPE_FSCR(sp)
+
+	/* Save SPE acc  */
+	evsubfw 	r3,r3,r3				/* zero r3 */
+	evaddumiaaw r3,r3					/* Add r3 = r3 + acc -> r3 = acc */
+	evstdd 		r3,ISR_FRM_SPE_ACC(r1)
+	
+	evstdd		r0, ISR_FRM_R0(sp)
+	evstdd		r4, ISR_FRM_R4(sp)
+	evstdd		r5, ISR_FRM_R5(sp)
+	evstdd		r6, ISR_FRM_R6(sp)
+	evstdd		r7, ISR_FRM_R7(sp)
+	evstdd		r8, ISR_FRM_R8(sp)
+	evstdd		r9, ISR_FRM_R9(sp)
+	evstdd		r10, ISR_FRM_R10(sp)
+	evstdd		r11, ISR_FRM_R11(sp)
+	evstdd		r12, ISR_FRM_R12(sp)
+	evstdd		r14, ISR_FRM_R14(sp)
+	evstdd		r15, ISR_FRM_R15(sp)
+	evstdd		r16, ISR_FRM_R16(sp)
+	evstdd		r17, ISR_FRM_R17(sp)
+	evstdd		r18, ISR_FRM_R18(sp)
+	evstdd		r19, ISR_FRM_R19(sp)
+	evstdd		r20, ISR_FRM_R20(sp)
+	evstdd		r21, ISR_FRM_R21(sp)
+	evstdd		r22, ISR_FRM_R22(sp)
+	evstdd		r23, ISR_FRM_R23(sp)
+	evstdd		r24, ISR_FRM_R24(sp)
+	evstdd		r25, ISR_FRM_R25(sp)
+	evstdd		r26, ISR_FRM_R26(sp)
+	evstdd		r27, ISR_FRM_R27(sp)
+	evstdd		r28, ISR_FRM_R28(sp)
+	evstdd		r29, ISR_FRM_R29(sp)
+	evstdd		r30, ISR_FRM_R30(sp)
+	addi		sp,sp,8
+	evstdd		r31, (ISR_FRM_R31-8)(sp)
+	addi		sp,sp,-8
+#else
+	/* Save the ISR frame */
+	addi 	sp,sp,-ISR_FRM_SIZE
+#if defined(CFG_EFPU)
+	/* SPEFSCR	*/
+	mfspr		r3,SPR_SPEFSCR
+	stw			r3,ISR_FRM_SPE_FSCR(sp)	
+#endif
+	stw		r0, ISR_FRM_R0(sp)
+	stw		r4, ISR_FRM_R4(sp)
+	stw		r5, ISR_FRM_R5(sp)
+	stw		r6, ISR_FRM_R6(sp)
+	stw		r7, ISR_FRM_R7(sp)
+	stw		r8, ISR_FRM_R8(sp)
+	stw		r9, ISR_FRM_R9(sp)
+	stw		r10, ISR_FRM_R10(sp)
+	stw		r11, ISR_FRM_R11(sp)
+	stw		r12, ISR_FRM_R12(sp)
+	stw		r14, ISR_FRM_R14(sp)
+	stw		r15, ISR_FRM_R15(sp)
+	stw		r16, ISR_FRM_R16(sp)
+	stw		r17, ISR_FRM_R17(sp)
+	stw		r18, ISR_FRM_R18(sp)
+	stw		r19, ISR_FRM_R19(sp)
+	stw		r20, ISR_FRM_R20(sp)
+	stw		r21, ISR_FRM_R21(sp)
+	stw		r22, ISR_FRM_R22(sp)
+	stw		r23, ISR_FRM_R23(sp)
+	stw		r24, ISR_FRM_R24(sp)
+	stw		r25, ISR_FRM_R25(sp)
+	stw		r26, ISR_FRM_R26(sp)
+	stw		r27, ISR_FRM_R27(sp)
+	stw		r28, ISR_FRM_R28(sp)
+	stw		r29, ISR_FRM_R29(sp)
+	stw		r30, ISR_FRM_R30(sp)
+	stw		r31, ISR_FRM_R31(sp)
+#endif
+	
+	li 		r3,ISR_PATTERN
+	stw		r3,ISR_FRM_PATTERN(sp)
+	/* Save the stack so it later can be saved in the pcb */	
+	mr		r4,sp			
+	
+	/* Switch to interrupt stack if at depth 0 */
+#if defined(CFG_MULTICORE)
+	/* Load the value OS_SYS_PTR->int_nest_cnt */
+	bl GetCoreID
+	bl loadSys
+	addi r5, r3, SYS_INT_NEST_CNT
+	lwz r5, 0(r5)
+	cmplwi	r5,0
+#else
+    LOAD_IND_32(r3,(Os_Sys+SYS_INT_NEST_CNT))
+    cmplwi	r3,0
+#endif
+	
+
+
+	bne		on_int_stack
+
+/* Load the interrupt stack */
+#if defined(CFG_MULTICORE)
+	addi r5, r3, SYS_INT_STACK
+	lwz r1, 0(r5)
+#else
+	LOAD_IND_32(r1,(Os_Sys+SYS_INT_STACK))
+#endif
+
+on_int_stack:
+
+#if defined(CFG_MPC5516)|| defined(CFG_MPC5668)
+#if defined(CFG_MULTICORE) 
+	bl GetCoreID
+	cmplwi r3, 0
+	bne ack_z0
+#endif
+	lis r6, (INTC_HI*0x10000 + INTC_LO + INTC_IACR_PRC0_OFFS)@ha
+	lwz r6, (INTC_HI*0x10000 + INTC_LO + INTC_IACR_PRC0_OFFS)@l(r6)
+#if defined(CFG_MULTICORE)
+	b ack_z0_end 
+ack_z0:
+	lis r6, (INTC_HI*0x10000 + INTC_LO + INTC_IACR_PRC1_OFFS)@ha
+	lwz r6, (INTC_HI*0x10000 + INTC_LO + INTC_IACR_PRC1_OFFS)@l(r6)
+ack_z0_end:	
+#endif
+#else
+	lis r6, (INTC_HI*0x10000 + INTC_LO + INTC_IACR_OFFS)@ha
+	lwz r6, (INTC_HI*0x10000 + INTC_LO + INTC_IACR_OFFS)@l(r6)
+#endif
+	/* Check for 0 entry */
+	mr		r5,r6
+
+vectorOk:
+    /* extract vector */
+	extrwi  r5,r5,30,0
+	/* Check for soft INT */
+	cmplwi 	r5,(NUM_SOFT_INT - 1)
+	bgt		noSoftInt
+	/* Clear soft interrupt */
+	li		r0,1
+	lis		r3, (INTC_HI*0x10000 + INTC_LO + INTC_SSCIR0_OFFS)@ha
+	addi	r3, r3, (INTC_HI*0x10000 + INTC_LO + INTC_SSCIR0_OFFS)@l
+	stbx	r0,r5,r3			
+	
+noSoftInt:	
+	LOAD_ADDR_32(3,Os_Isr)
+    mtlr  r3
+	mr    r3,r4  		/* "old" stack as arg1 */
+	mr	 r4,r5          /* Vector as arg2 */
+    blrl		 		/* Call the entry */
+
+	/* Notes!
+	 * The OS interrupt is ACK'd in Os_Isr(). For ISR1 it needs to call Irq_EOI()
+	 */
+	 
+	/* Irq_Entry have returned the stack we shall use */
+	mr 		sp,r3
+
+	/* Restore */
+restoreIsrContext:
+#if defined(CFG_SPE) 
+
+	// Restore SPE control/status reg.
+	lwz		r3,ISR_FRM_SPE_FSCR(sp)
+	mtspr	SPR_SPEFSCR,r3
+
+	/* Restore SPE acc */
+	evldd r3,ISR_FRM_SPE_ACC(r1)
+	evmra r3,r3
+	
+
+	evldd	r0, ISR_FRM_R0(sp)
+	evldd	r3, ISR_FRM_R3(sp)
+	evldd	r4, ISR_FRM_R4(sp)
+	evldd	r5, ISR_FRM_R5(sp)
+	evldd	r6, ISR_FRM_R6(sp)
+	evldd	r7, ISR_FRM_R7(sp)
+	evldd	r8, ISR_FRM_R8(sp)
+	evldd	r9, ISR_FRM_R9(sp)
+	evldd	r10, ISR_FRM_R10(sp)
+	evldd	r11, ISR_FRM_R11(sp)
+	evldd	r12, ISR_FRM_R12(sp)
+	evldd	r14, ISR_FRM_R14(sp)
+	evldd	r15, ISR_FRM_R15(sp)
+	evldd	r16, ISR_FRM_R16(sp)
+	evldd	r17, ISR_FRM_R17(sp)
+	evldd	r18, ISR_FRM_R18(sp)
+	evldd	r19, ISR_FRM_R19(sp)
+	evldd	r20, ISR_FRM_R20(sp)
+	evldd	r21, ISR_FRM_R21(sp)
+	evldd	r22, ISR_FRM_R22(sp)
+	evldd	r23, ISR_FRM_R23(sp)
+	evldd	r24, ISR_FRM_R24(sp)
+	evldd	r25, ISR_FRM_R25(sp)
+	evldd	r26, ISR_FRM_R26(sp)
+	evldd	r27, ISR_FRM_R27(sp)
+	evldd	r28, ISR_FRM_R28(sp)
+	evldd	r29, ISR_FRM_R29(sp)
+	evldd	r30, ISR_FRM_R30(sp)
+	addi	sp,sp,8
+	evldd	r31, (ISR_FRM_R31-8)(sp)
+	addi	sp,sp,-8
+#else
+#if defined(CFG_EFPU)
+	// Restore SPE control/status reg.
+	lwz		r3,ISR_FRM_SPE_FSCR(sp)
+	mtspr	SPR_SPEFSCR,r3
+#endif
+	lwz		r0, ISR_FRM_R0(sp)
+	lwz		r4, ISR_FRM_R4(sp)
+	lwz		r5, ISR_FRM_R5(sp)
+	lwz		r6, ISR_FRM_R6(sp)
+	lwz		r7, ISR_FRM_R7(sp)
+	lwz		r8, ISR_FRM_R8(sp)
+	lwz		r9, ISR_FRM_R9(sp)
+	lwz		r10, ISR_FRM_R10(sp)
+	lwz		r11, ISR_FRM_R11(sp)
+	lwz		r12, ISR_FRM_R12(sp)
+	lwz		r14, ISR_FRM_R14(sp)
+	lwz		r15, ISR_FRM_R15(sp)
+	lwz		r16, ISR_FRM_R16(sp)
+	lwz		r17, ISR_FRM_R17(sp)
+	lwz		r18, ISR_FRM_R18(sp)
+	lwz		r19, ISR_FRM_R19(sp)
+	lwz		r20, ISR_FRM_R20(sp)
+	lwz		r21, ISR_FRM_R21(sp)
+	lwz		r22, ISR_FRM_R22(sp)
+	lwz		r23, ISR_FRM_R23(sp)
+	lwz		r24, ISR_FRM_R24(sp)
+	lwz		r25, ISR_FRM_R25(sp)
+	lwz		r26, ISR_FRM_R26(sp)
+	lwz		r27, ISR_FRM_R27(sp)
+	lwz		r28, ISR_FRM_R28(sp)
+	lwz		r29, ISR_FRM_R29(sp)
+	lwz		r30, ISR_FRM_R30(sp)
+	lwz		r31, ISR_FRM_R31(sp)
+#endif	
+		
+	/* back to the exception frame */
+	addi 	sp,sp,ISR_FRM_SIZE
+
+#if defined(OS_SC3_ASM)||defined(OS_SC4_ASM)	
+	lwz 	r3, EXC_FRM_USPRG0(sp)
+	mtspr 	256,r3
+#endif
+	lwz 	r3, EXC_FRM_LR(sp)
+	mtlr 	r3
+	lwz	 	r3, EXC_FRM_CTR(sp)
+	mtctr 	r3
+	lwz 	r3, EXC_FRM_XER(sp)
+	mtxer 	r3
+	lwz 	r3, EXC_FRM_CR(sp)
+	mtcr	r3
+	lwz 	r3, EXC_FRM_SRR0(sp)
+	mtsrr0 	r3
+	lwz 	r3, EXC_FRM_SRR1(sp)
+	mtsrr1 	r3
+	lwz 	r3, EXC_FRM_R3(sp)
+	addi	sp,sp,EXC_FRM_SIZE
+	rfi
+
+
+
+
+#if defined(OS_SC3_ASM)||defined(OS_SC4_ASM)
+
+.extern	Os_ServiceList 
+
+/* r3 - index
+ * r4 - args...
+ */
+
+
+.global	Os_ArchSysCall_4
+Os_ArchSysCall_4:
+	sc
+	blr
+
+bbb:
+	// msr in SRR1
+	mfsrr1 	r3
+	rlwinm  r3,r3,0,18,16	// Clear MSR_PR
+	mtsrr1 	r3
+	rfi
+	
+bad_Index:
+	li 	r3,	E_OS_TRUSTED_INDEX_ASM
+	rfi	
+
+bad_Func:
+	li 	r3,	E_OS_TRUSTED_FUNC_ASM
+	rfi	
+
+
+
+/* System Call exception
+ * This is currently a real function call (Os_SysCall() is a real function)
+ * the only function context needs to be preserved here:
+ * -  r14-r31
+ * -  SRR0, SRR1 .. since we wan't to go back 
+ * 
+ * Change MSR... set EE and SPE
+ */
+exception_IVOR8:
+	mfspr	r0,256	/* get SPR_USPRG0 */
+	cmplwi	r0, 0
+	beq		bbb
+	
+	cmplwi 	r0,SYS_CALL_CNT_ASM
+	bgt		bad_Index
+
+	/* Create stack frame */
+	stwu	sp,-48(sp)
+
+	/* Save registers  */
+	stw  	r0,20(sp)	/* Save index */
+	stw  	r24,24(sp)	/* work reg */
+	stw  	r25,28(sp)	/* work reg */
+	stw  	r26,36(sp)	/* work reg */
+	mflr 	24
+	stw 	24, 16(sp)	/* Save LR */
+	mfsrr1 	24
+	stw 	24, 12(sp)	/* Save SRR1 */
+	mfsrr0 	24
+	stw 	24, 32(sp)	/* Save SRR0 */
+	mr		r26,r0
+	
+	/* Get Service list */ 
+	LOAD_ADDR_32(25,Os_ServiceList)
+	slwi 	r26,r26,2	// *4
+	lwzx	r24,r26,r25
+
+	cmplwi	r24,0			/* Null pointer check */
+	beq		bad_Func
+	
+	/* SPE */
+	mfmsr		r25
+#if defined(CFG_SPE) || defined(CFG_SPE_INIT)		
+    OR2IS(r25,0x0200)	/* Enable SPE */
+#endif
+
+	/* If EE-bit was set entering the function, set it now */
+	lwz     r26,12(sp)
+	rlwinm  r26,r26,0,16,16	/* extract EE bit */
+	or		r25,r26,r26
+
+	mtmsr 		r25
+	isync
+
+	mtlr  	r24
+
+	/* 
+	 * Call the function 
+	 */
+	blrl		
+	
+	/* return value here in r3,r4 */
+	
+	mfmsr 	r26
+	rlwinm  r26,r26,0,16,16	/* extract EE bit */
+	
+	LOCK()
+	
+	lwz    r25,20(r1)	/* get index back */
+	lwz	   r24,12(r1)	/* get srr1 from "sc" */ 
+	
+	/* Index 0,1,2, 3,4, 5,6 can set/clear MSR[EE] bit */
+	cmplwi  r25,7
+	bge 	no_context_change
+
+	/* Change SRR1 */
+	rlwinm  r24,r24,0,17,15	/* Clear EE bit */
+	or      r24,r24,r26		/* or in EE bit from msr */
+	
+no_context_change:	
+	
+	mtsrr1  r24
+
+	/* restore LR, r24 and r25 */	
+	lwz	     r24,16(r1)
+	mtlr 	r24
+	lwz	     r24,32(r1)
+	mtsrr0   r24 
+	lwz  	r24,24(sp)
+	lwz  	r25,28(sp)
+	lwz  	r26,36(sp)
+	
+	addi 	r1,r1,48		
+	rfi
+#endif	
+
+
+/**
+ * Decrementer exception. It just triggers soft interrupt 7.
+ *
+ */
+exception_IVOR10:
+    stwu  	r3,-8(sp)
+    stw   	r4,4(sp)
+
+    /* ack dec int */
+    lis 	r3,0x0800
+    mtspr   SPR_TSR,r3
+
+    /* Set soft int */
+    li  	r4,2
+	lis r3, (INTC_HI*0x10000 + INTC_LO + INTC_SSCIR0_OFFS + 7)@ha
+	stb r4, (INTC_HI*0x10000 + INTC_LO + INTC_SSCIR0_OFFS + 7)@l(r3)
+
+#if defined(CFG_MULTICORE)
+    /* Set soft int to z0 */
+    li  	r4,2
+	lis r3, (INTC_HI*0x10000 + INTC_LO + INTC_SSCIR0_OFFS + 4)@ha
+	stb r4, (INTC_HI*0x10000 + INTC_LO + INTC_SSCIR0_OFFS + 4)@l(r3)
+#endif
+    lwz     r3,0(sp)
+    lwz     r4,4(sp)
+    addi  	sp,sp,8
+    rfi
+
+#if defined(CFG_MULTICORE)
+
+/**
+ * r3 shall contain index of Os_Sys
+ * changes r5
+ * returns address of Os_Sys[CoreID] in r3
+ */
+loadSys:
+	li r5,SYS_SIZE	
+	MULLW (r3,r5)
+	LOAD_ADDR_32(r5,Os_Sys)
+	ADD(r3,r5)		
+	blr
+
+#endif
+
+
+/*
+ * r3 - entry
+ * r4 - New msr 
+ */
+
+#if 0
+	.global Os_ArchFirstCall
+Os_ArchFirstCall:
+
+//	bl 	Os_ArchSetMPU
+	
+	mtsrr0	r3 
+	mtsrr1  r4
+	/* Jump to start of function and set user mode */
+	rfi		 
+#endif
+
+
+#if defined(CFG_MULTICORE)
+/**
+ * int GetCoreID()
+ * Returns the logical id if the core
+ * 0 : Z1, maincore
+ * 1 : Z0
+ */
+GetCoreID:	
+	mfspr r3, 286
+	blr
+
+
+
+/**
+ * int Os_ArchTestAndSet(unsigned int* lock, int new_value)
+ * Atomically loads the value pointed to by lock and sets it to new_value
+ * if the loaded value is zero
+ * r3 - lock address
+ * r4 - new_value
+ * r5 - old_value
+ */
+Os_ArchTestAndSet:
+    /* load old_value from address r3 into r5 and reserve */
+	lwarx   r5, 0, r3
+
+	/* compare old_value with zero */
+	cmpwi   r5, 0
+
+	/* if old_value is not zero then it is already set, we are done */
+	bne     Os_ArchTestAndSetDone
+
+	/* if value is zero then store at address r3 the value in r4 (new_value) */
+	stwcx.  r4, 0, r3
+
+	/* if the store failed that means we lost the reservation, try again */
+	bne     Os_ArchTestAndSet
+Os_ArchTestAndSetDone:
+	/* the old_value is returned into r5 */
+	blr
+
+
+/**
+ * void Os_ArchGetSpinlock(unsigned int* lock)
+ * Occupies the spinlock pointed to by lock
+ * r3 - lock address
+ */
+Os_ArchGetSpinlock:
+	/* save link register */
+	mfspr   r6, LR
+
+	/* to occupy the lock we write value 1 in it */
+	li      r4, 1
+
+	/* try and set the lock */
+Os_ArchGetSpinlockLoop:
+	bl      Os_ArchTestAndSet
+
+	/* retry setting until the value returned by ArchTestAndSet in r5 is zero */
+	cmpwi   r5, 0
+	bne     Os_ArchGetSpinlockLoop
+
+	/* see C.1.2 in Book E */
+	isync
+
+	/* restore link register */
+	mtspr   LR, r6
+	blr
+
+
+/**
+ * void Os_ArchTryToGetSpinlock(unsigned int* lock)
+ * Tries to get the spinlock pointed to by lock
+ * r3 - lock address
+ * r4 - 0 if successful, 1 otherwise
+ */
+Os_ArchTryToGetSpinlock:
+	/* save link register */
+	mfspr   r6, LR
+
+	/* to occupy the lock we write value 1 in it */
+	li      r4, 1
+
+	/* try and set the lock */
+	bl      Os_ArchTestAndSet
+
+	/* return the old_value; if 0 then we have the lock, otherwise 1 */
+	addi   r3, r5, 0
+
+	/* restore link register */
+	mtspr   LR, r6
+	blr
+
+
+/**
+ * void Os_ArchReleaseSpinlock(unsigned int* lock)
+ * Releases the spinlock pointed to by lock
+ * r3 - lock address
+ */
+Os_ArchReleaseSpinlock:
+	/* see C.1.2 in Book E */
+	msync
+
+	/* to release the lock we write value 0 in it */
+	li      r4, 0
+
+	/* release the lock */
+	stw     r4, 0(r3)
+	blr
+
+#endif
+

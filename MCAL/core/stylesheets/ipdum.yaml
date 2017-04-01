@@ -1,0 +1,52 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Included Containers
+#########################################################
+- !!com.arccore.common.yaml.data.styles.IncludedContainer
+ parent: IpduMTxRequest
+ child: IpduMSelectorFieldPosition
+
+- !!com.arccore.common.yaml.data.styles.IncludedContainer
+ parent: IpduMRxIndication
+ child: IpduMSelectorFieldPosition
+
+- !!com.arccore.common.yaml.data.styles.IncludedContainer
+ parent: IpduMTxPathway
+ child: IpduMTxRequest
+
+- !!com.arccore.common.yaml.data.styles.IncludedContainer
+ parent: IpduMRxPathway
+ child: IpduMRxIndication
+
+#########################################################
+# Hidden parameters
+######################################################### 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IpduMRxHandleId 
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IpduMRxDirectComInvocation
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IpduMStaticPartExists
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IpduMTxStaticHandleId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IpduMTxDynamicHandleId  
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: IpduMPublishedInformation
+
+#########################################################
+# Excluded from generic validation
+#########################################################  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: IpduMTxDynamicHandleId
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: IpduMTxStaticHandleId
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: IpduMRxHandleId  

@@ -1,0 +1,85 @@
+
+
+
+The Freescale MPC5606S is an PowerPC process with a e200Z0h core, VLE only  
+	
+Datasheets:
+  Eval board:
+      http://www.nxp.com/webapp/sps/site/prod_summary.jsp?code=XPC560SKIT  
+      http://cache.nxp.com/files/microcontrollers/hardware_tools/schematics/XPC560SADPT176SSCH.pdf?fpsp=1
+      http://cache.nxp.com/files/32bit/doc/user_guide/XPC560SEVBUM.pdf?fpsp=1 
+      (Note: The above user manual is obsolete for latest versions of motherboard and is not applicable if you are using
+       XPC560S EVB ver. C (Required:Manual version 1.04, October 2011). You should request Nxp for updated version or find it in the CD)
+     Mainboard schematic
+      http://www.nxp.com/webapp/sps/site/prod_summary.jsp?code=MPC560xB_EVB&parentCode=XPC56xxMB&fpsp=1&nodeId=01624606C1427E
+      
+     
+  MPC560x
+    http://www.nxp.com/webapp/sps/site/prod_summary.jsp?code=MPC560xS&fsrch=1&sr=1
+
+Board:
+  8Mhz external crystal
+
+Supported compilers:
+  Code Warrior
+ 
+Info:	
+  MPC5606S
+  CPU:		 e200z0h (VLE only)
+  Freq:		 64 Mhz
+  Flash: 	 1.0 MB, primary
+             64K, data flash
+  RAM:       48K, ECC
+             160K, Graphics RAM (not ECC)
+  
+Memory Map:
+ 0x0000_0000 -> 0x000f_ffff   Flash
+ 0x0080_0000 -> 0x0080_ffff   Data Flash
+ 0x4000_0000 -> 0x4000_bfff   SRAM
+ 0x6000_0000 -> 0x6002_7fff   Graphics SRAM
+ 
+NOTE! In Mcu.c only board specific clocks and pin muxing are setup and there is no config tool support. 
+
+
+== SPI == 
+
+Adding a SPI EEPROM (ST M95256)
+
+Below is an example for interfacing SPI pins for a EEPROM chip to MCU pins.
+
+<- XPC560S ->#<---------------------- MCU --->
+             #       PAD Func              
+----------------------------------------------
+/S,PJ5-14# PB[13]  29  3  PCS1_0    
+Q,PJ5-8  # PB[7]   23  1  SIN_0    
+C,PJ5-10 # PB[9]   25  1  SCK_0     
+D,PJ5-9  # PB[8]   24  1  SOUT_0    
+
+
+SPI MEMORY 
+  M95256
+    /W   - High
+    /HOLD - High
+    Rest of the pins are obvious
+    Connected with 5V logic
+ 
+== ADC ==
+
+MPC5606S has only one ADC.
+In order for the MCAL ADC test to work on XPC56XX EVB motherboard Rev.C. Three channels must be connected correctly. One to ground, one to +5V and one to a voltage divider.
+PC0(PCR30) is configured for ADC0_P[0] and should be connected to ground. (PJ4.1 to Ground)
+PC1(PCR31) is configured for ADC0_P[1] and should be connected to +5V (PJ4.2 to +5V) 
+PC2(PCR32) is configured for ADC0_P[2] and should be connected to a voltage divider(PJ4.3 to J40 - lower pin;No need to short jumpers J40).
+
+ ---------------------------------- NOTE ----------------------------------
+  The xPC560S EVB v1.0.1 manual is total crap in chapter "3.8 Pin Mapping"
+  Known errors:
+   PJ1
+     PCS0.2, should be PCS1_0     
+   PJ9-Port F
+     As I understand it should map to Port F. However, PCS1_1 is
+     located on PCR[78]=PF[8] on CPU is connected to PF[0] on PJ9!!     
+---------------------------------- NOTE ----------------------------------  
+  
+  
+

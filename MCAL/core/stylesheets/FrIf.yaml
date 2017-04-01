@@ -1,0 +1,53 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters
+#########################################################
+#FrIfGeneral
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrIfUnusedBitValue      
+
+# FrIfCluster container
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrIfClstIdx
+
+# FrIfClusterDemEventParameterRefs
+
+           
+# FrIfController container
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrIfCtrlIdx
+  
+# FrIfTransceiver container 
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: FrIfTransceiver
+  
+# FrIfLPdu container
+
+# FrIfFrameTriggering container
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrIfAllowDynamicLSduLength 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrIfMessageId
+  
+        
+# FrIfTxPdu container
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: FrIfTxPduId
+
+#disabled container 
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: FrIfTransceiver  
+
+#########################################################
+# Excluded from generic validation
+#########################################################  
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: FrIfCounterLimit
+
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: FrIfRxComOpMaxLoop

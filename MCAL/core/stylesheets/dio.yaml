@@ -1,0 +1,27 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# Container DioChannelGroup
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DioChannelGroupIdentification
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DioPortOffset
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DioPortMask
+  mcals: [JACINTO5, JACINTO6]
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DioPortId
+  mcals: [JACINTO5, JACINTO6]
+  
+# Container DioGeneral
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: DioFlipChannelApi
+
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: DioChannelGroup
+  mcals: [JACONTO5, JACINTO6]
+   
+  

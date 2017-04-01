@@ -1,0 +1,44 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+# Container GptClockReferencePoint
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: GptClockReferencePoint
+  mcals: [ RH850F1H RH850F1L]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptClockReference
+  mcals: [ MPC560x, MPC5668, MPC551x,  MPC5744P, MPC5748G, MPC5634M, MPC5746C, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, zynq, RH850F1H, RH850F1L, MPC5777M, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+
+# Container GptChannelConfiguration  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptChannelId
+  mcals: [ MPC560x, MPC5668, MPC551x,  MPC5744P, MPC5748G, MPC5634M, MPC5746C, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, zynq, RH850F1H, RH850F1L, MPC5777M, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptChannelTickFrequency
+  mcals: [ MPC560x, MPC5668, MPC551x,  MPC5744P, MPC5748G, MPC5634M, MPC5746C, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, zynq, RH850F1H, RH850F1L, MPC5777M, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+    
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptChannelTickValueMax
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptChannelClkSrcRef
+  mcals: [ MPC560x, MPC551x, MPC5668, MPC5744P, MPC5748G, MPC5634M, MPC5746C, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, zynq, RH850F1H, RH850F1L, MPC5777M, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptPredefTimer100us32bitEnable
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptPredefTimer1usEnablingGrade
+  
+# Container GptConfiguraationOfOptApiServices
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: GptWakeupFunctionalityApi
+  mcals: [TMS570, TMS570LC43X]
+#######################################################  
+#Parameters excluded from generic validation
+#######################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: GptWakeupSourceRef
+  mcals: [ MPC560x, MPC5668, MPC5744P, MPC5748G, MPC5634M, MPC5746C, MPC5643L, SPC56XL70, MPC5644A, MPC5645S, SPC560B54, MPC5606B, MPC5606S, MPC5607B, zynq, RH850F1H, RH850F1L, MPC5777M, TMS570, TMS570LC43X, TMS570LS1114, JACINTO5, JACINTO6]  

@@ -1,0 +1,314 @@
+//------------------------------------------------------------------------------
+// HL_sys_core.asm
+//
+// Copyright (C) 2009-2016 Texas Instruments Incorporated - www.ti.com
+//
+//
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions
+//  are met)
+//
+//    Redistributions of source code must retain the above copyright
+//    notice, this list of conditions and the following disclaimer.
+//
+//    Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the
+//    distribution.
+//
+//    Neither the name of Texas Instruments Incorporated nor the names of
+//    its contributors may be used to endorse or promote products derived
+//    from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+//  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+//  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+//  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+//  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+//  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES// LOSS OF USE,
+//  DATA, OR PROFITS// OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+//  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+//  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+//  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//
+//
+
+#define _ASSEMBLER_
+#include "asm_arm.h"
+
+#if defined(__GNUC__)
+  	.syntax unified
+	.thumb
+#else
+	THUMB
+#endif        
+
+	ASM_GLOBAL(_cacheEnable_)
+    ASM_TYPE(_cacheEnable_, %function)
+
+	ASM_GLOBAL(_cacheDisable_)
+    ASM_TYPE(_cacheDisable_, %function)
+
+	ASM_GLOBAL(_dCacheInvalidate_)
+    ASM_TYPE(_dCacheInvalidate_, %function)
+
+	ASM_GLOBAL(_iCacheInvalidate_)
+    ASM_TYPE(_iCacheInvalidate_, %function)
+
+//-------------------------------------------------------------------------------
+// Get CPSR Value
+
+ASM_LABEL(_getCPSRValue_)
+
+        mrs   r0, CPSR
+        bx    lr
+
+
+//-------------------------------------------------------------------------------
+// Take CPU to IDLE state
+
+ASM_LABEL(_gotoCPUIdle_)
+
+        WFI
+        nop
+        nop
+        nop
+        nop
+        bx    lr
+
+//-------------------------------------------------------------------------------
+// Enable VFP Unit
+
+ASM_LABEL(_coreEnableVfp_)
+
+        mrc   p15,     #0x00,      r0,       c1, c0, #0x02
+        orr   r0,      r0,         #0xF00000
+        mcr   p15,     #0x00,      r0,       c1, c0, #0x02
+        mov   r0,      #0x40000000
+        fmxr  fpexc,   r0
+        bx    lr
+
+//-------------------------------------------------------------------------------
+// Enable Event Bus Export
+
+ASM_LABEL(_coreEnableEventBusExport_)
+
+        mrc   p15, #0x00, r0,         c9, c12, #0x00
+        orr   r0,  r0,    #0x10
+        mcr   p15, #0x00, r0,         c9, c12, #0x00
+        bx    lr
+
+//-------------------------------------------------------------------------------
+// Disable Event Bus Export
+
+ASM_LABEL(_coreDisableEventBusExport_)
+
+        mrc   p15, #0x00, r0,         c9, c12, #0x00
+        bic   r0,  r0,    #0x10
+        mcr   p15, #0x00, r0,         c9, c12, #0x00
+        bx    lr
+
+//-------------------------------------------------------------------------------
+// Enable Offset via Vic controller
+
+ASM_LABEL(_coreEnableIrqVicOffset_)
+
+        mrc   p15, #0, r0,         c1, c0,  #0
+        orr   r0,  r0,    #0x01000000
+        mcr   p15, #0, r0,         c1, c0,  #0
+        bx    lr
+
+//-------------------------------------------------------------------------------
+// Get data fault status register
+
+ASM_LABEL(_coreGetDataFault_)
+
+        mrc   p15, #0, r0, c5, c0,  #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Clear data fault status register
+
+ASM_LABEL(_coreClearDataFault_)
+
+        mov   r0,  #0
+        mcr   p15, #0, r0, c5, c0,  #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get instruction fault status register
+
+ASM_LABEL(_coreGetInstructionFault_)
+
+        mrc   p15, #0, r0, c5, c0, #1
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Clear instruction fault status register
+
+ASM_LABEL(_coreClearInstructionFault_)
+
+        mov   r0,  #0
+        mcr   p15, #0, r0, c5, c0, #1
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get data fault address register
+
+ASM_LABEL(_coreGetDataFaultAddress_)
+
+        mrc   p15, #0, r0, c6, c0,  #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Clear data fault address register
+
+ASM_LABEL(_coreClearDataFaultAddress_)
+
+        mov   r0,  #0
+        mcr   p15, #0, r0, c6, c0,  #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get instruction fault address register
+
+ASM_LABEL(_coreGetInstructionFaultAddress_)
+
+        mrc   p15, #0, r0, c6, c0, #2
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Clear instruction fault address register
+
+ASM_LABEL(_coreClearInstructionFaultAddress_)
+
+        mov   r0,  #0
+        mcr   p15, #0, r0, c6, c0, #2
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get auxiliary data fault status register
+
+ASM_LABEL(_coreGetAuxiliaryDataFault_)
+
+        mrc   p15, #0, r0, c5, c1, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Clear auxiliary data fault status register
+
+ASM_LABEL(_coreClearAuxiliaryDataFault_)
+
+        mov   r0,  #0
+        mcr   p15, #0, r0, c5, c1, #0
+        bx    lr
+
+
+
+
+//-------------------------------------------------------------------------------
+// Get auxiliary instruction fault status register
+
+ASM_LABEL(_coreGetAuxiliaryInstructionFault_)
+
+        mrc   p15, #0, r0, c5, c1, #1
+        bx    lr
+
+
+
+//-------------------------------------------------------------------------------
+// Clear auxiliary instruction fault status register
+
+ASM_LABEL(_coreClearAuxiliaryInstructionFault_)
+
+        mov   r0,  #0
+        mrc   p15, #0, r0, c5, c1, #1
+        bx    lr
+   
+
+//-------------------------------------------------------------------------------
+// Enable caches
+
+ASM_LABEL(_cacheEnable_)
+
+        mov r0,#0
+
+        MRC   p15, #0, R1, c1, c0, #0   // Read System Control Register configuration data
+        ORR   R1, R1, #0x1 <<12         // instruction cache enable
+        ORR   R1, R1, #0x1 <<2          // data cache enable
+        DSB
+        MCR   p15, #0, r0, c15, c5, #0  // Invalidate entire data cache
+        DSB                             // delay is required, manually added
+        MCR   p15, #0, r0, c7, c5, #0   // Invalidate entire instruction cache
+        DSB                             // delay is required, manually added
+        MCR   p15, #0, R1, c1, c0, #0   // enabled cache RAMs
+        ISB
+        bx    lr
+    
+
+//-------------------------------------------------------------------------------
+// Disable caches
+
+ASM_LABEL(_cacheDisable_)
+
+        MRC   p15, #0, R1, c1, c0, #0   // Read System Control Register configuration data
+        BIC   R1, R1, #0x1 <<12         // instruction cache disable
+        BIC   R1, R1, #0x1 <<2          // data cache disable
+        DSB
+        MCR   p15, #0, R1, c1, c0, #0   // disabled cache RAMs
+        ISB
+        bx    lr
+    
+
+//-------------------------------------------------------------------------------
+// Invalidate Data Cache
+
+ASM_LABEL(_dCacheInvalidate_)
+        MOV   R0,#0
+        DSB
+        MCR   P15, #0, R0, C15, C5, #0
+        DSB
+        bx    lr
+    
+
+//-------------------------------------------------------------------------------
+// Invalidate Instruction Cache
+
+ASM_LABEL(_iCacheInvalidate_)
+        MOV   R0,#0
+        DSB
+        MCR   p15, #0, r0, c7, c5, #0
+        DSB
+        bx    lr
+        
+//-------------------------------------------------------------------------------
+

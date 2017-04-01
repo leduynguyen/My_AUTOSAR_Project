@@ -1,0 +1,149 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+#########################################################
+# Hidden parameters
+#########################################################
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthIndex
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthMaxCtrlsSupported
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+   
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthUpdatePhysAddrFilter
+  mcals: [RH850F1H]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCpu1xclkValue
+  mcals: [zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+            
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthControllerHwUnit
+  mcals: [RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthControllerHwSpeed
+  mcals: [RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthControllerHwMIIMode
+  mcals: [RH850F1H,zynq]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlEnableRxChecksumOffload
+  mcals: [RH850F1H,JACINTO6]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlEnableTxChecksumOffload
+  mcals: [RH850F1H]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlDiscardRxFCS
+  mcals: [RH850F1H,JACINTO6]
+     
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCpu1xclkValue
+  mcals: [RH850F1H,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthSoftReset
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C]
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlRxDMAChannel
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C] 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlTxDMAChannel
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C] 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlRxQueueValue
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C] 
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthCtrlTxQueueValue
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C]  
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ArcEthFifoPrio
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C] 
+  
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthMainFunctionPeriod
+  mcals: [RH850F1H]       
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthGetDropCountApi
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthGetEtherStatsApi
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: EthGlobalTimeSupport
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_ALIGNMENT
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_CRC
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_ALIGNMENT
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_LATECOLLISION
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_MULTIPLECOLLISION
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_OVERSIZEFRAME
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_RX_FRAMES_LOST
+  mcals: [RH850F1H,zynq]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_SINGLECOLLISION
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: ETH_E_UNDERSIZEFRAME
+  mcals: [RH850F1H,zynq,JACINTO6,MPC5748G,MPC5747C,MPC5746C]
+ 
+- !!com.arccore.common.yaml.data.styles.HiddenParameter 
+  name: ArcEthCtrlEnableCircDesc
+  mcals: [RH850F1H,zynq,MPC5748G,MPC5747C,MPC5746C]
+   
+  
+            
+#########################################################
+# Parameter groups
+#########################################################
+
+#########################################################  
+#Parameters excluded from generic validation
+#########################################################
+- !!com.arccore.common.yaml.data.styles.ExcludedFromGenericValidation
+  name: EthCtrlIdx
+  mcals: [RH850F1H]
+  
+#########################################################
+# Disabled containers
+######################################################### 
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name: EthCtrlOffloading 

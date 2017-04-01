@@ -1,0 +1,39 @@
+# 5.0.0
+# com.arccore.bsw.stylesheet
+
+## OcuConfigSet
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: OcuCountdirection
+
+## OcuChannel
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: OcuChannelId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  OcuChannelTickDuration
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  OcuMaxCounterValue
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: OcuHardwareTriggeredAdc
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name: OcuHardwareTriggeredDMA
+  
+## OcuGroup
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  OcuGroupId
+
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  OcuGroupDefinition
+  
+## OcuHWSpecificSettings
+- !!com.arccore.common.yaml.data.styles.DisabledContainer
+  name:  OcuHWSpecificSettings
+      
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  OcuClockSource
+  
+- !!com.arccore.common.yaml.data.styles.HiddenParameter
+  name:  OcuPrescale
