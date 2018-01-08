@@ -1,3 +1,6 @@
+The project plan is initialized in the trello
+https://trello.com/b/TOhjq6fP/my-ar-project
+
 # My AUTOSAR Project
 This is the example project for integration all the open source of AUTOSAR from MCAL to BSW and ASW with OS. Below is the open source need for the project.
 
